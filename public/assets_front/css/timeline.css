@@ -1,0 +1,199 @@
+ .timeline {
+     text-align: center;
+     margin-top:2rem;
+ }
+ 
+ .progress-container {
+     display: inline-block;
+     /* width: 19%; */
+     width: 20%;
+     margin: 0 auto;
+     text-align: center;
+     position: relative;
+ }
+ 
+ .progress-container label {
+     cursor: pointer;
+     user-select: none;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     font-size: 1.1rem;
+     margin-bottom: 0;
+     transition: 1s cubic-bezier(0.915, 0.015, 0.3, 1.005);
+ }
+ 
+ .progress-container label img {
+     width: 120px;
+     height: 120px;
+     object-fit: cover;
+     border-radius: 50%;
+     transform: scale(.9);
+     transition: 1s cubic-bezier(0.915, 0.015, 0.3, 1.005);
+     will-change: transform;
+ }
+ 
+ .input-hidde {
+     display: none;
+ }
+ 
+ .progress_inner__bar--set {
+     width: 70%;
+     height: 16px;
+     position: relative;
+     left: 50%;
+     transform: translateX(-50%);
+     top: -112px;
+     background: var(--principal);
+     z-index: -2;
+ }
+ 
+ .progress_inner__bar {
+     width: 70%;
+     height: 17px;
+     position: relative;
+     top: -96px;
+     /* left: 10%; */
+     left: 15%;
+     /* background: linear-gradient( 45deg, #1ea4ec, #1ea4ec 4px, #1f8bc5 4px, #1f8bc5 10px); */
+     background: linear-gradient(-50deg, var(--acento) 15%, var(--secundario) 77%);
+     transition: width 1s cubic-bezier(0.915, 0.015, 0.3, 1.005);
+     border-radius: 6px;
+     width: 0;
+     z-index: -1;
+ }
+ 
+ .progress-tabs .tab-timeline {
+     opacity: 0;
+     visibility: hidden;
+     width: 29%;
+     border-radius: 4px;
+     background: var(--blanco);
+     box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 5%);
+     padding: 2rem;
+     transition: 1s cubic-bezier(0.915, 0.015, 0.3, 1.005);
+     position: absolute;
+     top: 0;
+     z-index: -1;
+     height:192px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .progress-tabs .tab-timeline p {
+     margin-bottom: 0;
+ }
+ 
+ .progress-tabs .tab-timeline::before {
+     content: '';
+     position: absolute;
+     left: 50%;
+     top: -10px;
+     border-top: 10px solid var(--blanco);
+     border-right: 10px solid var(--blanco);
+     border-bottom: 10px solid transparent;
+     border-left: 10px solid transparent;
+     transform: translateX(-50%) rotate(-45deg);
+ }
+ 
+ .progress-tabs .tab-1 {
+     left: calc(70% - 100.5%);
+     margin: 0 auto;
+ }
+ 
+ /* .progress-tabs .tab-2 {
+     left: calc(70% - 84%);
+     margin: 0 auto;
+
+ } */
+ 
+ .progress-tabs .tab-3 {
+     /* left: calc(70% - 64.5%); */
+     left: calc(70% - 80%);
+     margin: 0 auto;
+
+ }
+ 
+ .progress-tabs .tab-4 {
+     /* left: calc(70% - 45%); */
+     left: calc(70% - 60%);
+     margin: 0 auto;
+
+ }
+ 
+ .progress-tabs .tab-5 {
+     /* left: calc(70% - 25.5%); */
+     left: calc(70% - 39.5%);
+     margin: 0 auto;
+
+ }
+ 
+ .timeline-progress input[id="step-1"]:checked~.progress-tabs .tab-1,
+ .timeline-progress input[id="step-2"]:checked~.progress-tabs .tab-2,
+ .timeline-progress input[id="step-3"]:checked~.progress-tabs .tab-3,
+ .timeline-progress input[id="step-4"]:checked~.progress-tabs .tab-4,
+ .timeline-progress input[id="step-5"]:checked~.progress-tabs .tab-5 {
+     opacity: 1;
+     visibility: visible;
+     position: relative;
+     z-index: 9;
+ }
+ 
+ .timeline-progress input[id="step-1"]:checked~.progress-container label[for="step-1"],
+ .timeline-progress input[id="step-2"]:checked~.progress-container label[for="step-2"],
+ .timeline-progress input[id="step-3"]:checked~.progress-container label[for="step-3"],
+ .timeline-progress input[id="step-4"]:checked~.progress-container label[for="step-4"],
+ .timeline-progress input[id="step-5"]:checked~.progress-container label[for="step-5"] {
+     font-family: var(--openSans-Semi);
+     color: var(--principal);
+     transition: 1s cubic-bezier(0.915, 0.015, 0.3, 1.005);
+ }
+ 
+ .timeline-progress input[id="step-1"]:checked~.progress-container label[for="step-1"] img,
+ .timeline-progress input[id="step-2"]:checked~.progress-container label[for="step-2"] img,
+ .timeline-progress input[id="step-3"]:checked~.progress-container label[for="step-3"] img,
+ .timeline-progress input[id="step-4"]:checked~.progress-container label[for="step-4"] img,
+ .timeline-progress input[id="step-5"]:checked~.progress-container label[for="step-5"] img {
+     transform: scale(1.05);
+     transition: 1s cubic-bezier(0.915, 0.015, 0.3, 1.005);
+     will-change: transform;
+ }
+ 
+ .timeline-progress input[id="step-1"]:checked~.progress_inner__bar {
+     width: 0;
+ }
+ 
+ /* .timeline-progress input[id="step-2"]:checked~.progress_inner__bar {
+     width: 20%;
+ }
+  */
+ .timeline-progress input[id="step-3"]:checked~.progress_inner__bar {
+     /* width: 40%; */
+     width: 24%;
+ }
+ 
+ .timeline-progress input[id="step-4"]:checked~.progress_inner__bar {
+     /* width: 60%; */
+     width: 44%;
+ }
+ 
+ .timeline-progress input[id="step-5"]:checked~.progress_inner__bar {
+     width: 70%;
+ }
+ .title-timeline{
+    font-family: var(--montserrat);
+    font-size: var(--rem-20);
+ }
+.title-timeline a{
+    color:var(--negro);
+    font-size: var(--rem-20);
+    font-family: var(--montserrat);
+    transition: all .3s;
+ }
+.title-timeline a:hover{
+    color:var(--secundario);
+    text-decoration:none;
+ }

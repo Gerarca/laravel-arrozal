@@ -1,0 +1,38 @@
+.btn-principal {
+    padding: .8rem 1.5rem;
+    background: var(--fucsia);
+    color: var(--blanco);
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    transition: all .3s;
+    margin-top: 1rem;
+    display: inline-block;
+    max-width: 255px;
+    height: 60px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    border: none;
+}
+
+.btn-principal:hover {
+    text-decoration: none;
+    color: var(--blanco);
+    background: var(--fucsia-hover);
+}
+
+.btn-principal.btn-form {
+    width: 200px;
+}
+
+.btn-principal.btn-producto {
+    max-width: 270px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:990px) {
+    .btn-principal {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+}
