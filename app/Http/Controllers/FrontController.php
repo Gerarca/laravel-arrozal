@@ -9,10 +9,10 @@ class FrontController extends Controller
     public function index(){
         return view('front.index');
     }
-    public function novedades(){
-        return view('front.novedades');
+    public function noticias(){
+        return view('front.noticias');
     }
-    public function postNovedades(){
-        return view('front.postNovedades');
+    public function postNoticias(){
+        return view('front.postNoticias');
     }
 }

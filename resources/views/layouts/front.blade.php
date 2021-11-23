@@ -31,12 +31,12 @@
   
 </head>
 <body>
-  <header class="header {{ Route::is('front.novedades') ? 'backgorund-new':'' }}"" id="header">
+  <header class="header {{ Route::is('front.noticias') ? 'backgorund-new':'' }}" id="header">
     <div class="container">
       <nav class="menu-desktop">
         <div class="container-logo">
           <a href="{{ route('front.index')}}">
-            <img class="logo" src="{{ url('assets_front/images/logo-white.svg')}}" alt="Logo Arrozal S.A.">
+            <img class="logo" src="{{ url('assets_front/images/logo.svg')}}" alt="Logo Arrozal S.A.">
             <img class="logo-color" src="{{ url('assets_front/images/logo.svg')}}" alt="Logo Arrozal S.A.">
           </a>
         </div>
@@ -44,7 +44,8 @@
           <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
           <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
-          <li><a href="{{ route('front.novedades')}}">Novedades</a></li>
+          <li><a href="{{ route('front.index')}}#pasantias">Programa de pasantías</a></li>
+          <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
         </ul>
         <button class="btn-menu">
@@ -57,7 +58,8 @@
           <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
           <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
-          <li><a href="{{ route('front.novedades')}}">Novedades</a></li>
+          <li><a href="{{ route('front.index')}}#pasantias">Programa de pasantías</a></li>
+          <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -66,7 +68,11 @@
 
 
   @yield('content')
-
+  <div class="btn-whatsapp">
+    <a href="https://wa.me/%2B595984684092" target="_blank" title="Whatsapp">
+      <img src="{{ url('assets_front/images/wa-whatsapp.svg')}}" alt="Icon Whatsapp">
+    </a>
+  </div>
   <footer class="footer">
    <div class="container">
      <div class="row">
@@ -77,35 +83,36 @@
             </a>
          </div>
        </div>
-       <div class="col-md-4">
+       <div class="col-md-5">
          <div class="container-footer-enlaces">
            <h2 class="title-footer">Enlaces</h2>
            <ul class="lista-enlaces-footer">
-             <li><a href="#">Quiénes somos</a></li>
-             <li><a href="#">Dónde estamos</a></li>
-             <li><a href="#">Nuestros Servicios</a></li>
-             <li><a href="{{ route('front.novedades')}}">Novedades</a></li>
-             <li><a href="#">Contacto</a></li>
+             <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
+             <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
+             <li><a href="{{ route('front.index')}}#servicios">Nuestros Servicios</a></li>
+             <li><a href="{{ route('front.index')}}#pasantias">Programa de pasantías</a></li>
+             <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
+             <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
             </ul>
           </div>
        </div>
-       <div class="col-md-4">
+       <div class="col-md-3">
          <div class="container-footer-enlaces">
            <h2 class="title-footer">Seguinos</h2>
            <ul class="lista-redes">
              <li>
                <a href="https://www.instagram.com/arrozalsa_py/?fbclid=IwAR0GzBQrpfRTPvpAOoEvwV1V4Q0xU0m_TjvcLh8sIZH5NUecRLs1cU0ip8Y" target="_blank">
-                 <img src="{{ url('assets_front/images/instagram.svg')}}" alt="Icon Instagram">
+                 <img src="{{ url('assets_front/images/instagram-color.svg')}}" alt="Icon Instagram">
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/Arrozalsa/?rf=675455755800622" target="_blank">
-                  <img src="{{ url('assets_front/images/facebook.svg')}}" alt="Icon Facebook">
+                  <img src="{{ url('assets_front/images/facebook-app.svg')}}" alt="Icon Facebook">
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/company/arrozal-s-a/" target="_blank">
-                  <img src="{{ url('assets_front/images/in.svg')}}" alt="Icon Facebook">
+                  <img src="{{ url('assets_front/images/linkedin-app.svg')}}" alt="Icon Facebook">
                 </a>
               </li>
             </ul>

@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', 'Post Novedades')    
+@section('title', 'Post Noticias')    
 @section('content')
 <main class="main-blog">
   <section class="banner-blog">

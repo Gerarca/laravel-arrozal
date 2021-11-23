@@ -14,8 +14,8 @@ use App\Http\Controllers\FrontController;
 |
 */
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
-Route::get('/novedades', [FrontController::class, 'novedades'])->name('front.novedades');
-Route::get('/postNovedades', [FrontController::class, 'postNovedades'])->name('front.postNovedades');
+Route::get('/noticias', [FrontController::class, 'noticias'])->name('front.noticias');
+Route::get('/postNoticias', [FrontController::class, 'postNoticias'])->name('front.postNoticias');
 
 
 
