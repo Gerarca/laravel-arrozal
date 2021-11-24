@@ -394,7 +394,7 @@
         </div>
       </div>
 
-      <div class="row row-servicios" id="pasantias">
+      <div class="row row-servicios pasantias" id="pasantias">
         <div class="col-md-12 col-lg-6">
           <img class="img-servicios" src="{{ url('assets_front/images/pasantia.jpg')}}" loading="lazy" alt="">
         </div>
