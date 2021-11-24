@@ -16,7 +16,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://infonegocios.com.py/infoagro/arrozales-del-chaco-el-proyecto-que-aposto-al-cultivo-de-arroz-en-suelo-chaqueno-ya-exporta-casi-el-100-de-su-produccion" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-1.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-1.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">6/28/2021</p>
                 </div>
@@ -38,7 +38,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.campoagropecuario.com.py/notas/2200/experiencia-exitosa-que-suma-valor" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-2.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-2.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">4/20/2021</p>
                 </div>
@@ -59,7 +59,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/nacionales/2021/03/15/el-arroz-expande-su-horizonte-en-el-chaco/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-9.jpg')}}" alt="Avatinas">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-9.jpg')}}" loading="lazy" alt="Avatinas">
                   </a>
                   <p class="fecha">3/15/2021</p>
                 </div>
@@ -80,7 +80,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.productivacm.com/soja-fiel-companera-del-arroz-en-suelos-marginales/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-4.jpg')}}" alt="Avatinas">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-4.jpg')}}" loading="lazy" alt="Avatinas">
                   </a>
                   <p class="fecha">1/19/2021</p>
                 </div>
@@ -101,7 +101,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.usaid.gov/sites/default/files/documents/1862/arroz.pdf" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/4.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/4.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">5/1/2020</p>
                 </div>
@@ -122,7 +122,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/tv/abc-rural/2020/03/21/programa-18-arrozales-del-chaco/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-5.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-5.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">3/21/2020</p>
                 </div>
@@ -143,7 +143,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/suplementos/abc-rural/2020/03/04/el-chaco-muestra-que-es-apto-para-el-cultivo-del-arroz-y-su-desarrollo/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-6.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-6.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">3/4/2020</p>
                 </div>
@@ -164,7 +164,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.lanacion.com.py/negocios_edicion_impresa/2020/02/29/grupo-gpsa-presenta-su-potencial-productivo-en-3-jornada-del-arroz/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-7.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-7.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/29/2020</p>
                 </div>
@@ -185,7 +185,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/cultivo-arroz-el-chaco-tuvo-exitoso-resultado-n2872256.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/3.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/3.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/28/2020</p>
                 </div>
@@ -206,7 +206,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.campoagropecuario.com.py/notas/264/firme-crecimiento-del-proyecto-arrocero-de-gpsa-y-arrozal-en-el-chaco" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-8.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-8.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/25/2020</p>
                 </div>
@@ -227,7 +227,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/economia/2020/02/25/la-produccion-de-arroz-se-cuadruplico-en-10-anos/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-9.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-9.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/22/2020</p>
                 </div>
@@ -248,7 +248,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/suplementos/abc-rural/2020/02/05/arroz-debe-seguir-creciendo/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-11.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-11.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/5/2020</p>
                 </div>
@@ -269,7 +269,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.campoagropecuario.com.py/notas/676/gpsa-lanzo-la-campana-de-arroz-20192020" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">7/16/2019</p>
                 </div>
@@ -290,7 +290,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://gauchazh.clicrbs.com.br/economia/campo-e-lavoura/noticia/2019/04/lavouras-de-arroz-avancam-240-em-10-anos-no-paraguai-e-atraem-industrias-cjud2z5a401d501rtsipt0722.html" target="_blank">
-                    <img class="image-blog"  src="{{ url('assets_front/images/noticias/noticia10.jpg')}}" alt="">
+                    <img class="image-blog"  src="{{ url('assets_front/images/noticias/noticia10.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">4/12/2019</p>
                 </div>
@@ -311,7 +311,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/suplementos/abc-rural/produccion-de-arroz-en-armonia-con-el-medio---ing-agr-hector-ramirez--1792740.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-13.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-13.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">3/6/2019</p>
                 </div>
@@ -332,7 +332,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://campoagropecuario.com.py/notas/1130/avanza-la-agricultura-en-el-corazon-del-chaco" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">3/6/2019</p>
                 </div>
@@ -353,7 +353,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/suplementos/abc-rural/investigacion-y-tecnologia-en-arroz---ing-agr-hector-ramirez--1675010.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-14.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-14.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/14/2018</p>
                 </div>
@@ -374,7 +374,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/suplementos/abc-rural/arroz-para-el-mundo-1675008.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/14/2018</p>
                 </div>
@@ -395,7 +395,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://rcc.com.py/nacionales/arroz-en-el-chaco/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-15.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-15.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/1/2018</p>
                 </div>
@@ -416,7 +416,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.adndigital.com.py/etiqueta/hector-ramirez/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-16.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-16.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">6/11/2017</p>
                 </div>
@@ -437,7 +437,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/la-incertidumbre-brasil-preocupa-los-arroceros-paraguayos-n1086560.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-17.png')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-17.png')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">5/20/2017</p>
                 </div>
@@ -458,7 +458,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/optimismo-el-rubro-del-arroz-dos-anos-dificiles-n1059639.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/1/2017</p>
                 </div>
@@ -479,7 +479,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/suplementos/gaceta-del-sur/arrozal-recibe-una-distincion-internacional-1452090.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-18.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-18.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/10/2016</p>
                 </div>
@@ -500,7 +500,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/economia/paraguay-apunta-a-varios-mercados-de-centroamerica-para-el-arroz-1451041.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-19.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-19.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">2/5/2016</p>
                 </div>
@@ -521,7 +521,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/productores-cautelosos-el-desarrollo-campana-sojera-n948369.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-20.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-20.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">11/26/2015</p>
                 </div>
@@ -542,7 +542,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/exportacion-arroz-esta-paralizada-dicen-industriales-n904962.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-21.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-21.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">6/15/2015</p>
                 </div>
@@ -563,7 +563,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.abc.com.py/edicion-impresa/economia/buscan-que-arrozales-sean-amigables-con-las-aves-1396750.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-22.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-22.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">5/10/2015</p>
                 </div>
@@ -584,7 +584,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.lanacion.com.py/2015/04/22/inversion-tecnologica-es-la-fortaleza-del-sector-arrocero/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-23.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-23.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">4/21/2015</p>
                 </div>
@@ -605,7 +605,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/la-crisis-el-brasil-amenaza-las-empresas-exportadoras-paraguayas-n882104.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">3/22/2015</p>
                 </div>
@@ -626,7 +626,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/siembra-arroz-aumentara-mas-del-10-este-ano-afirman-los-productores-n844510.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-24.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-24.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">11/4/2014</p>
                 </div>
@@ -647,7 +647,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/arroceros-reclaman-mas-apoyo-entes-publicos-su-labor-n812948.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-25.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-25.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">7/18/2014</p>
                 </div>
@@ -668,7 +668,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://www.ultimahora.com/arroceros-reclaman-mayor-apoyo-instituciones-publicas-n812807.html" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-12.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">7/17/2014</p>
                 </div>
@@ -689,7 +689,7 @@
               <div class="container-blog">
                 <div class="container-image-blog">
                   <a href="https://flar.org/paraguay-el-area-de-cultivo-del-arroz-crecio-cerca-del-33-por-ciento/" target="_blank">
-                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-8.jpg')}}" alt="">
+                    <img class="image-blog" src="{{ url('assets_front/images/noticias/noticia-8.jpg')}}" loading="lazy" alt="">
                   </a>
                   <p class="fecha">3/12/2011</p>
                 </div>
