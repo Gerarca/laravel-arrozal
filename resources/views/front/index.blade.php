@@ -130,61 +130,7 @@
     </div>
   </section>
 
-  {{-- <section class="valores">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="container-valores">
-            <div class="container-icon-valores">
-              <img src="{{ url('assets_front/images/mision.svg')}}" alt="Icon Valores">
-              <span class="semilla semilla-1"></span>
-              <span class="semilla semilla-2"></span>
-              <span class="semilla semilla-3"></span>
-              <span class="semilla semilla-4"></span>
-            </div>
-            <div class="container-text-valores">
-              <h2 class="title-valores">Misión</h2>
-              <p class="valores-text">Fortalecer el potencial productivo y sustentable del arroz en Paraguay a través de la investigación científica, capacitación, producción y comercialización.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="container-valores">
-            <div class="container-icon-valores">
-              <img src="{{ url('assets_front/images/vision.svg')}}">
-              <span class="semilla semilla-5"></span>
-              <span class="semilla semilla-6"></span>
-              <span class="semilla semilla-7"></span>
-              <span class="semilla semilla-8"></span>
-            </div>
-            <div class="container-text-valores">
-              <h2 class="title-valores">Visión</h2>
-              <p class="valores-text">Posicionar el arroz paraguayo en el mercado
-                internacional como referencia de calidad y responsabilidad.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="container-valores">
-            <div class="container-icon-valores">
-              <img src="{{ url('assets_front/images/handshake.svg')}}" alt="Icon Valores">
-              <span class="semilla semilla-9"></span>
-              <span class="semilla semilla-10"></span>
-              <span class="semilla semilla-11"></span>
-              <span class="semilla semilla-12"></span>
-            </div>
-            <div class="container-text-valores">
-              <h2 class="title-valores">Valores</h2>
-              <p class="valores-text">Pasión, transparencia, compromiso, Innovación, conocimiento, sustentabilidad.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> --}}
+
   <section class="sombra"></section>
   <section class="historia">
     <div class="container">
@@ -291,7 +237,7 @@
           </div>
         </div>
         <div class="container-timeline-mobile">
-          <div class="container-image-timeline last">
+          <div class="container-image-timeline">
             <img class="img-timeline-mobile" src="{{ url('assets_front/images/5.jpg')}}" loading="lazy" alt="">
             <p>2019</p>
           </div>
@@ -324,13 +270,22 @@
 
   <section class="scroll" id="scroll">
     <figure class="mapa-1" id="mapa-1">
+      <picture>
+        <source srcset="{{ url('assets_front/images/mapa-responsive-1.jpg')}}" media="(max-width: 768px)">
         <img class="img-1" src="{{ url('assets_front/images/mapa-1.jpg')}}" alt="">
+       </picture>
     </figure>
     <figure class="mapa-2" id="mapa-2">
+      <picture>
+        <source srcset="{{ url('assets_front/images/mapa-responsive-2.jpg')}}" media="(max-width: 768px)">
         <img class="img-2" src="{{ url('assets_front/images/mapa-6.jpg')}}" alt="">
+       </picture>
     </figure>
     <figure class="mapa-3" id="mapa-3">
+      <picture>
+        <source srcset="{{ url('assets_front/images/mapa-responsive-2.jpg')}}" media="(max-width: 768px)">
         <img class="img-3" src="{{ url('assets_front/images/mapa-6.jpg')}}" alt="">
+       </picture>
     </figure>
     <div class="container-mapa-info">
       <h2 class="title-mapa-info">Arrozal S.A.</h2>
@@ -469,18 +424,19 @@
   <section class="testimonios">
     <div class="container">
       <div class="owl-testimonios owl-carousel owl-theme">
+        
+        <div class="item">
+          <div class="container-testimonios">
+            <p class="text-testimonio">“Empresa con una excelente atención y profesionalismo”</p>
+            <h4 class="autor-testimonio">Cocal Cereais</h4>
+          </div>
+        </div>
         <div class="item">
           <div class="container-testimonios">
             <p class="text-testimonio">“Arrozal S A no Paraguai , considero uma empresa que prima por três princípios básicos: Idoneidade, qualidade e comprometimento. No seguimento de arroz sempre cumprido o que se trata e encerrando com rapidez nossos contratos,
               E com isto só tenho a parabenizar os diretores e colaboradores por toda esta eficácia. Sou grato em tê-los como meu provedores e por nossa confiança mútua.”
               </p>
             <h4 class="autor-testimonio">Fepasi Alimentos </h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="container-testimonios">
-            <p class="text-testimonio">“Empresa con una excelente atención y profesionalismo”</p>
-            <h4 class="autor-testimonio">Cocal Cereais</h4>
           </div>
         </div>
       </div>
@@ -532,7 +488,7 @@
       </div>
       <div class="row mt-4">
         <div class="col-md-6">
-          {{-- <h3 class="title-form">Dejanos un mensaje</h3> --}}
+         
           <form action="#">
             <div class="form-group">
               <label for="nombre">Nombre</label>
@@ -668,7 +624,6 @@
   sr.reveal('.servi-text', { delay: 200})
   sr.reveal('.title-section', { delay: 200})
 
-  // sr.reveal('.tab-1', { delay:200})
   sr.reveal('.contianer-timeline-text', { interval: 16, delay:200})
 </script>
 

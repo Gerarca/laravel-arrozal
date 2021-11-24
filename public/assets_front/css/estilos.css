@@ -1676,7 +1676,8 @@ form {
         margin-bottom: 1rem;
     }
     .iframe-servicios {
-        height: 280px;
+        width: 100% !important;
+        height: auto;
         margin-bottom: 1rem;
     }
     .col-nosotros,
@@ -1778,7 +1779,8 @@ form {
     /* //////////Footer//////// */
     .container-footer-enlaces {
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
     }
     .title-section,
     .title-servicios,
@@ -1791,22 +1793,12 @@ form {
 }
 
 @media screen and (max-width:768px) {
-    #scroll {
-        height: 100vh;
-    }
-    .mapa-1,
-    .mapa-2 {
-        display: none;
-    }
     .img-3 {
         object-fit: cover;
         object-position: 20%;
     }
     .container-mapa-info {
         display: none;
-    }
-    .mapa-3 {
-        top: 0;
     }
     .tf-img-slider {
         width: 300px !important;
@@ -1822,5 +1814,16 @@ form {
     }
     .tp-mask-wrap {
         text-align: center;
+    }
+    .container-text-servicios {
+        height: auto;
+    }
+    .img-1,
+    .img-2,
+    .img-3 {
+        padding: 1rem 0;
+    }
+    .lista-enlaces-footer {
+        grid-column-gap: 0;
     }
 }
