@@ -31,7 +31,7 @@
      let $window = $(window);
      let wSize = $window.outerHeight();
      let element = $('#scroll');
-     if ($(window).width() > 520) {
+     if ($(window).width() > 320) {
          $window.on('scroll', function(event) {
              let wScroll = $window.scrollTop();
 
@@ -43,14 +43,14 @@
                  let eScroll = wScroll - eTop;
                  let eNextTop = $this.next().offset().top;
 
-                
+
                  if ((wScroll + wSize + (wSize / 2)) >= eTop && wScroll <= eFim) {
                      if (eScroll < 0) {
                          $this.find('.scroll').css('right', `${eScroll}px`);
                      } else if (eScroll >= 0) {}
                  }
 
-                
+
                  if (wScroll >= eTop && wScroll <= (eNextTop)) {
                      if (eScroll >= 0) {
                          $this.find('.mapa-1').css({ left: `-${eScroll}px`, opacity: (1 - (eScroll) / 500) });
@@ -60,7 +60,7 @@
                      }
                      $this.find('.mapa-1, .mapa-2, .mapa-3').addClass('p-fixed');
                  } else {
-                     
+
                      $this.find('.mapa-1, .mapa-2, .mapa-3').removeClass('p-fixed');
                  }
 
