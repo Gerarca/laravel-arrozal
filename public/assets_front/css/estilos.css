@@ -653,6 +653,10 @@ body {
     padding-top: 2rem;
 }
 
+.equipo-animation {
+    margin-bottom: 1.5rem;
+}
+
 
 /* //////////Equipo///////// */
 
@@ -1161,7 +1165,7 @@ body {
 
 @media screen and (max-width:768px) {
     .text-pasantia {
-        width: 100%;
+        width: 90%;
     }
     .grid-pasantia-item img {
         height: auto;
