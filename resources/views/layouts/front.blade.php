@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sr">
+<html lang="es" class="sr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
   <link rel="manifest" href="{{ url('assets_front/favicon/site.webmanifest')}}">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <meta name="google" content="notranslate">
 
   <link rel="stylesheet" href="{{ url('assets_front/css/owl.carousel.min.css')}}">
 
@@ -32,7 +33,7 @@
 </head>
 <body>
   <header class="header {{ Route::is('front.noticias') ? 'backgorund-new':'' }}" id="header">
-    <div class="container">
+    <div class="container-fluid">
       <nav class="menu-desktop">
         <div class="container-logo">
           <a href="{{ route('front.index')}}">
@@ -41,10 +42,11 @@
           </a>
         </div>
         <ul class="lista-menu">
+          <li><a href="{{ route('front.index')}}">Inicio</a></li>
           <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
           <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
-          <li><a href="{{ route('front.index')}}#pasantias">Programa de pasantías</a></li>
+          <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
           <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
         </ul>
@@ -55,10 +57,11 @@
       </nav>
       <div class="menu-mobile">
         <ul class="lista-menu-mobile">
+          <li><a href="{{ route('front.index')}}">Inicio</a></li>
           <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
           <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
-          <li><a href="{{ route('front.index')}}#pasantias">Programa de pasantías</a></li>
+          <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
           <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
         </ul>
@@ -69,7 +72,7 @@
 
   @yield('content')
   <div class="btn-whatsapp">
-    <a href="https://wa.me/%2B595984684092" target="_blank" title="Whatsapp">
+    <a href="https://wa.me/%2B595984684092?text=%C2%A1Bienvenido%20a%20Arrozal%20S.A.!%20Gracias%20por%20contactarnos.%20%C2%BFCómo%20podemos%20ayudarte%3F" target="_blank" title="Whatsapp">
       <img src="{{ url('assets_front/images/wa-whatsapp.svg')}}" alt="Icon Whatsapp">
     </a>
   </div>
@@ -79,7 +82,7 @@
        <div class="col-md-4">
          <div class="container-logo-footer">
             <a href="{{ route('front.index')}}">
-              <img src="{{ url('assets_front/images/logo-white.svg')}}" width="190" alt="Arrozal S.A.">
+              <img src="{{ url('assets_front/images/logo.svg')}}" width="190" alt="Arrozal S.A.">
             </a>
          </div>
        </div>
@@ -87,10 +90,11 @@
          <div class="container-footer-enlaces">
            <h2 class="title-footer">Enlaces</h2>
            <ul class="lista-enlaces-footer">
+             <li><a href="{{ route('front.index')}}">Inicio</a></li>
              <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
              <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
              <li><a href="{{ route('front.index')}}#servicios">Nuestros Servicios</a></li>
-             <li><a href="{{ route('front.index')}}#pasantias">Programa de pasantías</a></li>
+             <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
              <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
              <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
             </ul>

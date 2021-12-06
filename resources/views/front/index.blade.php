@@ -7,10 +7,10 @@
       <div id="rev-slider1" class="rev_slider  ">
           <ul>
               <li data-transition="random">
-                  <img src="{{ url('assets_front/images/banner-1.png')}}" alt="" data-bgposition="center center" data-no-retina>
+                  <img src="{{ url('assets_front/images/banner-new-3.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
                   <div class="bg-slider-1"></div>
 
-                  <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
+                  {{-- <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
                   data-width="full" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="400" data-splitin="none" data-splitout="none" data-responsive_offset="on">
                       <div class="text-banner">
@@ -18,15 +18,14 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquam recusandae, quis quo commodi debitis.</p>
                       </div>
                       <a class="btn-enviar mt-1" href="#">Más información</a>
-                  </div>
+                  </div> --}}
               </li>
 
-
               <li data-transition="random">
-                  <img src="{{ url('assets_front/images/banner-2.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
+                  <img src="{{ url('assets_front/images/banner-1-new.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
                   <div class="bg-slider-1"></div>
 
-                  <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
+                  {{-- <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
                   data-width="full" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="400" data-splitin="none" data-splitout="none" data-responsive_offset="on">
                     <div class="text-banner">
@@ -34,16 +33,15 @@
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquam recusandae, quis quo commodi debitis.</p>
                     </div>
                     <a class="btn-enviar mt-1" href="#">Más información</a>
-                  </div>
+                  </div> --}}
 
               </li>
 
-
               <li data-transition="random">
-                  <img src="{{ url('assets_front/images/banner-3.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
+                  <img src="{{ url('assets_front/images/banner-new-2.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
                   <div class="bg-slider-1"></div>
 
-                  <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
+                  {{-- <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
                   data-width="full" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                   data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="400" data-splitin="none" data-splitout="none" data-responsive_offset="on">
                     <div class="text-banner">
@@ -51,7 +49,12 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquam recusandae, quis quo commodi debitis.</p>
                     </div>
                     <a class="btn-enviar mt-1" href="#">Más información</a>
-                  </div>
+                  </div> --}}
+
+              </li>
+              <li data-transition="random">
+                  <img src="{{ url('assets_front/images/banner-4.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
+                  <div class="bg-slider-1"></div>
 
               </li>
 
@@ -130,6 +133,37 @@
     </div>
   </section>
 
+  <section class="equipo">
+    <div class="container">
+      <h2 class="title-historia">Nuestro equipo</h2>
+      <div class="row row-equipo">
+        <div class="col-md-3 equipo-animation">
+          <div class="equipo-image">
+            <img src="{{ url('assets_front/images/maria.jpg')}}" alt="">
+          </div>
+          <h3 class="title-equipo">María Alejandra </h3>
+        </div>
+        <div class="col-md-3 equipo-animation">
+          <div class="equipo-image">
+            <img src="{{ url('assets_front/images/andres.jpg')}}" alt="">
+          </div>
+          <h3 class="title-equipo">Andrés Felipe</h3>
+        </div>
+        <div class="col-md-3 equipo-animation">
+          <div class="equipo-image">
+            <img src="{{ url('assets_front/images/marta.jpg')}}" alt="">
+          </div>
+          <h3 class="title-equipo">Marta Martínez</h3>
+        </div>
+        <div class="col-md-3 equipo-animation">
+          <div class="equipo-image">
+            <img src="{{ url('assets_front/images/hector.jpg')}}" alt="">
+          </div>
+          <h3 class="title-equipo">Héctor Ramírez</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="sombra"></section>
   <section class="historia">
@@ -145,7 +179,7 @@
           {{-- <input class="input-hidde" id='step-6' name='step' type='radio'> --}}
           <div class='progress-container'>
             <label for='step-1'>
-              <img src="{{ url('assets_front/images/1.jpg')}}" loading="lazy" alt="">
+              <img src="{{ url('assets_front/images/2004.jpg')}}" loading="lazy" alt="">
               2004
             </label>
           </div>
@@ -169,7 +203,7 @@
           </div>
           <div class='progress-container'>
             <label for='step-5'>
-              <img src="{{ url('assets_front/images/soja.jpg')}}" loading="lazy" alt="">
+              <img src="{{ url('assets_front/images/2021.jpg')}}" loading="lazy" alt="">
               2021
             </label>
           </div>
@@ -208,7 +242,7 @@
       <div class="timeline-mobile">
         <div class="container-timeline-mobile">
           <div class="container-image-timeline">
-            <img class="img-timeline-mobile" src="{{ url('assets_front/images/1.jpg')}}" loading="lazy" alt="">
+            <img class="img-timeline-mobile" src="{{ url('assets_front/images/2004.jpg')}}" loading="lazy" alt="">
             <p>2004</p>
           </div>
           <div class="contianer-timeline-text">
@@ -252,7 +286,7 @@
         </div>
         <div class="container-timeline-mobile">
           <div class="container-image-timeline last">
-            <img class="img-timeline-mobile" src="{{ url('assets_front/images/soja.jpg')}}" loading="lazy" alt="">
+            <img class="img-timeline-mobile" src="{{ url('assets_front/images/2021.jpg')}}" loading="lazy" alt="">
             <p>2021</p>
           </div>
           <div class="contianer-timeline-text">
@@ -294,7 +328,7 @@
   </section>
 
   <section class="sombra sombre-blanca"></section>
-  <section class="nuestros-sevicios" id="servicios">
+  {{-- <section class="nuestros-sevicios" id="servicios">
     <div class="container">
       <h2 class="title-servicios">Nuestros Servicios</h2>
      
@@ -419,6 +453,144 @@
         </div>
       </div>
     </div>
+  </section> --}}
+
+  <section class="nuestros-sevicios" id="servicios">
+    <div class="container">
+      <h2 class="title-servicios">Nuestros Servicios</h2>
+
+      <div class="grid-servicios">
+        <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/produccion.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Producción Arroz</h2>
+            <p class="grid-servicios-text">San Cosme - Itapúa. Tipo de Arroz: Arroz largo fino. Época de Cosecha: Enero a Abril</p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-01" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div>
+
+        <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/1.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Comercialización</h2>
+            <p class="grid-servicios-text">Exportamos arroz en cascara y actuamos como intermediarios de la exportación de arroz blanco.</p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-02" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div>
+
+        <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/consultoria.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Consultoría Técnica</h2>
+            <p class="grid-servicios-text">40 años de experiencia en el cultivo de arroz en Paraguay, Colombia y Brasil.</p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-03" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div>
+
+        <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/silos.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Servicios de secado y almacenaje</h2>
+            <p class="grid-servicios-text">Ubicación: Coronel Bogado - Itapúa <br> Servicio de 24 horas durante la época de cosecha.</p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-04" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div>
+
+        <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/maquinas.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Servicio de Máquinas</h2>
+            <p class="grid-servicios-text">Ofrecemos nuestras maquinas para realizar actividades agricolas relacionadas a la preparacion de suelo, siembra y cosecha. </p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-05" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div>
+        
+        <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/experimental.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Campo Experimental <br> Privado</h2>
+            <p class="grid-servicios-text">Ubicación: Coronel Bogado - Itapúa, San Cosme - Itapúa, Bajo Chaco - Chaco</p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-06" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div>
+
+        {{-- <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/pasantia.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Programas de pasantías</h2>
+            <p class="grid-servicios-text">Más de 30 estudiantes de universidades y colegios agrícolas han realizado sus pasantías en nuestro centro de investigación.</p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-07" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div> --}}
+
+        <div class="grid-servicios-items">
+          <div class="grid-servicios-images">
+            <img src="{{ url('assets_front/images/soja.jpg')}}" alt="">
+          </div>
+          <div class="grid-servicios-text">
+            <h2 class="grid-servicios-title">Producción de Soja</h2>
+            <p class="grid-servicios-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolorem blanditiis aspernatur fugit tempore accusamus.</p>
+          </div>
+          <div class="grid-sevicions-button">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-08" class="grid-servicios-btn">Ver más</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pasantia" id="pasantia">
+    
+      <h2 class="title-servicios">Programas de pasantías</h2>
+      <p class="text-pasantia">Más de 30 estudiantes de universidades y colegios agrícolas han realizado sus pasantías en nuestro centro de investigación.</p>
+
+      <div class="grid-pasantia">
+        <div class="grid-pasantia-item">
+          <img src="{{ url('assets_front/images/pasantia.jpg')}}" alt="">
+          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+        </div>
+        <div class="grid-pasantia-item">
+          <img src="{{ url('assets_front/images/soja.jpg')}}" alt="">
+          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+        </div>
+        <div class="grid-pasantia-item">
+          <img src="{{ url('assets_front/images/5.png')}}" alt="">
+          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+        </div>
+        <div class="grid-pasantia-item">
+          <img src="{{ url('assets_front/images/6.jpg')}}" alt="">
+          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+        </div>
+      </div>
   </section>
 
   <section class="testimonios">
@@ -596,6 +768,224 @@
     </div>
   </section>
 
+{{-- /////////////Modales/////////////// --}}
+<!-- Modal 01-->
+<div class="modal fade" id="modal-01" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/produccion.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Producción Comercial de Arroz</h2>
+              <p>Ubicación: San Cosme - Itapúa</p>
+              <p>Tipo de Arroz: Arroz largo fino</p>
+              <p>Época de Cosecha: Enero a Abril</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 01-->
+
+<!-- Modal 02-->
+<div class="modal fade" id="modal-02" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/1.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Comercialización</h2>
+              <p>Exportamos arroz en cascara y actuamos como intermediarios de la exportación de arroz blanco.</p>
+              <p>Constantemente estamos desarrollando mercados de exportación y relaciones valiosas a largo plazo.</p>
+              <ul class="lista-servicios">
+                <li>Paquetes de 1 kg - 5 kg</li>
+                <li>Bolsas de 25 kg / 30kg</li>
+                <li>Granel</li>
+              </ul>
+              <a href="#contacto" class="btn-enviar btn-cotizacion">Solicitar cotización</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 02-->
+
+<!-- Modal 03-->
+<div class="modal fade" id="modal-03" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/consultoria.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Consultoría Técnica</h2>
+              <p>40 años de experiencia en el cultivo de arroz en Paraguay, Colombia y Brasil.</p>
+              <ul class="lista-servicios">
+                <li>Estudio de aptitud de campo para producción de arroz.</li>
+                <li>Elaboración de proyectos de producción.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 03-->
+
+<!-- Modal 04-->
+<div class="modal fade" id="modal-04" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/silos.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Servicios de secado y almacenaje </h2>
+              <p>Ubicación: Coronel Bogado - Itapúa</p>
+              <p>Servicio de 24 horas durante la época de cosecha.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 04-->
+
+<!-- Modal 05-->
+<div class="modal fade" id="modal-05" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/maquinas.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Servicios de secado y almacenaje </h2>
+              <p>Ubicación: Coronel Bogado - Itapúa</p>
+              <p>Servicio de 24 horas durante la época de cosecha.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 05-->
+
+<!-- Modal 06-->
+<div class="modal fade" id="modal-06" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/experimental.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Servicio de Máquinas</h2>
+              <p>Ofrecemos nuestras maquinas para realizar actividades agricolas relacionadas a la preparacion de suelo, siembra y cosecha. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 06-->
+
+<!-- Modal 07-->
+<div class="modal fade" id="modal-07" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/pasantia.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Programas de pasantías</h2>
+              <p>Más de 30 estudiantes de universidades y colegios agrícolas han realizado sus pasantías en nuestro centro de investigación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 07-->
+
+<!-- Modal 08-->
+<div class="modal fade" id="modal-08" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="grid-modal">
+          <div class="grid-modal-item">
+            <img class="img-modal" src="{{ url('assets_front/images/soja.jpg')}}" alt="">
+          </div>
+          <div class="grid-modal-item">
+            <div class="container-text-servicios">
+              <h2 class="title-row-servicios">Producción de Soja</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tenetur ut rerum commodi! Praesentium, asperiores ipsum repudiandae necessitatibus sapiente enim dolores dolorem tenetur a cum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Modal 08-->
+
+
+{{-- /////////////FIN Modales/////////////// --}}
 </main>
 @endsection
 @section('especifico')
@@ -613,6 +1003,8 @@
   sr.reveal('.img-nosotros', { delay: 200})
   sr.reveal('.title-historia', { delay: 200})
   sr.reveal('.container-valores', { interval: 16, delay:200})
+  sr.reveal('.equipo-animation', { interval: 16, delay:200})
+  sr.reveal('.grid-servicios-items', { interval: 16, delay:200})
 
   sr.reveal('.container-mapa-info', { delay: 200})
   sr.reveal('.title-servicios', { delay: 200})

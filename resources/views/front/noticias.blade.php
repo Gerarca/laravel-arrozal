@@ -4,7 +4,7 @@
 <main class="main-blog">
   <section class="banner-novedades">
     <div class="container">
-      <h2 class="title-blog">Novedades</h2>
+      <h2 class="title-blog">Noticias</h2>
     </div>
   </section>
   <section class="blog">
