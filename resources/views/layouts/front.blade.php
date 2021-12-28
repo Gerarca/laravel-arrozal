@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets_front/favicon/apple-touch-icon.png')}}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets_front/favicon/favicon-32x32.png')}}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets_front/favicon/favicon-16x16.png')}}">
@@ -17,11 +17,11 @@
 
   <link rel="stylesheet" href="{{ url('assets_front/css/bootstrap.min.css')}}">
 
-  <link rel="stylesheet" href="{{ url('assets_front/css/estilos.css')}}">
+  <link rel="stylesheet" href="{{ url('assets_front/css/estilos.css')}}?v=0.1">
   <link rel="stylesheet" href="{{ url('assets_front/css/rev-slider.css')}}">
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  
+
 
 
   @hasSection('title')
@@ -29,7 +29,7 @@
   @else
    <title>Arrozal</title>
   @endif
-  
+
 </head>
 <body>
   <header class="header {{ Route::is('front.noticias') ? 'backgorund-new':'' }}" id="header">
@@ -72,7 +72,7 @@
 
   @yield('content')
   <div class="btn-whatsapp">
-    <a href="https://wa.me/%2B595984684092?text=%C2%A1Bienvenido%20a%20Arrozal%20S.A.!%20Gracias%20por%20contactarnos.%20%C2%BFCómo%20podemos%20ayudarte%3F" target="_blank" title="Whatsapp">
+    <a href="https://wa.me/595984684092?text=Estoy%20escribiendo%20del%20sitio%20web" target="_blank" title="Whatsapp">
       <img src="{{ url('assets_front/images/wa-whatsapp.svg')}}" alt="Icon Whatsapp">
     </a>
   </div>
@@ -140,7 +140,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slideReveal/1.1.2/jquery.slidereveal.min.js" integrity="sha512-lvyVkYVYViNQ5+AhhO/6FUr5/cA8s7G3BOy6VY3GsBpZeyX7eJoYLDSpy4RbszSzA1gqmROQmWNDNECah7Ds+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="{{ url('assets_front/plugins/owl.carousel.min.js')}}"></script>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.7/scrollreveal.min.js"></script>
 
   {{-- rev-slider --}}

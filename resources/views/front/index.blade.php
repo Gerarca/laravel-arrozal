@@ -20,44 +20,10 @@
                       <a class="btn-enviar mt-1" href="#">Más información</a>
                   </div> --}}
               </li>
-
               <li data-transition="random">
-                  <img src="{{ url('assets_front/images/banner-1-new.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
+                  <img src="{{ url('assets_front/images/Campo3.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
                   <div class="bg-slider-1"></div>
-
-                  {{-- <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
-                  data-width="full" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                  data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="400" data-splitin="none" data-splitout="none" data-responsive_offset="on">
-                    <div class="text-banner">
-                      <h2> Sit aliquam recusandae, quis quo commodi debitis.</h2>
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquam recusandae, quis quo commodi debitis.</p>
-                    </div>
-                    <a class="btn-enviar mt-1" href="#">Más información</a>
-                  </div> --}}
-
               </li>
-
-              <li data-transition="random">
-                  <img src="{{ url('assets_front/images/banner-new-2.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
-                  <div class="bg-slider-1"></div>
-
-                  {{-- <div class="container-text-banner tp-caption" data-x="['left','left','left','center']" data-hoffset="['40','90','30','14']" data-y="['middle','middle','middle','middle']" data-voffset="['0','40','0','40']" data-fontsize="['72','62','50','42']" data-lineheight="['86','70','64','48']"
-                  data-width="full" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                  data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="400" data-splitin="none" data-splitout="none" data-responsive_offset="on">
-                    <div class="text-banner">
-                      <h2>Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquam recusandae, quis quo commodi debitis.</p>
-                    </div>
-                    <a class="btn-enviar mt-1" href="#">Más información</a>
-                  </div> --}}
-
-              </li>
-              <li data-transition="random">
-                  <img src="{{ url('assets_front/images/banner-4.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
-                  <div class="bg-slider-1"></div>
-
-              </li>
-
           </ul>
       </div>
     </div>
@@ -76,7 +42,7 @@
     <div class="container">
       <div class="row row-nosotros">
         <div class="col-md-6">
-          <img class="img-nosotros load-hidden" src="{{ url('assets_front/images/banner-3.jpg')}}" loading="lazy" alt="">
+          <img class="img-nosotros load-hidden" src="{{ url('assets_front/images/quienes-somos2.JPG')}}" loading="lazy" alt="">
         </div>
         <div class="col-md-6 col-nosotros">
           <div class="container-text-nosotros load-hidden">
@@ -123,7 +89,7 @@
               </div>
               <div class="container-text-valores">
                 <h2 class="title-valores">Valores</h2>
-                <p class="valores-text">Pasión, transparencia, compromiso, Innovación, conocimiento, sustentabilidad.
+                <p class="valores-text">Pasión, transparencia, compromiso e integridad.
                 </p>
               </div>
             </div>
@@ -179,19 +145,19 @@
           {{-- <input class="input-hidde" id='step-6' name='step' type='radio'> --}}
           <div class='progress-container'>
             <label for='step-1'>
-              <img src="{{ url('assets_front/images/2004.jpg')}}" loading="lazy" alt="">
+              <img src="{{ url('assets_front/images/Consultoria.png')}}" loading="lazy" alt="">
               2004
             </label>
           </div>
           <div class='progress-container'>
             <label for='step-2'>
-              <img src="{{ url('assets_front/images/3.jpg')}}" loading="lazy" alt="">
+              <img src="{{ url('assets_front/images/Silos2.JPG')}}" loading="lazy" alt="">
               2012
             </label>
           </div>
           <div class='progress-container'>
             <label for='step-3'>
-              <img src="{{ url('assets_front/images/4.jpg')}}" loading="lazy" alt="">
+              <img src="{{ url('assets_front/images/Campo2.jpeg')}}" loading="lazy" alt="">
               2017
             </label>
           </div>
@@ -203,7 +169,7 @@
           </div>
           <div class='progress-container'>
             <label for='step-5'>
-              <img src="{{ url('assets_front/images/2021.jpg')}}" loading="lazy" alt="">
+              <img src="{{ url('assets_front/images/Soja-2021.JPG')}}" loading="lazy" alt="">
               2021
             </label>
           </div>
@@ -219,21 +185,21 @@
 
             <div class='tab-timeline tab-2'>
               <h5 class="title-timeline">
-                Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Investigación y Servicios de Pos-Cosecha
+                Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Campo Experimental y Servicios de secado y almacenamiento de grano.
               </h5>
             </div>
             <div class='tab-timeline tab-3'>
-              <h5 class="title-timeline">Inicio de la Producción Comercial de Arroz</h5>
+              <h5 class="title-timeline">Inicio de la producción comercial de arroz en San Cosme y Damián y Bajo Chaco.</h5>
             </div>
             <div class='tab-timeline tab-4'>
               <h5 class="title-timeline">
                 <a href="https://www.gpsa.com.py/" target="_blank">
-                  Formación de la sociedad Arrozales del Chaco S.A. con GPSAE – Producción de arroz en el bajo Chaco.
+                  Formación de la sociedad Arrozales del Chaco S.A. con G.P.S.A.E – Producción de arroz en el bajo Chaco.
                 </a>
               </h5>
             </div>
             <div class='tab-timeline tab-5'>
-              <h5 class="title-timeline">Inicio de la produccion de soja en General Delgado</h5>
+              <h5 class="title-timeline">Inicio de la producción de soja en General Delgado.</h5>
             </div>
           </div>
         </div>
@@ -242,7 +208,7 @@
       <div class="timeline-mobile">
         <div class="container-timeline-mobile">
           <div class="container-image-timeline">
-            <img class="img-timeline-mobile" src="{{ url('assets_front/images/2004.jpg')}}" loading="lazy" alt="">
+            <img class="img-timeline-mobile" src="{{ url('assets_front/images/Consultoria.png')}}" loading="lazy" alt="">
             <p>2004</p>
           </div>
           <div class="contianer-timeline-text">
@@ -252,21 +218,21 @@
         </div>
         <div class="container-timeline-mobile">
           <div class="container-image-timeline">
-            <img class="img-timeline-mobile" src="{{ url('assets_front/images/3.jpg')}}" loading="lazy" alt="">
+            <img class="img-timeline-mobile" src="{{ url('assets_front/images/Silos2.JPG')}}" loading="lazy" alt="">
             <p>2012</p>
           </div>
           <div class="contianer-timeline-text">
-            <h5 class="title-timeline">Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Investigación y Servicios de Pos-Cosecha</h5>
+            <h5 class="title-timeline">Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Campo Experimental y Servicios de secado y almacenamiento de grano.</h5>
 
           </div>
         </div>
         <div class="container-timeline-mobile">
           <div class="container-image-timeline">
-            <img class="img-timeline-mobile" src="{{ url('assets_front/images/4.jpg')}}" loading="lazy" alt="">
+            <img class="img-timeline-mobile" src="{{ url('assets_front/images/Campo2.jpeg')}}" loading="lazy" alt="">
             <p>2017</p>
           </div>
           <div class="contianer-timeline-text">
-            <h5 class="title-timeline">Inicio de la Producción Comercial de Arroz</h5>
+            <h5 class="title-timeline">Inicio de la producción comercial de arroz en San Cosme y Damián y Bajo Chaco.</h5>
 
           </div>
         </div>
@@ -278,7 +244,7 @@
           <div class="contianer-timeline-text">
             <h5 class="title-timeline">
               <a href="https://www.gpsa.com.py/" target="_blank">
-                Formación de la sociedad Arrozales del Chaco S.A. con GPSAE – Producción de arroz en el bajo Chaco.
+                Formación de la sociedad Arrozales del Chaco S.A. con G.P.S.A.E – Producción de arroz en el bajo Chaco.
               </a>
             </h5>
 
@@ -286,13 +252,13 @@
         </div>
         <div class="container-timeline-mobile">
           <div class="container-image-timeline last">
-            <img class="img-timeline-mobile" src="{{ url('assets_front/images/2021.jpg')}}" loading="lazy" alt="">
+            <img class="img-timeline-mobile" src="{{ url('assets_front/images/Soja-2021.JPG')}}" loading="lazy" alt="">
             <p>2021</p>
           </div>
           <div class="contianer-timeline-text">
             <h5 class="title-timeline">
               <a href="https://www.gpsa.com.py/" target="_blank">
-                Inicio de la produccion de soja en General Delgado
+                Inicio de la producción de soja en General Delgado.
               </a>
             </h5>
 
@@ -312,18 +278,18 @@
     <figure class="mapa-2" id="mapa-2">
       <picture>
         <source srcset="{{ url('assets_front/images/mapa-responsive-2.jpg')}}" media="(max-width: 768px)">
-        <img class="img-2" src="{{ url('assets_front/images/mapa-6.jpg')}}" alt="">
+        <img class="img-2" src="{{ url('assets_front/images/mapa-7.png')}}" alt="">
        </picture>
     </figure>
     <figure class="mapa-3" id="mapa-3">
       <picture>
         <source srcset="{{ url('assets_front/images/mapa-responsive-2.jpg')}}" media="(max-width: 768px)">
-        <img class="img-3" src="{{ url('assets_front/images/mapa-6.jpg')}}" alt="">
+        <img class="img-3" src="{{ url('assets_front/images/mapa-7.png')}}" alt="">
        </picture>
     </figure>
     <div class="container-mapa-info">
-      <h2 class="title-mapa-info">Arrozal S.A.</h2>
-      <p class="text-mapa-info">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable. </p>
+      <h2 class="title-mapa-info">Donde estamos</h2>
+      <p class="text-mapa-info">Nuestra producción de arroz esta ubicada en dos regiones. La primera producción se encuentra en el Departamento de Itapúa en la cuenca del Río Paraná próxima a la Central Hidroeléctrica Yacyretá. El segundo emprendimiento esta ubicado en la cuenca del Río Paraguay, en el lado Chaco próximo a la ciudad de Concepción en el Departamento de Presidente Hayes. </p>
     </div>
   </section>
 
@@ -331,7 +297,7 @@
   {{-- <section class="nuestros-sevicios" id="servicios">
     <div class="container">
       <h2 class="title-servicios">Nuestros Servicios</h2>
-     
+
       <div class="row row-servicios">
         <div class="col-md-12 col-lg-6">
           <img class="img-servicios" src="{{ url('assets_front/images/produccion.jpg')}}" loading="lazy" alt="">
@@ -460,33 +426,33 @@
       <h2 class="title-servicios">Nuestros Servicios</h2>
 
       <div class="grid-servicios">
-        <div class="grid-servicios-items">
+        <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
             <img src="{{ url('assets_front/images/produccion.jpg')}}" alt="">
           </div>
           <div class="grid-servicios-text">
-            <h2 class="grid-servicios-title">Producción Arroz</h2>
-            <p class="grid-servicios-text">San Cosme - Itapúa. Tipo de Arroz: Arroz largo fino. Época de Cosecha: Enero a Abril</p>
+            <h2 class="grid-servicios-title">Producción Comercial de Arroz</h2>
+            <p class="grid-servicios-text">San Cosme – Itapúa (Arrozal S.A.), Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.). Tipo de Arroz: Arroz largo fino. Época de Cosecha: Enero a Abril</p>
           </div>
           <div class="grid-sevicions-button">
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-01" class="grid-servicios-btn">Ver más</a>
           </div>
         </div>
 
-        <div class="grid-servicios-items">
+        <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
             <img src="{{ url('assets_front/images/1.jpg')}}" alt="">
           </div>
           <div class="grid-servicios-text">
             <h2 class="grid-servicios-title">Comercialización</h2>
-            <p class="grid-servicios-text">Exportamos arroz en cascara y actuamos como intermediarios de la exportación de arroz blanco.</p>
+            <p class="grid-servicios-text">Comercializamos arroz en cáscara localmente y en el exterior. Además, actuamos como intermediarios de la exportación de arroz blanco.</p>
           </div>
           <div class="grid-sevicions-button">
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-02" class="grid-servicios-btn">Ver más</a>
           </div>
         </div>
 
-        <div class="grid-servicios-items">
+        <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
             <img src="{{ url('assets_front/images/consultoria.jpg')}}" alt="">
           </div>
@@ -499,7 +465,7 @@
           </div>
         </div>
 
-        <div class="grid-servicios-items">
+        <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
             <img src="{{ url('assets_front/images/silos.jpg')}}" alt="">
           </div>
@@ -512,26 +478,26 @@
           </div>
         </div>
 
-        <div class="grid-servicios-items">
+        <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
-            <img src="{{ url('assets_front/images/maquinas.jpg')}}" alt="">
+            <img src="{{ url('assets_front/images/serv-maq.JPG')}}" alt="">
           </div>
           <div class="grid-servicios-text">
             <h2 class="grid-servicios-title">Servicio de Máquinas</h2>
-            <p class="grid-servicios-text">Ofrecemos nuestras maquinas para realizar actividades agricolas relacionadas a la preparacion de suelo, siembra y cosecha. </p>
+            <p class="grid-servicios-text">Prestamos servicio de máquinas a la empresa Arrozales del Chaco cubriendo una área del 40%.</p>
           </div>
           <div class="grid-sevicions-button">
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-05" class="grid-servicios-btn">Ver más</a>
           </div>
         </div>
-        
-        <div class="grid-servicios-items">
+
+        <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
             <img src="{{ url('assets_front/images/experimental.jpg')}}" alt="">
           </div>
           <div class="grid-servicios-text">
             <h2 class="grid-servicios-title">Campo Experimental <br> Privado</h2>
-            <p class="grid-servicios-text">Ubicación: Coronel Bogado - Itapúa, San Cosme - Itapúa, Bajo Chaco - Chaco</p>
+            <p class="grid-servicios-text">Ubicación: Coronel Bogado - Itapúa, San Cosme - Itapúa, Bajo Chaco – Pte. Hayes</p>
           </div>
           <div class="grid-sevicions-button">
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-06" class="grid-servicios-btn">Ver más</a>
@@ -551,13 +517,13 @@
           </div>
         </div> --}}
 
-        <div class="grid-servicios-items">
+        <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
-            <img src="{{ url('assets_front/images/soja.jpg')}}" alt="">
+            <img src="{{ url('assets_front/images/FAV36.JPG')}}" alt="">
           </div>
           <div class="grid-servicios-text">
             <h2 class="grid-servicios-title">Producción de Soja</h2>
-            <p class="grid-servicios-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolorem blanditiis aspernatur fugit tempore accusamus.</p>
+            <p class="grid-servicios-text">Producimos soja en la ciudad de General Delgado, Departamento de Itapúa.</p>
           </div>
           <div class="grid-sevicions-button">
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-08" class="grid-servicios-btn">Ver más</a>
@@ -569,47 +535,74 @@
   </section>
 
   <section class="pasantia" id="pasantia">
-    
+
       <h2 class="title-servicios">Programas de pasantías</h2>
       <p class="text-pasantia">Más de 30 estudiantes de universidades y colegios agrícolas han realizado sus pasantías en nuestro centro de investigación.</p>
 
       <div class="grid-pasantia">
         <div class="grid-pasantia-item">
-          <img src="{{ url('assets_front/images/pasantia.jpg')}}" alt="">
-          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+          <img src="{{ url('assets_front/images/Pasantia1.jpg')}}" alt="">
         </div>
         <div class="grid-pasantia-item">
-          <img src="{{ url('assets_front/images/soja.jpg')}}" alt="">
-          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+          <img src="{{ url('assets_front/images/Pasantia3.jpeg')}}" alt="">
         </div>
         <div class="grid-pasantia-item">
-          <img src="{{ url('assets_front/images/5.png')}}" alt="">
-          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+          <img src="{{ url('assets_front/images/Pasantia4.jpeg')}}" alt="">
         </div>
         <div class="grid-pasantia-item">
-          <img src="{{ url('assets_front/images/6.jpg')}}" alt="">
-          <h3 class="grid-pasantia-description">Lorem, ipsum dolor.</h3>
+          <img src="{{ url('assets_front/images/Pasantia5.jpeg')}}" alt="">
         </div>
       </div>
   </section>
 
-  <section class="testimonios">
-    <div class="container">
-      <div class="owl-testimonios owl-carousel owl-theme">
-        
-        <div class="item">
-          <div class="container-testimonios">
-            <p class="text-testimonio">“Empresa con una excelente atención y profesionalismo”</p>
-            <h4 class="autor-testimonio">Cocal Cereais</h4>
-          </div>
+  <section class="pb-5 d-none">
+
+      <h2 class="title-servicios">Día de Campo</h2>
+      <p class="text-pasantia">Desde el año 2013, hemos estado organizando cada año el día de campo con el fin de reunir a todos los interesados en la producción de arroz. En este evento, participan productores, representantes de empresas, instituciones financieras, institutos nacionales e internacional, profesores y estudiantes.
+        Durante la jornada, los visitantes tienen la oportunidad de intercambiar información, recorrer el campo de producción y las parcelas experimentales, debatir importantes asuntos y situaciones del sector arrocero.
+      </p>
+
+      <div class="grid-pasantia">
+        <div class="grid-pasantia-item">
+          <img src="{{ url('assets_front/images/Campo1.jpg')}}" alt="">
         </div>
-        <div class="item">
-          <div class="container-testimonios">
-            <p class="text-testimonio">“Arrozal S A no Paraguai , considero uma empresa que prima por três princípios básicos: Idoneidade, qualidade e comprometimento. No seguimento de arroz sempre cumprido o que se trata e encerrando com rapidez nossos contratos,
-              E com isto só tenho a parabenizar os diretores e colaboradores por toda esta eficácia. Sou grato em tê-los como meu provedores e por nossa confiança mútua.”
-              </p>
-            <h4 class="autor-testimonio">Fepasi Alimentos </h4>
-          </div>
+        <div class="grid-pasantia-item">
+          <img src="{{ url('assets_front/images/Campo2.jpeg')}}" alt="">
+        </div>
+        <div class="grid-pasantia-item">
+          <img src="{{ url('assets_front/images/Campo3.jpg')}}" alt="">
+        </div>
+      </div>
+  </section>
+
+  <section class="adc">
+    <div class="container">
+      <img src="{{asset('assets_front/images/adc-logo1.png')}}" alt="Arrozales del Chaco S.A." class="adc-logo" loading="lazy">
+      <p class="text-adc">Por medio de la unión de ARROZAL S.A. Y G.P.S.A.E., nace en el 2019 la empresa Arrozales del Chaco S.A. - El proyecto arrocero de mayor impacto en el país ubicado en el departamento Presidente Hayes. Hoy en día, se producen 6,000 hectáreas y se apunta a alcanzar el área de 10,000 hectáreas.
+      </p>
+
+      <div class="video-container mb-4">
+        <iframe src="https://www.youtube.com/embed/ySJLXFdLGSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="row" style="gap: 30px 0px;">
+        <div class="adc-img col-6 col-md-6">
+          <img src="{{ url('assets_front/images/ADCH0.JPG')}}" class="img-fluid" loading="lazy" alt="">
+        </div>
+        <div class="adc-img col-6 col-md-6">
+          <img src="{{ url('assets_front/images/ADCH1.JPG')}}" class="img-fluid" loading="lazy" alt="">
+        </div>
+        <div class="adc-img col-6 col-md-6">
+          <img src="{{ url('assets_front/images/ADCH2.JPG')}}" class="img-fluid" loading="lazy" alt="">
+        </div>
+        <div class="adc-img col-6 col-md-6">
+          <img src="{{ url('assets_front/images/ADCH3.JPG')}}" class="img-fluid" loading="lazy" alt="">
+        </div>
+        <div class="adc-img col-6 col-md-6">
+          <img src="{{ url('assets_front/images/ADCH4.JPG')}}" class="img-fluid" loading="lazy" alt="">
+        </div>
+        <div class="adc-img col-6 col-md-6">
+          <img src="{{ url('assets_front/images/ADCH5.JPG')}}" class="img-fluid" loading="lazy" alt="">
         </div>
       </div>
     </div>
@@ -656,11 +649,11 @@
             </li>
           </ul>
         </div>
-       
+
       </div>
       <div class="row mt-4">
         <div class="col-md-6">
-         
+
           <form action="#">
             <div class="form-group">
               <label for="nombre">Nombre</label>
@@ -680,6 +673,7 @@
                 <select class="form-control" name="asunto" id="select" required>
                   <option value="Solicitar cotizacion" selected>Solicitar cotización</option>
                   <option value="Trabaja con nosotros">Trabajá con Nosotros</option>
+                  <option value="Otros">Otros</option>
                 </select>
               </div>
             </div>
@@ -784,7 +778,9 @@
           <div class="grid-modal-item">
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Producción Comercial de Arroz</h2>
-              <p>Ubicación: San Cosme - Itapúa</p>
+              <p>Ubicación: San Cosme – Itapúa (Arrozal S.A.) <br>
+                Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.)
+              </p>
               <p>Tipo de Arroz: Arroz largo fino</p>
               <p>Época de Cosecha: Enero a Abril</p>
             </div>
@@ -811,8 +807,7 @@
           <div class="grid-modal-item">
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Comercialización</h2>
-              <p>Exportamos arroz en cascara y actuamos como intermediarios de la exportación de arroz blanco.</p>
-              <p>Constantemente estamos desarrollando mercados de exportación y relaciones valiosas a largo plazo.</p>
+              <p>Comercializamos arroz en cáscara localmente y en el exterior. Además, actuamos como intermediarios de la exportación de arroz blanco.</p>
               <ul class="lista-servicios">
                 <li>Paquetes de 1 kg - 5 kg</li>
                 <li>Bolsas de 25 kg / 30kg</li>
@@ -844,10 +839,7 @@
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Consultoría Técnica</h2>
               <p>40 años de experiencia en el cultivo de arroz en Paraguay, Colombia y Brasil.</p>
-              <ul class="lista-servicios">
-                <li>Estudio de aptitud de campo para producción de arroz.</li>
-                <li>Elaboración de proyectos de producción.</li>
-              </ul>
+              <p>Realizamos estudio de aptitud de campo para producción de arroz y elaboración de proyectos de producción.</p>
             </div>
           </div>
         </div>
@@ -893,13 +885,12 @@
         </button>
         <div class="grid-modal">
           <div class="grid-modal-item">
-            <img class="img-modal" src="{{ url('assets_front/images/maquinas.jpg')}}" alt="">
+            <img class="img-modal" src="{{ url('assets_front/images/serv-maq.JPG')}}" alt="">
           </div>
           <div class="grid-modal-item">
             <div class="container-text-servicios">
-              <h2 class="title-row-servicios">Servicios de secado y almacenaje </h2>
-              <p>Ubicación: Coronel Bogado - Itapúa</p>
-              <p>Servicio de 24 horas durante la época de cosecha.</p>
+              <h2 class="title-row-servicios">Servicio de Máquinas</h2>
+              <p>Prestamos servicio de máquinas a la empresa Arrozales del Chaco cubriendo una área del 40%.</p>
             </div>
           </div>
         </div>
@@ -923,8 +914,20 @@
           </div>
           <div class="grid-modal-item">
             <div class="container-text-servicios">
-              <h2 class="title-row-servicios">Servicio de Máquinas</h2>
-              <p>Ofrecemos nuestras maquinas para realizar actividades agricolas relacionadas a la preparacion de suelo, siembra y cosecha. </p>
+              <h2 class="title-row-servicios">Campo Experimental <br> Privado</h2>
+              <p>Ubicación: Coronel Bogado - Itapúa <br>
+                San Cosme - Itapúa <br>
+                Bajo Chaco – Pte. Hayes
+              </p>
+              <p>Realizamos los siguientes ensayos:</p>
+              <ul class="lista-servicios">
+                <li>- Ensayo comparativo de rendimiento de variedades comerciales e introducidas</li>
+                <li>- Introducción y Registros de variedades para uso comercial</li>
+                <li>- Introducción de líneas para obtención de nuevas variedades nacionales</li>
+                <li>- Ensayos comparativos y de validación de eficacia de los insumos agrícolas</li>
+                <li>- Ensayos de fertilización, corrección de suelo, nutrición de planta</li>
+                <li>- Ensayos de época de siembra, manejo de malezas, plagas y enfermedades</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -969,12 +972,12 @@
         </button>
         <div class="grid-modal">
           <div class="grid-modal-item">
-            <img class="img-modal" src="{{ url('assets_front/images/soja.jpg')}}" alt="">
+            <img class="img-modal" src="{{ url('assets_front/images/FAV36.JPG')}}" alt="">
           </div>
           <div class="grid-modal-item">
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Producción de Soja</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tenetur ut rerum commodi! Praesentium, asperiores ipsum repudiandae necessitatibus sapiente enim dolores dolorem tenetur a cum.</p>
+              <p>Producimos soja en la ciudad de General Delgado, Departamento de Itapúa.</p>
             </div>
           </div>
         </div>
@@ -1015,6 +1018,8 @@
   sr.reveal('.img-servicios', { interval: 16, delay:200})
   sr.reveal('.servi-text', { delay: 200})
   sr.reveal('.title-section', { delay: 200})
+  sr.reveal('.adc-logo', { delay: 200})
+  sr.reveal('.adc-img', { interval: 16, delay:200})
 
   sr.reveal('.contianer-timeline-text', { interval: 16, delay:200})
 </script>
