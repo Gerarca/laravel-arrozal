@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="{{ url('assets_front/css/bootstrap.min.css')}}">
 
-  <link rel="stylesheet" href="{{ url('assets_front/css/estilos.css')}}?v=0.1">
+  <link rel="stylesheet" href="{{ url('assets_front/css/estilos.css')}}?v=0.2">
   <link rel="stylesheet" href="{{ url('assets_front/css/rev-slider.css')}}">
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -47,6 +47,7 @@
           <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
           <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
+          <li><a href="{{ route('front.index')}}#campo">Día de Campo</a></li>
           <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
         </ul>
@@ -62,6 +63,7 @@
           <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
           <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
+          <li><a href="{{ route('front.index')}}#campo">Día de Campo</a></li>
           <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
         </ul>

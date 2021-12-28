@@ -519,7 +519,7 @@
       </div>
   </section>
 
-  <section class="pb-5 d-none">
+  <section class="pb-5" id="campo" style="scroll-margin: 7rem;">
 
       <h2 class="title-servicios">Día de Campo</h2>
       <p class="text-pasantia">Desde el año 2013, hemos estado organizando cada año el día de campo con el fin de reunir a todos los interesados en la producción de arroz. En este evento, participan productores, representantes de empresas, instituciones financieras, institutos nacionales e internacional, profesores y estudiantes.
