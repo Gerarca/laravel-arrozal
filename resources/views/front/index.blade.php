@@ -99,38 +99,6 @@
     </div>
   </section>
 
-  <section class="equipo">
-    <div class="container">
-      <h2 class="title-historia">Nuestro equipo</h2>
-      <div class="row row-equipo">
-        <div class="col-md-3 equipo-animation">
-          <div class="equipo-image">
-            <img src="{{ url('assets_front/images/maria.jpg')}}" alt="">
-          </div>
-          <h3 class="title-equipo">María Alejandra </h3>
-        </div>
-        <div class="col-md-3 equipo-animation">
-          <div class="equipo-image">
-            <img src="{{ url('assets_front/images/andres.jpg')}}" alt="">
-          </div>
-          <h3 class="title-equipo">Andrés Felipe</h3>
-        </div>
-        <div class="col-md-3 equipo-animation">
-          <div class="equipo-image">
-            <img src="{{ url('assets_front/images/marta.jpg')}}" alt="">
-          </div>
-          <h3 class="title-equipo">Marta Martínez</h3>
-        </div>
-        <div class="col-md-3 equipo-animation">
-          <div class="equipo-image">
-            <img src="{{ url('assets_front/images/hector.jpg')}}" alt="">
-          </div>
-          <h3 class="title-equipo">Héctor Ramírez</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="sombra"></section>
   <section class="historia">
     <div class="container">
