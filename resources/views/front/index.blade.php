@@ -161,9 +161,7 @@
             </div>
             <div class='tab-timeline tab-4'>
               <h5 class="title-timeline">
-                <a href="https://www.gpsa.com.py/" target="_blank">
-                  Formación de la sociedad Arrozales del Chaco S.A. con G.P.S.A.E – Producción de arroz en el bajo Chaco.
-                </a>
+                Formación de la sociedad Arrozales del Chaco S.A. con G.P.S.A.E – Producción de arroz en el bajo Chaco.
               </h5>
             </div>
             <div class='tab-timeline tab-5'>
@@ -211,9 +209,7 @@
           </div>
           <div class="contianer-timeline-text">
             <h5 class="title-timeline">
-              <a href="https://www.gpsa.com.py/" target="_blank">
-                Formación de la sociedad Arrozales del Chaco S.A. con G.P.S.A.E – Producción de arroz en el bajo Chaco.
-              </a>
+              Formación de la sociedad Arrozales del Chaco S.A. con G.P.S.A.E – Producción de arroz en el bajo Chaco.
             </h5>
 
           </div>
