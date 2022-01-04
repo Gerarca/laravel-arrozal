@@ -33,7 +33,7 @@
 </head>
 <body>
   <header class="header {{ Route::is('front.noticias') ? 'backgorund-new':'' }}" id="header">
-    <div class="container-fluid">
+    <div class="container">
       <nav class="menu-desktop">
         <div class="container-logo">
           <a href="{{ route('front.index')}}">
@@ -44,9 +44,9 @@
         <ul class="lista-menu">
           <li><a href="{{ route('front.index')}}">Inicio</a></li>
           <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
-          <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
+          {{-- <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li> --}}
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
-          <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
+          {{-- <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li> --}}
           <li><a href="{{ route('front.index')}}#campo">Día de Campo</a></li>
           <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
@@ -60,9 +60,9 @@
         <ul class="lista-menu-mobile">
           <li><a href="{{ route('front.index')}}">Inicio</a></li>
           <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
-          <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
+          {{-- <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li> --}}
           <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
-          <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
+          {{-- <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li> --}}
           <li><a href="{{ route('front.index')}}#campo">Día de Campo</a></li>
           <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
           <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
@@ -94,9 +94,9 @@
            <ul class="lista-enlaces-footer">
              <li><a href="{{ route('front.index')}}">Inicio</a></li>
              <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
-             <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li>
+             {{-- <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li> --}}
              <li><a href="{{ route('front.index')}}#servicios">Nuestros Servicios</a></li>
-             <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li>
+             <li><a href="{{ route('front.index')}}#campo">Día de campo</a></li>
              <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
              <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
             </ul>

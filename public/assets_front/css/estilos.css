@@ -782,7 +782,7 @@ body {
     right: 10%;
     padding: 2.5rem;
     border-radius: 4px;
-    width: 360px;
+    width: 380px;
     margin-left: auto;
     z-index: 99;
     background: var(--blanco);
@@ -846,6 +846,35 @@ body {
     color: var(--title);
     text-align: center;
     margin-bottom: .5rem;
+}
+
+.campo {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.row.row-campo {
+    display: flex;
+    align-items: center;
+}
+
+.owl-campo .item img {
+    width: 90%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.title-servicios.title-campo {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.text-pasantia.text-campo {
+    width: 90%;
+    text-align: left;
 }
 
 .subtitle-servicios {
@@ -993,6 +1022,9 @@ body {
     line-height: 1.5;
     margin-top: .5rem;
     margin-bottom: .5rem;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-sevicions-button {
@@ -1122,6 +1154,15 @@ body {
     .img-modal {
         height: 240px;
     }
+    .grid-servicios-text {
+        width: 100%;
+    }
+    .title-servicios.title-campo {
+        width: 100%;
+    }
+    .text-pasantia.text-campo {
+        width: 100%;
+    }
 }
 
 
@@ -1158,6 +1199,10 @@ body {
     object-fit: cover;
 }
 
+.grid-pasantia-item img:last-child {
+    object-position: top;
+}
+
 .grid-pasantia-description {
     font-size: var(--rem-18);
     text-align: center;
@@ -1174,6 +1219,10 @@ body {
     }
     .grid-pasantia {
         grid-row-gap: 30px;
+    }
+    .owl-campo .item img {
+        width: 100%;
+        height: 280px;
     }
 }
 
@@ -1262,9 +1311,12 @@ body {
     opacity: .8;
 }
 
+
 /* ////////////Testimonios//////////////// */
 
+
 /* ////////////ADC//////////////// */
+
 .adc {
     background: var(--gris-two);
     background-image: url(../images/background.png);
@@ -1272,6 +1324,13 @@ body {
     background-position: center;
     padding: 4rem 0;
 }
+
+.img-adc {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
 .video-container {
     height: 0;
     overflow: hidden;
@@ -1280,20 +1339,24 @@ body {
     position: relative;
 }
 
-.video-container iframe, .video-container object, .video-container embed {
+.video-container iframe,
+.video-container object,
+.video-container embed {
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
 }
-.adc-logo{
+
+.adc-logo {
     display: flex;
     align-items: center;
     margin: auto;
     max-width: 220px;
     margin-bottom: 30px;
 }
+
 .text-adc {
     color: var(--principal);
     font-family: var(--montserrat);
@@ -1301,7 +1364,10 @@ body {
     text-align: center;
     margin-bottom: 33px;
 }
+
+
 /* ////////////ADC//////////////// */
+
 
 /* ////////////Contacto//////////////// */
 
@@ -1309,7 +1375,7 @@ body {
     padding: 4rem 0;
     background: var(--blanco);
     position: relative;
-    scroll-margin: 5rem;
+    scroll-margin: 15rem;
 }
 
 .contacto:after {
@@ -2039,9 +2105,9 @@ form {
         width: 100%;
     }
     @media (max-width:480px) {
-      h2.subtitle-eslogan {
-        font-size: 5vw;
-      }
+        h2.subtitle-eslogan {
+            font-size: 5vw;
+        }
     }
     /* ////////timeline//////// */
     .timeline {
