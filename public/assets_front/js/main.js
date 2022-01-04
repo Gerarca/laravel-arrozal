@@ -94,10 +94,11 @@
  $('.owl-campo').owlCarousel({
      loop: true,
      margin: 0,
-     nav: false,
+     nav: true,
      dots: false,
      autoplay: true,
      autoplayTimeout: 5000,
+     navText: ["<img src='assets_front/images/arrow-left-2.svg'>", "<img src='assets_front/images/arrow-right.svg'>"],
      responsive: {
          0: {
              items: 1

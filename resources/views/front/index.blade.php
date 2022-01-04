@@ -478,7 +478,7 @@
                 <div class="container-image-contacto">
                 <img src="{{ url('assets_front/images/phone.svg')}}" alt="Icono phone">
                 </div>
-                +595984 684 092
+                +595 984 684 092
               </a>
             </li>
             <li>
@@ -574,11 +574,12 @@
           <div class="grid-modal-item">
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Producción Comercial de Arroz</h2>
-              <p>Ubicación: San Cosme – Itapúa (Arrozal S.A.) <br>
-                Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.)
+              <p class="text-servicios-modal">Ubicación: <br> San Cosme – Itapúa (Arrozal S.A.) <br>
+                Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.). <br>
+                Tipo de Arroz: Arroz largo fino. <br>
+                Época de Cosecha: Enero a Abril
               </p>
-              <p>Tipo de Arroz: Arroz largo fino</p>
-              <p>Época de Cosecha: Enero a Abril</p>
+            
             </div>
           </div>
         </div>

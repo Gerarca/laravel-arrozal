@@ -866,6 +866,37 @@ body {
     margin: 0 auto;
 }
 
+.owl-campo .owl-nav .owl-prev,
+.owl-campo .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 35px;
+    background-color: rgba(0, 0, 0, .2) !important;
+    transition: .6s ease;
+    user-select: none;
+}
+
+.owl-campo .owl-nav .owl-prev img,
+.owl-campo .owl-nav .owl-next img {
+    width: 12px;
+}
+
+.owl-campo .owl-nav .owl-prev {
+    left: 35px;
+}
+
+.owl-campo .owl-nav .owl-next {
+    right: 35px;
+}
+
 .title-servicios.title-campo {
     text-align: left;
     width: 90%;
@@ -1132,6 +1163,10 @@ body {
     height: 100%;
     aspect-ratio: 3/3.6;
     object-fit: cover;
+}
+
+.text-servicios-modal {
+    line-height: 1.8rem;
 }
 
 @media (min-width: 576px) {

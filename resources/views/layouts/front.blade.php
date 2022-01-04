@@ -163,6 +163,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="{{ url('assets_front/js/main.js')}}"></script>
+    <script>
+      window.rutaWeb = "{{ route('front.index') }}";
+      console.log(window.rutaWeb);
+    </script>
 </body>
 @yield('especifico')
 
