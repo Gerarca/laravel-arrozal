@@ -46,12 +46,12 @@
     <div class="container">
       <div class="row row-nosotros">
         <div class="col-md-6">
-          <img class="img-nosotros load-hidden" src="{{ url('assets_front/images/quienes-somos2.JPG')}}" loading="lazy" alt="">
+          <img class="img-nosotros load-hidden" src="{{ url('assets_front/images/quienes-somos3.jpg')}}" loading="lazy" alt="">
         </div>
         <div class="col-md-6 col-nosotros">
           <div class="container-text-nosotros load-hidden">
             <h2 class="title-nosotros">Quiénes Somos</h2>
-            <p class="text-nosotros">Arrozal S.A, fundada en 2010 y ubicada en la ciudad de Coronel Bogado en Paraguay, es una empresa familiar pionera en el servicio de consultoría y asistencia técnica, como también en la investigación privada de arroz. Hoy en día, se dedica a la producción comercial de arroz comprometida en asegurar una calidad superior.</p>
+            <p class="text-nosotros">Arrozal S.A, fundada en 2010 y ubicada en la ciudad de Coronel Bogado, departamento de Itapua es una empresa familiar pionera en el servicio de consultoría y asistencia técnica, como también en la investigación privada de arroz en Paraguay. Hoy en día, se dedica a la producción comercial de arroz comprometida en asegurar un producto con calidad superior.</p>
           </div>
           <div class="valores-nosotros">
             <div class="container-valores load-hidden">
@@ -124,7 +124,7 @@
           <div class='progress-container'>
             <label for='step-2'>
               <img src="{{ url('assets_front/images/Silos2.JPG')}}" loading="lazy" alt="">
-              2012
+              2010
             </label>
           </div>
           <div class='progress-container'>
@@ -157,7 +157,7 @@
 
             <div class='tab-timeline tab-2'>
               <h5 class="title-timeline">
-                Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Campo Experimental y Servicios de secado y almacenamiento de grano.
+                Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Campo Experimental y Servicios de Secado y Almacenamiento de grano.
               </h5>
             </div>
             <div class='tab-timeline tab-3'>
@@ -189,10 +189,10 @@
         <div class="container-timeline-mobile">
           <div class="container-image-timeline">
             <img class="img-timeline-mobile" src="{{ url('assets_front/images/Silos2.JPG')}}" loading="lazy" alt="">
-            <p>2012</p>
+            <p>2010</p>
           </div>
           <div class="contianer-timeline-text">
-            <h5 class="title-timeline">Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Campo Experimental y Servicios de secado y almacenamiento de grano.</h5>
+            <h5 class="title-timeline">Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Campo Experimental y Servicios de Secado y Almacenamiento de grano.</h5>
 
           </div>
         </div>
@@ -239,7 +239,7 @@
   <section class="adc">
     <div class="container">
     
-      <div class="video-container mb-4">
+      <div class="video-container video-container-homenaje mb-4">
         <iframe src="https://www.youtube.com/embed/GU6RZmnGq-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
@@ -248,24 +248,24 @@
   <section class="scroll" id="scroll">
     <figure class="mapa-1" id="mapa-1">
       <picture>
-        <source srcset="{{ url('assets_front/images/mapa-responsive-1.jpg')}}" media="(max-width: 768px)">
+        <source srcset="{{ url('assets_front/images/mapa-1.jpg')}}" media="(max-width: 768px)">
         <img class="img-1" src="{{ url('assets_front/images/mapa-1.jpg')}}" alt="">
        </picture>
     </figure>
     <figure class="mapa-2" id="mapa-2">
       <picture>
-        <source srcset="{{ url('assets_front/images/mapa-responsive-2.jpg')}}" media="(max-width: 768px)">
+        <source srcset="{{ url('assets_front/images/mapa-2.png')}}" media="(max-width: 768px)">
         <img class="img-2" src="{{ url('assets_front/images/mapa-2.jpg')}}" alt="">
        </picture>
     </figure>
     <figure class="mapa-3" id="mapa-3">
       <picture>
-        <source srcset="{{ url('assets_front/images/mapa-responsive-2.jpg')}}" media="(max-width: 768px)">
+        <source srcset="{{ url('assets_front/images/mapa-2.jpg')}}" media="(max-width: 768px)">
         <img class="img-3" src="{{ url('assets_front/images/mapa-2.jpg')}}" alt="">
        </picture>
     </figure>
     <div class="container-mapa-info">
-      <h2 class="title-mapa-info">Donde estamos</h2>
+      <h2 class="title-mapa-info">Dónde estamos</h2>
       <p class="text-mapa-info">Nuestra producción de arroz esta ubicada en dos regiones. La primera producción se encuentra en el Departamento de Itapúa en la cuenca del Río Paraná próxima a la Central Hidroeléctrica Yacyretá. El segundo emprendimiento esta ubicado en la cuenca del Río Paraguay, en el lado Chaco próximo a la ciudad de Concepción en el Departamento de Presidente Hayes. </p>
     </div>
   </section>
@@ -283,7 +283,7 @@
           </div>
           <div class="grid-servicios-text">
             <h2 class="grid-servicios-title">Producción Comercial de Arroz</h2>
-            <p class="grid-servicios-text">San Cosme – Itapúa (Arrozal S.A.)  <br> Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.). <br>Tipo de Arroz: Arroz largo fino. <br> Época de Cosecha: Enero a Abril</p>
+            <p class="grid-servicios-text">San Cosme – Itapúa (Arrozal S.A.)  <br> Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.). <br>Tipo de Arroz: Arroz largo fino. <br> Época de Cosecha: Enero a Abril.</p>
           </div>
           <div class="grid-sevicions-button">
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-01" class="grid-servicios-btn">Ver más</a>
@@ -309,8 +309,7 @@
           </div>
           <div class="grid-servicios-text">
             <h2 class="grid-servicios-title">Consultoría Técnica</h2>
-            <p class="grid-servicios-text">Consultoría Técnica: 40 años de experiencia en el cultivo de arroz en Paraguay, Colombia (CIAT) y
-              Brasil (IRGA).</p>
+            <p class="grid-servicios-text">40 años de experiencia en el cultivo de arroz en Paraguay, Colombia (CIAT) y Brasil (IRGA).</p>
           </div>
           <div class="grid-sevicions-button">
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-03" class="grid-servicios-btn">Ver más</a>
@@ -322,7 +321,7 @@
             <img src="{{ url('assets_front/images/silo-2.jpg')}}" alt="">
           </div>
           <div class="grid-servicios-text">
-            <h2 class="grid-servicios-title">Servicios de secado y almacenaje</h2>
+            <h2 class="grid-servicios-title">Servicios de Secado y Almacenaje</h2>
             <p class="grid-servicios-text">Ubicación: Coronel Bogado - Itapúa</p>
           </div>
           <div class="grid-sevicions-button">
@@ -376,7 +375,7 @@
   <section class="pasantia" id="pasantia">
 
       <h2 class="title-servicios">Programas de pasantías</h2>
-      <p class="text-pasantia">Más de 50 estudiantes de universidades y colegios agrícolas han realizado sus pasantías y programa de tesis en nuestro centro de investigación.</p>
+      <p class="text-pasantia">Más de 50 estudiantes de universidades y colegios agrícolas han realizado sus pasantías y TRABAJO de tesis en nuestro centro de investigación.</p>
 
       <div class="grid-pasantia">
         <div class="grid-pasantia-item">
@@ -425,7 +424,7 @@
   <section class="adc">
     <div class="container">
       <img src="{{asset('assets_front/images/logo-arrozales.png')}}" alt="Arrozales del Chaco S.A." class="adc-logo" loading="lazy">
-      <p class="text-adc">Por medio de la unión de ARROZAL S.A. Y G.P.S.A.E., nace en el 2019 la empresa Arrozales del Chaco S.A. - El proyecto arrocero de mayor impacto en el país ubicado en el departamento Presidente Hayes. Hoy en día, se producen 6,000 hectáreas y se apunta a alcanzar el área de 10,000 hectáreas.
+      <p class="text-adc">Por medio de la ALIANZA ENTRE ARROZAL S.A. Y G.P.S.A.E., nace en el 2019 la empresa Arrozales del Chaco S.A. - El proyecto arrocero de mayor impacto en el país ubicado en el departamento Presidente Hayes. Hoy en día, se producen 6,000 hectáreas y se apunta a alcanzar el área de 10,000 hectáreas.
       </p>
 
       <div class="video-container mb-4">
@@ -474,11 +473,11 @@
               </a>
             </li>
             <li>
-              <a href="tel:+595984684092">
+              <a href="tel:+595986544341">
                 <div class="container-image-contacto">
                 <img src="{{ url('assets_front/images/phone.svg')}}" alt="Icono phone">
                 </div>
-                +595 984 684 092
+                +595 986 544 341
               </a>
             </li>
             <li>
@@ -494,8 +493,8 @@
                 <div class="container-image-contacto">
                   <img src="{{ url('assets_front/images/clock.svg')}}" alt="Icono Hora">
                 </div>
-                <p>Lunes- viernes: 7:30 a.m. – 17:00 p.m. <br>
-                Sábados: 7:30 a.m. – 12:00 a.m.</p>
+                <p>Lunes – viernes: 7:00 a.m – 17:00 p.m. <br>
+                  Sábados: 7:00 a.m. – 12:00 p.m.</p>
               </a>
             </li>
           </ul>
@@ -577,7 +576,7 @@
               <p class="text-servicios-modal">Ubicación: <br> San Cosme – Itapúa (Arrozal S.A.) <br>
                 Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.). <br>
                 Tipo de Arroz: Arroz largo fino. <br>
-                Época de Cosecha: Enero a Abril
+                Época de Cosecha: Enero a Abril.
               </p>
             
             </div>
@@ -631,8 +630,7 @@
           <div class="grid-modal-item">
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Consultoría Técnica</h2>
-              <p>40 años de experiencia en el cultivo de arroz en Paraguay, Colombia (CIAT) y
-                Brasil (IRGA).</p>
+              <p>40 años de experiencia en el cultivo de arroz en Paraguay, Colombia (CIAT) y Brasil (IRGA).</p>
               <p>Realizamos estudio de aptitud de campo para producción de arroz y
                 elaboración de proyectos de producción.</p>
             </div>
@@ -658,7 +656,7 @@
           </div>
           <div class="grid-modal-item">
             <div class="container-text-servicios">
-              <h2 class="title-row-servicios">Servicios de secado y almacenaje </h2>
+              <h2 class="title-row-servicios">Servicios de Secado y Almacenaje</h2>
               <p>Ubicación: Coronel Bogado - Itapúa</p>
               
             </div>
