@@ -2255,17 +2255,19 @@ form {
     .container-mapa-info {
         position: absolute;
         left: 50%;
-        top: unset;
+        top: -50px;
         transform: translateX(-50%) !important;
-        bottom: 10px;
         right: unset;
-        width: 95%;
+        width: 98%;
         margin: 0 auto;
-        padding: 1.8rem;
+        padding: 1.8rem 1.2rem;
         background: #efefef;
     }
     .title-mapa-info {
         font-size: 1.6rem;
+    }
+    .text-mapa-info {
+        font-size: .9rem;
     }
     .tf-img-slider {
         width: 300px !important;

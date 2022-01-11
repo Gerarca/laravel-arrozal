@@ -246,21 +246,22 @@
   </section>
 
   <section class="scroll" id="scroll">
+    
     <figure class="mapa-1" id="mapa-1">
       <picture>
-        <source srcset="{{ url('assets_front/images/mapa-1.jpg')}}" media="(max-width: 768px)">
+        <source srcset="{{ url('assets_front/images/mapa-nuevo.jpg')}}" media="(max-width: 768px)">
         <img class="img-1" src="{{ url('assets_front/images/mapa-1.jpg')}}" alt="">
        </picture>
     </figure>
     <figure class="mapa-2" id="mapa-2">
       <picture>
-        <source srcset="{{ url('assets_front/images/mapa-2.png')}}" media="(max-width: 768px)">
+        <source srcset="{{ url('assets_front/images/mapa-nuevo-2.png')}}" media="(max-width: 768px)">
         <img class="img-2" src="{{ url('assets_front/images/mapa-2.jpg')}}" alt="">
        </picture>
     </figure>
     <figure class="mapa-3" id="mapa-3">
       <picture>
-        <source srcset="{{ url('assets_front/images/mapa-2.jpg')}}" media="(max-width: 768px)">
+        <source srcset="{{ url('assets_front/images/mapa-nuevo-2.jpg')}}" media="(max-width: 768px)">
         <img class="img-3" src="{{ url('assets_front/images/mapa-2.jpg')}}" alt="">
        </picture>
     </figure>
@@ -375,7 +376,7 @@
   <section class="pasantia" id="pasantia">
 
       <h2 class="title-servicios">Programas de pasantías</h2>
-      <p class="text-pasantia">Más de 50 estudiantes de universidades y colegios agrícolas han realizado sus pasantías y TRABAJO de tesis en nuestro centro de investigación.</p>
+      <p class="text-pasantia">Más de 50 estudiantes de universidades y colegios agrícolas han realizado sus pasantías y trabajo de tesis en nuestro centro de investigación.</p>
 
       <div class="grid-pasantia">
         <div class="grid-pasantia-item">
