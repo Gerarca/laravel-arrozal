@@ -159,6 +159,7 @@
     <script src="{{ url('assets_front/rev-slider/extensions/revolution.extension.parallax.min.js')}}"></script>
     <script src="{{ url('assets_front/rev-slider/extensions/revolution.extension.slideanims.min.js')}}"></script>
     <script src="{{ url('assets_front/rev-slider/extensions/revolution.extension.video.min.js')}}"></script>
+    <script type="text/javascript" src="{{url('assets_front/js/sweetalert.min.js')}}"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -169,5 +170,25 @@
     </script>
 </body>
 @yield('especifico')
+<script type="text/javascript">
+    $(document).ready(function () {
+        @if($errors->any())
+        @foreach ($errors->all() as $error)
+        swal("Atención", "{{$error}}", "warning");
+        @endforeach
+        @endif
 
+        @if(session('status'))
+        swal("Éxito", "{{ session('status') }}", "success");
+        @endif
+
+        @if(session('status_err'))
+        swal({
+            title: "Ups",
+            text: `{!! session('status_err') !!}`,
+            icon: "error"
+        });
+        @endif
+    });
+</script> 
 </html>

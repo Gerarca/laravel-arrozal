@@ -505,18 +505,19 @@
       <div class="row mt-4">
         <div class="col-md-6">
 
-          <form action="#">
+          <form action="{{route('front.contacto')}}#form-contacto" method="POST" enctype="multipart/form-data" id="form-contacto">
+            @csrf
             <div class="form-group">
               <label for="nombre">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required value="{{ old('nombre') }}" maxlength="100">
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required value="{{ old('email') }}" maxlength="100">
             </div>
             <div class="form-group">
               <label for="telefono">Teléfono</label>
-              <input type="text" class="form-control" id="telefono" placeholder="Teléfono">
+              <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" required value="{{ old('telefono') }}" maxlength="100">
             </div>
             <div class="form-group">
               <label for="asunto">Asunto</label>
@@ -540,10 +541,10 @@
             </div>
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
-              <textarea class="form-control" name="mensaje" id="mensaje" cols="10" rows="3" placeholder="Escriba su mensaje"></textarea>
+              <textarea class="form-control" name="mensaje" id="mensaje" cols="10" rows="3" placeholder="Escriba su mensaje" required>{{ old('mensaje') }}</textarea>
             </div>
             <div class="form-group">
-              <button class="btn-enviar">Enviar</button>
+              <button class="btn-enviar" type="submit">Enviar</button>
             </div>
           </form>
         </div>

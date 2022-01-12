@@ -17,6 +17,7 @@ Route::redirect('/', config('app.url') . '/inicio');
 Route::get('/inicio', [FrontController::class, 'index'])->name('front.index');
 Route::get('/noticias', [FrontController::class, 'noticias'])->name('front.noticias');
 Route::get('/postNoticias', [FrontController::class, 'postNoticias'])->name('front.postNoticias');
+Route::post('/contacto', [FrontController::class, 'sendContacto'])->name('front.contacto');
 
 
 
