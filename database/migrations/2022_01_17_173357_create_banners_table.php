@@ -21,7 +21,6 @@ class CreateBannersTable extends Migration
             $table->text('enlace')->nullable();
             $table->string('imagen')->nullable();
             $table->integer('orden')->unsigned()->default('1');
-            $table->bigInteger('user_id')->unsigned();
             $table->boolean('visible')->default(true);
             $table->timestamps();
         });

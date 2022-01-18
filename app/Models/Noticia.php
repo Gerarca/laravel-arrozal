@@ -9,6 +9,6 @@ class Noticia extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'titulo', 'enlace', 'imagen', 'fecha',
+        'titulo', 'enlace', 'imagen',
     ];
 }

@@ -34,7 +34,6 @@ class BannerController extends Controller {
             $banner->boton = $request->boton;
             $banner->orden = $request->orden;
             $banner->visible = $request['visible'] ? '1' : '0';
-            $banner->user_id = \Auth::user()->id;
             $banner->save();
         } catch (\Exception $e) {
             \Log::error($e);

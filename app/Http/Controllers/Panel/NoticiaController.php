@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Panel;
 use App\Http\Controllers\Controller;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
-use Carbon\Carbon;
 
 class NoticiaController extends Controller
 {
@@ -15,10 +14,10 @@ class NoticiaController extends Controller
         return view('panel.noticias.index', compact('Noticias'));
     }
 
-    public function create(Noticia $Noticia) {
+    public function create(Noticia $noticia) {
         $orden_maximo = Noticia::get()->count() + 1;
 
-        return view('panel.noticias.form', compact('Noticia', 'orden_maximo'));
+        return view('panel.noticias.form', compact('noticia', 'orden_maximo'));
     }
 
     public function store(Request $request) {
@@ -32,29 +31,28 @@ class NoticiaController extends Controller
             $Noticia->imagen = $fileName;
             $Noticia->titulo = $request->titulo;
             $Noticia->enlace = $request->enlace;
-            $Noticia->fecha = Carbon::now()->toTimeString();
             $Noticia->save();
         } catch (\Exception $e) {
             \Log::error($e);
 
-            return redirect()->route('noticia.index')->withErrors($e->getMessage());
+            return redirect()->route('noticias.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('noticia.index', $Noticia)->with('success', 'Noticia almacenado correctamente.')
+        return redirect()->route('noticias.index', $Noticia)->with('success', 'Noticia almacenado correctamente.')
             ->with('imagen', $fileName);
     }
 
     public function edit($id) {
-        $Noticia = Noticia::findOrFail($id);
+        $noticia = Noticia::findOrFail($id);
         $orden_maximo = Noticia::get()->count() + 1;
 
-        return view('panel.noticias.form', compact('Noticia', 'orden_maximo'));
+        return view('panel.noticias.form', compact('noticia', 'orden_maximo'));
     }
 
     public function update(Request $request, $id) {
         try {
             $Noticia = Noticia::findOrFail($id);
-            $Noticia->fill($request->only('titulo', 'enlace', Carbon::now()->toTimeString() ))->save();
+            $Noticia->fill($request->only('titulo', 'enlace' ))->save();
             if ($request->hasFile('imagen')) {
                 $fileName = 'Noticia' . '-' . time() . '.' . $request->file('imagen')->getClientOriginalExtension();
                 $request->imagen->move(base_path() . '/public/uploads/', $fileName);
@@ -67,12 +65,12 @@ class NoticiaController extends Controller
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('noticia.index')->with('success', 'Actualizado con éxito');
+        return redirect()->route('noticias.index')->with('success', 'Actualizado con éxito');
     }
 
     public function destroy(Noticia $Noticia) {
         $Noticia->delete();
 
-        return redirect()->route('noticia.index')->with('success', 'Eliminado con éxito');
+        return redirect()->route('noticias.index')->with('success', 'Eliminado con éxito');
     }
 }

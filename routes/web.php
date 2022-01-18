@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,19 @@ Route::get('/inicio', [FrontController::class, 'index'])->name('front.index');
 Route::get('/noticias', [FrontController::class, 'noticias'])->name('front.noticias');
 Route::get('/postNoticias', [FrontController::class, 'postNoticias'])->name('front.postNoticias');
 Route::post('/contacto', [FrontController::class, 'sendContacto'])->name('front.contacto');
-
+/*
 Route::group(['namespace' => 'App\Http\Controllers\Panel', 'prefix' => 'panel'], function () {
     Route::resource('banner', 'BannerController', ['except' => ['show']]);
     Route::resource('noticias', 'NoticiaController', ['except' => ['show']]);
 });
+*/
 
+Auth::routes(['register' => false]);
+Route::get('/panel', [App\Http\Controllers\HomeController::class, 'index'])->name('panel');
+    Route::middleware('auth')->group(function () {
+        Route::get('{page}', ['as' => 'page.index', 'uses' => [App\Http\Controllers\PageController::class, 'index']]);
+        Route::group(['namespace' => 'App\Http\Controllers\Panel', 'prefix' => 'panel'], function () {
+            Route::resource('banner', 'BannerController', ['except' => ['show']]);
+            Route::resource('noticias', 'NoticiaController', ['except' => ['show']]);
+        });
+    });
