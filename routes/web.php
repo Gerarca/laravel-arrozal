@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +19,8 @@ Route::get('/noticias', [FrontController::class, 'noticias'])->name('front.notic
 Route::get('/postNoticias', [FrontController::class, 'postNoticias'])->name('front.postNoticias');
 Route::post('/contacto', [FrontController::class, 'sendContacto'])->name('front.contacto');
 
-
-
+Route::group(['namespace' => 'App\Http\Controllers\Panel', 'prefix' => 'panel'], function () {
+    Route::resource('banner', 'BannerController', ['except' => ['show']]);
+    Route::resource('noticias', 'NoticiaController', ['except' => ['show']]);
+});
 

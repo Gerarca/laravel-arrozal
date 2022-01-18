@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
+
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
     public function index(){
-        return view('front.index');
+        $banners = Banner::orderBy('orden', 'ASC')->get();
+        return view('front.index', compact('banners'));
     }
     public function noticias(){
         return view('front.noticias');
@@ -35,7 +38,7 @@ class FrontController extends Controller
             return back()->withInput()->withErrors($validator);
         }
 
-      
+
         $color_principal = '#222021';
 
         $nombre = $request->nombre;
@@ -50,7 +53,7 @@ class FrontController extends Controller
             $filePathName = null;
         }
 
-    
+
         try {
             \Mail::send('emails.contacto_email', [
                 'nombre'         => $nombre,
