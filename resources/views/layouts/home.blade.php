@@ -31,11 +31,7 @@
                                 <h5>
                                     <small>{{ __('Rol: ') }}</small>
                                     <br/>
-                                    @if(auth()->user()->roles->first())
-                                        <td>{{ auth()->user()->roles->first()->name }}</td>
-                                    @else
-                                        <td><em>Sin rol asignado</em></td>
-                                    @endif
+                                    {{--<td>{{ auth()->user()->roles->first()->name }}</td> --}}
                                 </h5>
                             </div>
 

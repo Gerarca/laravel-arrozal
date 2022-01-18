@@ -67,6 +67,12 @@
                     <p>{{ __('Banner') }}</p>
                 </a>
             </li>
+            <li class="{{ $elementActive == 'noticia' ? 'active' : '' }}">
+                <a href="{{ route('page.index', 'panel/noticias') }}">
+                    <i class="nc-icon nc-image"></i>
+                    <p>{{ __('Noticias') }}</p>
+                </a>
+            </li>
             <li class="{{ $elementActive == 'nosotros' || $elementActive == 'equipo' || $elementActive == 'conocenos' ? 'active' : '' }}">
                 <a data-toggle="collapse" href="#nosotros">
                     <i class="nc-icon nc-badge"></i>

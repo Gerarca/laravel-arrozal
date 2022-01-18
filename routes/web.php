@@ -33,5 +33,6 @@ Route::get('/panel', [App\Http\Controllers\HomeController::class, 'index'])->nam
         Route::group(['namespace' => 'App\Http\Controllers\Panel', 'prefix' => 'panel'], function () {
             Route::resource('banner', 'BannerController', ['except' => ['show']]);
             Route::resource('noticias', 'NoticiaController', ['except' => ['show']]);
+            Route::get('editar_perfil', 'UserController@editar_perfil')->name('editar_perfil');
         });
     });
