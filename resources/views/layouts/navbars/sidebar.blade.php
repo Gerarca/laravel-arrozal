@@ -52,12 +52,6 @@
                                 <span class="sidebar-normal">{{ __('Administrar Usuarios') }}</span>
                             </a>
                         </li>
-                        <li class="{{ $elementActive == 'roles' ? 'active' : '' }}">
-                            <a href="{{ route('page.index', 'panel/roles') }}">
-                                <span class="sidebar-mini-icon">R</span>
-                                <span class="sidebar-normal">{{ __('Roles') }}</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </li>
@@ -84,21 +78,15 @@
                 <div class="collapse" id="nosotros">
                     <ul class="nav">
                         <li class="{{ $elementActive == 'nosotros' ? 'active' : '' }}">
-                            <a href="{{ route('page.index', 'panel/nosotros') }}">
+                            <a href="{{ route('page.index', 'panel/quienessomos') }}">
                                 <span class="sidebar-mini-icon">AS</span>
-                                <span class="sidebar-normal">{{ __('Administrar Secciones') }}</span>
+                                <span class="sidebar-normal">{{ __('Quienes Somos') }}</span>
                             </a>
                         </li>
                         <li class="{{ $elementActive == 'equipo' ? 'active' : '' }}">
                             <a href="{{ route('page.index', 'panel/equipo') }}">
                                 <span class="sidebar-mini-icon">AE</span>
-                                <span class="sidebar-normal">{{ __('Administrar Equipo') }}</span>
-                            </a>
-                        </li>
-                        <li class="{{ $elementActive == 'conocenos' ? 'active' : '' }}">
-                            <a href="{{ route('page.index', 'panel/conocenos') }}">
-                                <span class="sidebar-mini-icon">AC</span>
-                                <span class="sidebar-normal">{{ __('Administrar Conocenos') }}</span>
+                                <span class="sidebar-normal">{{ __('Donde Estamos') }}</span>
                             </a>
                         </li>
                     </ul>
@@ -130,10 +118,10 @@
                 </div>
             </li>
             <li class="{{ $elementActive == 'desarrollo' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'panel/desarrollo') }}">
+                <a href="{{ route('page.index', 'panel/nuestrahistoria') }}">
                     <i class="nc-icon nc-world-2"></i>
 
-                    <p>{{ __('Desarrollo') }}</p>
+                    <p>{{ __('Nuestra Historia') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'newsletter' ? 'active' : '' }}">

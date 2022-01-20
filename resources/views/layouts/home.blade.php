@@ -23,21 +23,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <hr>
-                    <div class="button-container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
-                                <h5>
-                                    <small>{{ __('Rol: ') }}</small>
-                                    <br/>
-                                    {{--<td>{{ auth()->user()->roles->first()->name }}</td> --}}
-                                </h5>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

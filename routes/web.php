@@ -31,8 +31,11 @@ Route::get('/panel', [App\Http\Controllers\HomeController::class, 'index'])->nam
     Route::middleware('auth')->group(function () {
         Route::get('{page}', ['as' => 'page.index', 'uses' => [App\Http\Controllers\PageController::class, 'index']]);
         Route::group(['namespace' => 'App\Http\Controllers\Panel', 'prefix' => 'panel'], function () {
+            Route::get('editar_perfil', 'UserController@editar_perfil')->name('editar_perfil');
             Route::resource('banner', 'BannerController', ['except' => ['show']]);
             Route::resource('noticias', 'NoticiaController', ['except' => ['show']]);
-            Route::get('editar_perfil', 'UserController@editar_perfil')->name('editar_perfil');
+            Route::resource('quienessomos', 'QuienesSomosController', ['except' => ['show']]);
+            Route::resource('nuestrahistoria', 'NuestraHistoriaController', ['except' => ['show']]);
+            Route::resource('nuestrahistoriavideo', 'NuestraHistoriaVideoController', ['except' => ['show']]);
         });
     });
