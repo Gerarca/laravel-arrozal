@@ -34,27 +34,6 @@
                     <p>{{ __('Inicio') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'usuarios' || $elementActive == 'editar_perfil' || $elementActive == 'roles' ? 'active' : '' }}">
-                <a data-toggle="collapse" href="#users">
-                    <i class="nc-icon nc-circle-10"></i>
-
-                    <p>
-                        {{ __('Usuarios') }}
-                        <b class="caret"></b>
-                    </p>
-                </a>
-
-                <div class="collapse" id="users">
-                    <ul class="nav">
-                        <li class="{{ $elementActive == 'usuarios' ? 'active' : '' }}">
-                            <a href="{{ route('page.index', 'panel/usuarios') }}">
-                                <span class="sidebar-mini-icon">AU</span>
-                                <span class="sidebar-normal">{{ __('Administrar Usuarios') }}</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
             <li class="{{ $elementActive == 'banner' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/banner') }}">
                     <i class="nc-icon nc-image"></i>
@@ -84,34 +63,9 @@
                             </a>
                         </li>
                         <li class="{{ $elementActive == 'equipo' ? 'active' : '' }}">
-                            <a href="{{ route('page.index', 'panel/equipo') }}">
+                            <a href="{{ route('page.index', 'panel/dondeestamos') }}">
                                 <span class="sidebar-mini-icon">AE</span>
                                 <span class="sidebar-normal">{{ __('Donde Estamos') }}</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="{{ $elementActive == 'proyectos' || $elementActive == 'imagenes_proyecto'  ? 'active' : '' }}">
-                <a data-toggle="collapse" href="#proyectos">
-                    <i class="nc-icon nc-chart-bar-32"></i>
-                    <p>
-                            {{ __('Proyectos') }}
-                        <b class="caret"></b>
-                    </p>
-                </a>
-                <div class="collapse" id="proyectos">
-                    <ul class="nav">
-                        <li class="{{ $elementActive == 'proyectos' ? 'active' : '' }}">
-                            <a href="{{ route('page.index', 'panel/proyectos') }}">
-                                <span class="sidebar-mini-icon">AS</span>
-                                <span class="sidebar-normal">{{ __('Administrar Secciones') }}</span>
-                            </a>
-                        </li>
-                        <li class="{{ $elementActive == 'imagenes_proyecto' ? 'active' : '' }}">
-                            <a href="{{ route('page.index', 'panel/imagenes_proyecto') }}">
-                                <span class="sidebar-mini-icon">AI</span>
-                                <span class="sidebar-normal">{{ __('Administrar Imagenes') }}</span>
                             </a>
                         </li>
                     </ul>
@@ -125,20 +79,33 @@
                 </a>
             </li>
             <li class="{{ $elementActive == 'newsletter' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'panel/newsletter') }}">
+                <a href="{{ route('page.index', 'panel/servicios') }}">
                     <i class="nc-icon nc-email-85"></i>
 
-                    <p>{{ __('Newsletter') }}</p>
+                    <p>{{ __('Servicios') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'solicitud' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'panel/solicitud') }}">
+                <a href="{{ route('page.index', 'panel/pasantias') }}">
                     <i class="nc-icon nc-money-coins"></i>
 
-                    <p>{{ __('Solicitudes') }}</p>
+                    <p>{{ __('Pasantias') }}</p>
                 </a>
             </li>
+            <li class="{{ $elementActive == 'solicitud' ? 'active' : '' }}">
+                <a href="{{ route('page.index', 'panel/diadecampo') }}">
+                    <i class="nc-icon nc-money-coins"></i>
 
+                    <p>{{ __('Dia de Campo') }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'solicitud' ? 'active' : '' }}">
+                <a href="{{ route('page.index', 'panel/arrozales') }}">
+                    <i class="nc-icon nc-money-coins"></i>
+
+                    <p>{{ __('Arrozales del Chaco') }}</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

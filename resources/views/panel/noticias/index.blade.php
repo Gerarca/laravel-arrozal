@@ -107,12 +107,13 @@
             });
 
             var table = $('#datatable').DataTable();
-          });
+        });
         $(document).on('click', '.btn-delete', function(){
             $('.modal form').attr('action', $(this).data('route'));
             $('#ModalLabel').text($(this).data('title'));
         })
     </script>
+
     @if($errors->any())
         @foreach ($errors->all() as $error)
             <script>
