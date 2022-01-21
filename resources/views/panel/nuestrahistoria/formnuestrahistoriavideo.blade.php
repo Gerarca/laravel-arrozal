@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'nosotros'
+    'elementActive' => 'nuestrahistoria'
 ])
 @section('title')
     {{!isset($nuestrahistoriavideo->id) ? 'Editar Video' : 'Agregar Video'}}

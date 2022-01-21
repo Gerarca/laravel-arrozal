@@ -42,7 +42,7 @@
             </li>
             <li class="{{ $elementActive == 'noticia' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/noticias') }}">
-                    <i class="nc-icon nc-image"></i>
+                    <i class="nc-icon nc-paper"></i>
                     <p>{{ __('Noticias') }}</p>
                 </a>
             </li>
@@ -71,7 +71,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="{{ $elementActive == 'desarrollo' ? 'active' : '' }}">
+            <li class="{{ $elementActive == 'nuestrahistoria' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/nuestrahistoria') }}">
                     <i class="nc-icon nc-world-2"></i>
 
@@ -80,7 +80,7 @@
             </li>
             <li class="{{ $elementActive == 'newsletter' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/servicios') }}">
-                    <i class="nc-icon nc-email-85"></i>
+                    <i class="nc-icon nc-settings"></i>
 
                     <p>{{ __('Servicios') }}</p>
                 </a>

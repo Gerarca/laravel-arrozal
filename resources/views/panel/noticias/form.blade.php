@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'banner'
+    'elementActive' => 'noticia'
 ])
 @section('title')
     {{!isset($banner->id) ? 'Crear Noticia' : 'Editar Noticia'}}

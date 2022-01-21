@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'banner'
+    'elementActive' => 'nosotros'
 ])
 @section('title')
     {{!isset($DondeEstamos->id) ? 'Crear Donde Estamos' : 'Editar Donde Estamos'}}
