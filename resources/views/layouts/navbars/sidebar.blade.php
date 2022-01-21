@@ -85,21 +85,21 @@
                     <p>{{ __('Servicios') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'solicitud' ? 'active' : '' }}">
+            <li class="{{ $elementActive == 'pasantias' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/pasantias') }}">
                     <i class="nc-icon nc-money-coins"></i>
 
                     <p>{{ __('Pasantias') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'solicitud' ? 'active' : '' }}">
+            <li class="{{ $elementActive == 'diadecampo' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/diadecampo') }}">
                     <i class="nc-icon nc-money-coins"></i>
 
                     <p>{{ __('Dia de Campo') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'solicitud' ? 'active' : '' }}">
+            <li class="{{ $elementActive == 'arrozales' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/arrozales') }}">
                     <i class="nc-icon nc-money-coins"></i>
 
