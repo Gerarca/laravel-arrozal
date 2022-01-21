@@ -78,7 +78,7 @@
                     <p>{{ __('Nuestra Historia') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'newsletter' ? 'active' : '' }}">
+            <li class="{{ $elementActive == 'servicios' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/servicios') }}">
                     <i class="nc-icon nc-settings"></i>
 
