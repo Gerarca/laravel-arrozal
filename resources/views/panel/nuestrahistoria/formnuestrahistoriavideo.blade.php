@@ -3,7 +3,7 @@
     'elementActive' => 'nuestrahistoria'
 ])
 @section('title')
-    {{!isset($nuestrahistoriavideo->id) ? 'Editar Video' : 'Agregar Video'}}
+    {{!isset($nuestrahistoriavideo->id) ? 'Agregar Video' : 'Editar Video'}}
 @endsection
 @section('content')
     <div class="content">

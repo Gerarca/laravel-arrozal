@@ -3,7 +3,7 @@
     'elementActive' => 'noticia'
 ])
 @section('title')
-    {{!isset($banner->id) ? 'Crear Noticia' : 'Editar Noticia'}}
+    {{!isset($noticia->id) ? 'Crear Noticia' : 'Editar Noticia'}}
 @endsection
 @section('content')
     <div class="content">

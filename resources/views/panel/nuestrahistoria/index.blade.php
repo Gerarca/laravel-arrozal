@@ -2,7 +2,7 @@
     'class' => '',
     'elementActive' => 'nuestrahistoria'
 ])
-@section('title', 'Quienes Somos')
+@section('title', 'Nuestra Historia')
 @section('content')
     <div class="content">
         <div class="container-fluid mt--7">
