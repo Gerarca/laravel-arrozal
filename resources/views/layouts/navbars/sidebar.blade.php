@@ -73,28 +73,28 @@
             </li>
             <li class="{{ $elementActive == 'nuestrahistoria' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/nuestrahistoria') }}">
-                    <i class="nc-icon nc-world-2"></i>
+                    <i class="nc-icon nc-calendar-60"></i>
 
                     <p>{{ __('Nuestra Historia') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'servicios' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/servicios') }}">
-                    <i class="nc-icon nc-settings"></i>
+                    <i class="nc-icon nc-alert-circle-i"></i>
 
                     <p>{{ __('Servicios') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'pasantias' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/pasantias') }}">
-                    <i class="nc-icon nc-money-coins"></i>
+                    <i class="nc-icon nc-map-big"></i>
 
                     <p>{{ __('Pasantias') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'diadecampo' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'panel/diacampo') }}">
-                    <i class="nc-icon nc-money-coins"></i>
+                    <i class="nc-icon nc-single-copy-04"></i>
 
                     <p>{{ __('Dia de Campo') }}</p>
                 </a>
