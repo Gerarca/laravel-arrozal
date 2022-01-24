@@ -38,7 +38,7 @@ class PasantiasImagenesController extends Controller
             return redirect()->route('pasantias.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('pasantias.index', $pasantiasImagen)->with('success', 'Banner almacenado correctamente.')
+        return redirect()->route('pasantias.index', $pasantiasImagen)->with('success', 'Imagen almacenado correctamente.')
             ->with('imagen', $fileName);
     }
 

@@ -93,7 +93,7 @@
                 </a>
             </li>
             <li class="{{ $elementActive == 'diadecampo' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'panel/diadecampo') }}">
+                <a href="{{ route('page.index', 'panel/diacampo') }}">
                     <i class="nc-icon nc-money-coins"></i>
 
                     <p>{{ __('Dia de Campo') }}</p>

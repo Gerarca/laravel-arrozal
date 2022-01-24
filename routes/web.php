@@ -41,5 +41,10 @@ Route::get('/panel', [App\Http\Controllers\HomeController::class, 'index'])->nam
             Route::resource('servicios', 'ServiciosController', ['except' => ['show']]);
             Route::resource('pasantias', 'PasantiasTextoController', ['except' => ['show']]);
             Route::resource('pasantiasimagenes', 'PasantiasImagenesController', ['except' => ['show']]);
+            Route::resource('diacampo', 'DiaCampoTextoController', ['except' => ['show']]);
+            Route::resource('diacampoimagenes', 'DiaCampoImagenesController', ['except' => ['show']]);
+            Route::resource('arrozales', 'ArrozalesTextoController', ['except' => ['show']]);
+            Route::resource('arrozalesvideo', 'ArrozalesVideoController', ['except' => ['show']]);
+            Route::resource('arrozalesimagenes', 'ArrozalesImagenesController', ['except' => ['show']]);
         });
     });
