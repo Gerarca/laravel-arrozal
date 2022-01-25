@@ -24,16 +24,16 @@
                         <div class="card-body">
                             <div class="form-group has-label">
                                 <label for="titulo">
-                                    Titulo
+                                    Titulo *
                                 </label>
-                                <input class="form-control" id="titulo" name="titulo" type="text"
+                                <input class="form-control" id="titulo" name="titulo" type="text" required
                                        value="{{$noticia->titulo?$noticia->titulo:old('titulo')}}"/>
                             </div>
                             <div class="form-group has-label">
                                 <label for="enlace">
-                                    Enlace
+                                    Enlace *
                                 </label>
-                                <input class="form-control" id="enlace" name="enlace" type="text"
+                                <input class="form-control" id="enlace" name="enlace" type="text" required
                                        value="{{$noticia->enlace?$noticia->enlace:old('enlace')}}" url="true"/>
                             </div>
 
@@ -47,7 +47,7 @@
 
                                     <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                         <div class="fileinput-new thumbnail">
-                                            <img src="{{$noticia->imagen ? url('uploads/'.$noticia->imagen):url('assets_template/img/image_placeholder.jpg')}}"
+                                            <img src="{{$noticia->imagen ? url('uploads/'.$noticia->imagen):url('assets_template/img/image_placeholder.jpg') }}"
                                                  alt="{{$noticia->titulo?$noticia->titulo:old('titulo')}}">
                                         </div>
                                         <div class="fileinput-preview fileinput-exists thumbnail"></div>
@@ -55,12 +55,20 @@
                                             <span class="btn btn-rose btn-round btn-file">
                                             <span class="fileinput-new">Seleccionar Imagen</span>
                                             <span class="fileinput-exists">Cambiar</span>
-                                                <input type="file" name="imagen" id="imagen" {{ $noticia->id ? '' : 'required="true"' }} accept="image/*"/></span>
+                                                <input type="file" name="imagen" id="imagen" {{ $noticia->id ? '' : 'required="true"' }} accept="image/*"  }}"   />
+                                            </span>
                                             <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
                                                data-dismiss="fileinput"><i class="fa fa-times"></i> Quitar</a>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group has-label">
+                                <label for="titulo">
+                                    Fuente
+                                </label>
+                                <input class="form-control" id="fuente" name="fuente" type="text" required
+                                       value="{{$noticia->fuente?$noticia->fuente:old('fuente')}}"/>
                             </div>
                             <div class="category form-category">* Campos requeridos</div><br>
                         </div>

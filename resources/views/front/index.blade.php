@@ -6,6 +6,13 @@
     <div class="rev_slider_wrapper">
       <div id="rev-slider1" class="rev_slider  ">
           <ul>
+              @foreach ($banners as $banner)
+                <li data-transition="random">
+                    <img src="{{ url('uploads/'.$banner->imagen) }}" alt="{{ $banner->titulo }}" data-bgposition="center center" data-no-retina>
+                    <div class="bg-slider-1"></div>
+                </li>
+              @endforeach
+              {{--
               <li data-transition="random">
                   <img src="{{ url('assets_front/images/banner-new-3.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
                   <div class="bg-slider-1"></div>
@@ -18,7 +25,7 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquam recusandae, quis quo commodi debitis.</p>
                       </div>
                       <a class="btn-enviar mt-1" href="#">Más información</a>
-                  </div> --}}
+                  </div>
               </li>
               <li data-transition="random">
                   <img src="{{ url('assets_front/images/vista-aerea.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
@@ -27,7 +34,7 @@
               <li data-transition="random">
                   <img src="{{ url('assets_front/images/maquinas-1.jpg')}}" alt="" data-bgposition="center center" data-no-retina>
                   <div class="bg-slider-1"></div>
-              </li>
+              </li> --}}
           </ul>
       </div>
     </div>
@@ -45,60 +52,62 @@
   <section class="nosotros" id="nosotros">
     <div class="container">
       <div class="row row-nosotros">
+        @foreach ($quienesSomos as $quienessomo)
         <div class="col-md-6">
-          <img class="img-nosotros load-hidden" src="{{ url('assets_front/images/quienes-somos3.jpg')}}" loading="lazy" alt="">
+          <img class="img-nosotros load-hidden" src="{{ url('uploads/'.$quienessomo->imagen) }}" alt="{{ $quienessomo->titulo }} }}" loading="lazy" alt="">
         </div>
         <div class="col-md-6 col-nosotros">
-          <div class="container-text-nosotros load-hidden">
-            <h2 class="title-nosotros">Quiénes Somos</h2>
-            <p class="text-nosotros">Arrozal S.A, fundada en 2010 y ubicada en la ciudad de Coronel Bogado, departamento de Itapua es una empresa familiar pionera en el servicio de consultoría y asistencia técnica, como también en la investigación privada de arroz en Paraguay. Hoy en día, se dedica a la producción comercial de arroz comprometida en asegurar un producto con calidad superior.</p>
-          </div>
-          <div class="valores-nosotros">
-            <div class="container-valores load-hidden">
-              <div class="container-icon-valores">
-                <img src="{{ url('assets_front/images/mision.svg')}}" alt="Icon Valores">
-                <span class="semilla semilla-1"></span>
-                <span class="semilla semilla-2"></span>
-                <span class="semilla semilla-3"></span>
-                <span class="semilla semilla-4"></span>
+              <div class="container-text-nosotros load-hidden">
+                <h2 class="title-nosotros">Quiénes Somos</h2>
+                {{--<p class="text-nosotros">Arrozal S.A, fundada en 2010 y ubicada en la ciudad de Coronel Bogado, departamento de Itapua es una empresa familiar pionera en el servicio de consultoría y asistencia técnica, como también en la investigación privada de arroz en Paraguay. Hoy en día, se dedica a la producción comercial de arroz comprometida en asegurar un producto con calidad superior.</p> --}}
+                <p class="text-nosotros">{{ $quienessomo->descripcion }}</p>
               </div>
-              <div class="container-text-valores">
-                <h2 class="title-valores">Misión</h2>
-                <p class="valores-text">Fortalecer el potencial productivo y sustentable del arroz en Paraguay a través de la investigación científica, capacitación, producción y comercialización.
-                </p>
+              <div class="valores-nosotros">
+                <div class="container-valores load-hidden">
+                  <div class="container-icon-valores">
+                    <img src="{{ url('assets_front/images/mision.svg')}}" alt="Icon Valores">
+                    <span class="semilla semilla-1"></span>
+                    <span class="semilla semilla-2"></span>
+                    <span class="semilla semilla-3"></span>
+                    <span class="semilla semilla-4"></span>
+                  </div>
+                  <div class="container-text-valores">
+                    <h2 class="title-valores">Misión</h2>
+                    {{--<p class="valores-text">Fortalecer el potencial productivo y sustentable del arroz en Paraguay a través de la investigación científica, capacitación, producción y comercialización.</p> --}}
+                    <p class="valores-text">{{ $quienessomo->mision }}</p>
+                  </div>
+                </div>
+                <div class="container-valores load-hidden">
+                  <div class="container-icon-valores">
+                    <img src="{{ url('assets_front/images/vision.svg')}}">
+                    <span class="semilla semilla-5"></span>
+                    <span class="semilla semilla-6"></span>
+                    <span class="semilla semilla-7"></span>
+                    <span class="semilla semilla-8"></span>
+                  </div>
+                  <div class="container-text-valores">
+                    <h2 class="title-valores">Visión</h2>
+                    {{--<p class="valores-text">Posicionar el arroz paraguayo en el mercado internacional como referencia de calidad y responsabilidad.</p> --}}
+                    <p class="valores-text">{{ $quienessomo->vision }}</p>
+                  </div>
+                </div>
+                <div class="container-valores mb-0 load-hidden">
+                  <div class="container-icon-valores">
+                    <img src="{{ url('assets_front/images/handshake.svg')}}" alt="Icon Valores">
+                    <span class="semilla semilla-9"></span>
+                    <span class="semilla semilla-10"></span>
+                    <span class="semilla semilla-11"></span>
+                    <span class="semilla semilla-12"></span>
+                  </div>
+                  <div class="container-text-valores">
+                    <h2 class="title-valores">Valores</h2>
+                    {{--<p class="valores-text">Pasión, transparencia, compromiso e integridad.</p> --}}
+                    <p class="valores-text">{{ $quienessomo->valores }}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="container-valores load-hidden">
-              <div class="container-icon-valores">
-                <img src="{{ url('assets_front/images/vision.svg')}}">
-                <span class="semilla semilla-5"></span>
-                <span class="semilla semilla-6"></span>
-                <span class="semilla semilla-7"></span>
-                <span class="semilla semilla-8"></span>
-              </div>
-              <div class="container-text-valores">
-                <h2 class="title-valores">Visión</h2>
-                <p class="valores-text">Posicionar el arroz paraguayo en el mercado
-                  internacional como referencia de calidad y responsabilidad.
-                </p>
-              </div>
-            </div>
-            <div class="container-valores mb-0 load-hidden">
-              <div class="container-icon-valores">
-                <img src="{{ url('assets_front/images/handshake.svg')}}" alt="Icon Valores">
-                <span class="semilla semilla-9"></span>
-                <span class="semilla semilla-10"></span>
-                <span class="semilla semilla-11"></span>
-                <span class="semilla semilla-12"></span>
-              </div>
-              <div class="container-text-valores">
-                <h2 class="title-valores">Valores</h2>
-                <p class="valores-text">Pasión, transparencia, compromiso e integridad.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
+        @endforeach
       </div>
     </div>
   </section>
@@ -115,6 +124,15 @@
           <input class="input-hidde" id='step-4' name='step' type='radio'>
           <input class="input-hidde" id='step-5' name='step' type='radio'>
           {{-- <input class="input-hidde" id='step-6' name='step' type='radio'> --}}
+          @foreach ($NuestraHistoria as $nuestrahistoria)
+            <div class='progress-container'>
+                <label for="{{ 'step-' .$loop->index + 1 }}">
+                    <img src="{{ url('uploads/'.$nuestrahistoria->imagen) }}" loading="lazy" alt="{{ $nuestrahistoria->titulo }}">
+                    {{ $nuestrahistoria->titulo }}
+                </label>
+            </div>
+          @endforeach
+          {{--
           <div class='progress-container'>
             <label for='step-1'>
               <img src="{{ url('assets_front/images/Consultoria.png')}}" loading="lazy" alt="">
@@ -145,16 +163,21 @@
               2021
             </label>
           </div>
-
+          --}}
 
           <div class='progress_inner__bar'></div>
           <div class='progress_inner__bar--set'></div>
           <div class='progress-tabs'>
+            @foreach ($NuestraHistoria as $nuestrahistoria)
+                <div class="{{ 'tab-timeline tab-' .$loop->index + 1 }}">
+                <h5 class="title-timeline"> {{ $nuestrahistoria->texto }} </h5>
+              </div>
+            @endforeach
+              {{--
             <div class='tab-timeline tab-1'>
               <h5 class="title-timeline">Inicio de los servicios de consultoría
                 y asistencia técnica en Paraguay.</h5>
             </div>
-
             <div class='tab-timeline tab-2'>
               <h5 class="title-timeline">
                 Formación de la empresa Arrozal S.A. - Consultoría & Asistencia Técnica, Campo Experimental y Servicios de Secado y Almacenamiento de grano.
@@ -171,11 +194,26 @@
             <div class='tab-timeline tab-5'>
               <h5 class="title-timeline">Inicio de la producción de soja en General Delgado.</h5>
             </div>
+            --}}
           </div>
         </div>
       </div>
 
       <div class="timeline-mobile">
+
+        @foreach ($NuestraHistoria as $nuestrahistoria)
+            <div class="container-timeline-mobile">
+                <div class="container-image-timeline">
+                    <img class="img-timeline-mobile" src="{{ url('uploads/'.$nuestrahistoria->imagen) }}" loading="lazy" alt="">
+                    <p> {{ $nuestrahistoria->titulo }} </p>
+                </div>
+                <div class="contianer-timeline-text">
+                    <h5 class="title-timeline">{{ $nuestrahistoria->texto }}</h5>
+
+                </div>
+            </div>
+        @endforeach
+{{--
         <div class="container-timeline-mobile">
           <div class="container-image-timeline">
             <img class="img-timeline-mobile" src="{{ url('assets_front/images/Consultoria.png')}}" loading="lazy" alt="">
@@ -229,24 +267,29 @@
                 Inicio de la producción de soja en General Delgado.
               </a>
             </h5>
-
+--}}
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
+  @if (!$NuestraHistoriaVideo->isEmpty() )
   <section class="adc">
     <div class="container">
-    
-      <div class="video-container video-container-homenaje mb-4">
-        <iframe src="https://www.youtube.com/embed/GU6RZmnGq-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+        @foreach ($NuestraHistoriaVideo as $nuestrahistoriavideo)
+            <div class="video-container video-container-homenaje mb-4">
+                <iframe src="{{ $nuestrahistoriavideo->enlace  }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {{--<iframe src="https://www.youtube.com/embed/GU6RZmnGq-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
+            </div>
+        @endforeach
     </div>
   </section>
+  @endif
 
   <section class="scroll" id="scroll">
-    
+
     <figure class="mapa-1" id="mapa-1">
       <picture>
         <source srcset="{{ url('assets_front/images/mapa-nuevo.jpg')}}" media="(max-width: 768px)">
@@ -267,7 +310,10 @@
     </figure>
     <div class="container-mapa-info">
       <h2 class="title-mapa-info">Dónde estamos</h2>
-      <p class="text-mapa-info">Nuestra producción de arroz esta ubicada en dos regiones. La primera producción se encuentra en el Departamento de Itapúa en la cuenca del Río Paraná próxima a la Central Hidroeléctrica Yacyretá. El segundo emprendimiento esta ubicado en la cuenca del Río Paraguay, en el lado Chaco próximo a la ciudad de Concepción en el Departamento de Presidente Hayes. </p>
+      @foreach ($DondeEstamos as $dondeestamos)
+      <p class="text-mapa-info">{{ $dondeestamos->texto }}</p>
+      @endforeach
+      {{--<p class="text-mapa-info">Nuestra producción de arroz esta ubicada en dos regiones. La primera producción se encuentra en el Departamento de Itapúa en la cuenca del Río Paraná próxima a la Central Hidroeléctrica Yacyretá. El segundo emprendimiento esta ubicado en la cuenca del Río Paraguay, en el lado Chaco próximo a la ciudad de Concepción en el Departamento de Presidente Hayes. </p> --}}
     </div>
   </section>
 
@@ -278,6 +324,22 @@
       <h2 class="title-servicios">Nuestros Servicios</h2>
 
       <div class="grid-servicios">
+
+        @foreach ($Servicios as $servicio)
+            <div class="grid-servicios-items col-md-6">
+                <div class="grid-servicios-images">
+                    <img src="{{ url('uploads/'.$servicio->imagen) }}" alt="{{ $servicio->titulo }}">
+                </div>
+                <div class="grid-servicios-text">
+                    <h2 class="grid-servicios-title">{{ $servicio->titulo }}</h2>
+                    <p class="grid-servicios-text">{{ $servicio->texto }}</p>
+                </div>
+                <div class="grid-sevicions-button">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="{{ '#modal-0' .$loop->index+1 }}" class="grid-servicios-btn">Ver más</a>
+                </div>
+            </div>
+        @endforeach
+            {{--
         <div class="grid-servicios-items col-md-6">
           <div class="grid-servicios-images">
             <img src="{{ url('assets_front/images/produccion.jpg')}}" alt="">
@@ -368,7 +430,7 @@
             <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-08" class="grid-servicios-btn">Ver más</a>
           </div>
         </div>
-
+        --}}
       </div>
     </div>
   </section>
@@ -376,9 +438,18 @@
   <section class="pasantia" id="pasantia">
 
       <h2 class="title-servicios">Programas de pasantías</h2>
-      <p class="text-pasantia">Más de 50 estudiantes de universidades y colegios agrícolas han realizado sus pasantías y trabajo de tesis en nuestro centro de investigación.</p>
+      @foreach ($PasantiasTextos as $pasantiastextos)
+      <p class="text-pasantia">{{ $pasantiastextos->texto }}</p>
+      @endforeach
+      {{--<p class="text-pasantia">Más de 50 estudiantes de universidades y colegios agrícolas han realizado sus pasantías y trabajo de tesis en nuestro centro de investigación.</p>--}}
 
       <div class="grid-pasantia">
+          @foreach ($PasantiasImagenes as $pasantiasimagenes)
+            <div class="grid-pasantia-item">
+                <img src="{{ url('uploads/'.$pasantiasimagenes->imagen) }}" alt="Imagen">
+            </div>
+          @endforeach
+        {{--
         <div class="grid-pasantia-item">
           <img src="{{ url('assets_front/images/pasantia-01.jpg')}}" alt="">
         </div>
@@ -391,6 +462,7 @@
         <div class="grid-pasantia-item">
           <img src="{{ url('assets_front/images/Pasantia5.jpeg')}}" alt="">
         </div>
+        --}}
       </div>
   </section>
 
@@ -399,14 +471,24 @@
       <div class="row row-campo">
         <div class="col-md-6">
           <h2 class="title-servicios title-campo">Día de Campo</h2>
+            @foreach ($DiaCampoTextos as $DiaCampoTexto)
+            <p class="text-pasantia text-campo">{{ $DiaCampoTexto->texto }}</p>
+            @endforeach
+          {{--
           <p class="text-pasantia text-campo">Desde el año 2013, hemos estado organizando cada año el día de campo con el fin de reunir a todos los interesados
             en la producción de arroz. En este evento, participan productores, autoridades, representantes de empresas, instituciones
           financieras, institutos nacionales e internacional, profesores y estudiantes. Durante la jornada, los visitantes tienen la oportunidad
             de intercambiar información, recorrer el campo de producción y las parcelas experimentales, debatir importantes asuntos y situaciones del sector arrocero.
-          </p>
+          </p> --}}
         </div>
         <div class="col-md-6">
           <div class="owl-campo owl-carousel owl-theme">
+              @foreach ($DiaCampoImagenes as $DiaCampoImagen)
+                <div class="item">
+                    <img src="{{ url('uploads/'.$DiaCampoImagen->imagen) }}" alt="">
+                </div>
+              @endforeach
+              {{--
             <div class="item">
               <img src="{{ url('assets_front/images/dia-campo-1.jpg')}}" alt="">
             </div>
@@ -416,6 +498,7 @@
             <div class="item">
               <img src="{{ url('assets_front/images/dia-campo-3.jpg')}}" alt="">
             </div>
+            --}}
         </div>
         </div>
       </div>
@@ -424,37 +507,53 @@
 
   <section class="adc">
     <div class="container">
-      <img src="{{asset('assets_front/images/logo-arrozales.png')}}" alt="Arrozales del Chaco S.A." class="adc-logo" loading="lazy">
-      <p class="text-adc">Por medio de la ALIANZA ENTRE ARROZAL S.A. Y G.P.S.A.E., nace en el 2019 la empresa Arrozales del Chaco S.A. - El proyecto arrocero de mayor impacto en el país ubicado en el departamento Presidente Hayes. Hoy en día, se producen 6,000 hectáreas y se apunta a alcanzar el área de 10,000 hectáreas.
-      </p>
+        <img src="{{asset('assets_front/images/logo-arrozales.png')}}" alt="Arrozales del Chaco S.A." class="adc-logo" loading="lazy">
+        @foreach ($ArrozalesTextos as $ArrozalesTexto)
+        <p class="text-adc">{{ $ArrozalesTexto->texto }}</p>
+        @endforeach
+        {{--<p class="text-adc">Por medio de la ALIANZA ENTRE ARROZAL S.A. Y G.P.S.A.E., nace en el 2019 la empresa Arrozales del Chaco S.A. - El proyecto arrocero de mayor impacto en el país ubicado en el departamento Presidente Hayes. Hoy en día, se producen 6,000 hectáreas y se apunta a alcanzar el área de 10,000 hectáreas.</p>--}}
 
-      <div class="video-container mb-4">
-        {{-- <iframe src="https://www.youtube.com/embed/ySJLXFdLGSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
-        <iframe src="https://www.youtube.com/embed/yaa64YQ689U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-
-       
-      </div>
+        @if (!$ArrozalesVideos->isEmpty())
+            <div class="video-container mb-4">
+                @foreach ($ArrozalesVideos as $ArrozalesVideo)
+                <iframe src="{{ $ArrozalesVideo->enlace }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                @endforeach
+            </div>
+        @endif
+        {{--
+        <div class="video-container mb-4">
+            <iframe src="https://www.youtube.com/embed/yaa64YQ689U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        --}}
 
       <div class="row d-flex justify-content-center" style="gap: 30px 0px;">
+        @if (!$ArrozalesImagenes->isEmpty())
+            @foreach ($ArrozalesImagenes as $ArrozalesImagen)
+                <div class="adc-img col-12 col-md-4">
+                    <img src="{{ url('uploads/'.$ArrozalesImagen->imagen) }}" class="img-adc" loading="lazy" alt="Imagen">
+                </div>
+            @endforeach
+        @endif
+
         {{-- <div class="adc-img col-6 col-md-6">
           <img src="{{ url('assets_front/images/ADCH0.JPG')}}" class="img-fluid" loading="lazy" alt="">
-        </div> --}}
+        </div>
         <div class="adc-img col-12 col-md-4">
           <img src="{{ url('assets_front/images/ADCH5.JPG')}}" class="img-adc" loading="lazy" alt="">
         </div>
         {{-- <div class="adc-img col-6 col-md-6">
           <img src="{{ url('assets_front/images/ADCH2.JPG')}}" class="img-fluid" loading="lazy" alt="">
-        </div> --}}
+        </div>
         <div class="adc-img col-12 col-md-4">
           <img src="{{ url('assets_front/images/ADCH1.JPG')}}" class="img-adc" loading="lazy" alt="">
         </div>
         {{-- <div class="adc-img col-6 col-md-6">
           <img src="{{ url('assets_front/images/ADCH4.JPG')}}" class="img-fluid" loading="lazy" alt="">
-        </div> --}}
+        </div>
         <div class="adc-img col-12 col-md-4">
           <img src="{{ url('assets_front/images/ADCH3.JPG')}}" class="img-adc" loading="lazy" alt="">
         </div>
+        --}}
       </div>
     </div>
   </section>
@@ -549,7 +648,7 @@
           </form>
         </div>
         <div class="col-md-6 tabs-container">
-         
+
 
           <div class="mapa-iframe">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.9882769762517!2d-56.33582178481511!3d-27.125179208632336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9459d6339ebc7589%3A0xd402dd1d8fb8c515!2sArrozal%20S.A!5e0!3m2!1ses-419!2spy!4v1635179839354!5m2!1ses-419!2spy" width="100%" height="462" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -560,6 +659,36 @@
   </section>
 
 {{-- /////////////Modales/////////////// --}}
+
+@foreach ($Servicios as $servicio)
+    <div class="modal fade" id="{{ 'modal-0' .$loop->index+1 }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="grid-modal">
+                <div class="grid-modal-item">
+                    <img class="img-modal" src="{{ url('uploads/'.$servicio->imagen) }}" alt="{{ $servicio->titulo }}">
+                </div>
+                <div class="grid-modal-item">
+                    <div class="container-text-servicios">
+                        <h2 class="title-row-servicios">{{ $servicio->titulo }}</h2>
+                        <p class="text-servicios-modal">{{ $servicio->texto }}</p>
+                        @if ($servicio->titulo == 'Comercialización' || $servicio->titulo == 'comercialización' )
+                            <button type="button"  class="btn-enviar btn-cotizacion" data-dismiss="modal">Solicitar cotización</button>
+                        @endif
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+@endforeach
+
+{{--
 <!-- Modal 01-->
 <div class="modal fade" id="modal-01" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -574,13 +703,13 @@
           </div>
           <div class="grid-modal-item">
             <div class="container-text-servicios">
-              <h2 class="title-row-servicios">Producción Comercial de Arroz</h2>
+              <h2 class="title-row-servicios">Producción Comercial de Arroz Gerarca</h2>
               <p class="text-servicios-modal">Ubicación: <br> San Cosme – Itapúa (Arrozal S.A.) <br>
                 Pte. Hayes – Bajo Chaco (Arrozales del Chaco S.A.). <br>
                 Tipo de Arroz: Arroz largo fino. <br>
                 Época de Cosecha: Enero a Abril.
               </p>
-            
+
             </div>
           </div>
         </div>
@@ -606,7 +735,7 @@
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Comercialización</h2>
               <p>Comercializamos arroz en cáscara localmente y en el exterior. Además, actuamos como intermediarios de la exportación de arroz blanco.</p>
-              {{-- <a href="{{ route('front.index')}}#contacto" class="btn-enviar btn-cotizacion">Solicitar cotización</a> --}}
+               <a href="{{ route('front.index')}}#contacto" class="btn-enviar btn-cotizacion">Solicitar cotización</a>
               <button type="button"  class="btn-enviar btn-cotizacion" data-dismiss="modal">Solicitar cotización</button>
             </div>
           </div>
@@ -660,7 +789,7 @@
             <div class="container-text-servicios">
               <h2 class="title-row-servicios">Servicios de Secado y Almacenaje</h2>
               <p>Ubicación: Coronel Bogado - Itapúa</p>
-              
+
             </div>
           </div>
         </div>
@@ -781,7 +910,7 @@
   </div>
 </div>
 <!-- Fin Modal 08-->
-
+--}}
 
 {{-- /////////////FIN Modales/////////////// --}}
 </main>

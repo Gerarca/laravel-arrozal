@@ -31,6 +31,7 @@
                                     <th>Titulo</th>
                                     <th>Enlace</th>
                                     <th>Imagen</th>
+                                    <th>Fuente</th>
                                     <th>Fecha de creación</th>
                                     <th class="disabled-sorting"></th>
                                     <th class="disabled-sorting"></th>
@@ -42,6 +43,7 @@
                                             <td> {{ $noticia->titulo  === null ? "No posee título" : $noticia->titulo }}</td>
                                             <td>{!! $noticia->enlace ? '<a href="'.$noticia->enlace.'" target="_blank" class="btn btn-primary btn-round btn-icon"><i class="fa fa-chrome"></i></a>' : 'No posee enlace'  !!}</td>
                                             <td><img src="{{ url('uploads/'.$noticia->imagen) }}" alt="{{ $noticia->titulo }}" width="100"></td>
+                                            <td>{{ $noticia->fuente }}</td>
                                             <td>{{ $noticia->created_at }}</td>
                                             <td><a href="{{ route('noticias.edit', $noticia->id) }}" class="btn btn-primary btn-fab btn-icon btn-round" title="editar">
                                                     <i class="fa fa-edit"></i></a>

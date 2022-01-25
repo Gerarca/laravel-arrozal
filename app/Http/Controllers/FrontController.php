@@ -3,17 +3,45 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
-
+use App\Models\QuienesSomos;
+use App\Models\NuestraHistoria;
+use App\Models\NuestraHistoriaVideo;
+use App\Models\DondeEstamo;
+use App\Models\Servicio;
+use App\Models\PasantiasTexto;
+use App\Models\PasantiasImagene;
+use App\Models\DiaCampoTexto;
+use App\Models\DiaCampoImagenes;
+use App\Models\ArrozalesTexto;
+use App\Models\ArrozalesImagene;
+use App\Models\ArrozalesVideo;
+use App\Models\Noticia;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
     public function index(){
-        $banners = Banner::orderBy('orden', 'ASC')->get();
-        return view('front.index', compact('banners'));
+        $banners = Banner::orderBy('orden', 'ASC')->get()->where('visible',1);
+        $quienesSomos = QuienesSomos::all()->sortBy('orden');
+        $NuestraHistoria = NuestraHistoria::all()->sortBy('orden');
+        $NuestraHistoriaVideo = NuestraHistoriaVideo::all()->sortBy('orden');
+        $DondeEstamos = DondeEstamo::all()->sortBy('orden');
+        $Servicios = Servicio::all()->sortBy('orden');
+        $PasantiasTextos = PasantiasTexto::all()->sortBy('orden');
+        $PasantiasImagenes = PasantiasImagene::all()->sortBy('orden');
+        $DiaCampoTextos = DiaCampoTexto::all()->sortBy('orden');
+        $DiaCampoImagenes = DiaCampoImagenes::all()->sortBy('orden');
+        $ArrozalesTextos = ArrozalesTexto::all()->sortBy('orden');
+        $ArrozalesVideos = ArrozalesVideo::all()->sortBy('orden');
+        $ArrozalesImagenes = ArrozalesImagene::all()->sortBy('orden');
+
+        return view('front.index', compact('banners','quienesSomos','NuestraHistoria',
+        'NuestraHistoriaVideo','DondeEstamos','Servicios','PasantiasTextos','PasantiasImagenes',
+        'DiaCampoTextos','DiaCampoImagenes','ArrozalesTextos','ArrozalesVideos','ArrozalesImagenes'));
     }
     public function noticias(){
-        return view('front.noticias');
+        $Noticias = Noticia::all()->sortBy('orden');
+        return view('front.noticias', compact('Noticias'));
     }
     public function postNoticias(){
         return view('front.postNoticias');

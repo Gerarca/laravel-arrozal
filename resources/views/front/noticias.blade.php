@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', 'Noticias')    
+@section('title', 'Noticias')
 @section('content')
 <main class="main-blog">
   <section class="banner-novedades">
@@ -12,6 +12,35 @@
       <div class="row">
         <div class="col-md-9">
           <div class="grid-blog">
+
+            @if (!$Noticias->isEmpty())
+                @foreach ($Noticias as $Noticia)
+                <div class="item-grid-blog">
+                    <div class="container-blog">
+                        <div class="container-image-blog">
+                            <a href="{{ $Noticia->enlace }}" target="_blank">
+                                <img class="image-blog" src="{{ url('uploads/'.$Noticia->imagen)  }}" loading="lazy" alt="">
+                            </a>
+                            <p class="fecha">{{ $Noticia->created_at->format('d/m/y') }}</p>
+                        </div>
+                        <div class="body-text-novedades">
+                            <div class="container-info-blog">
+                                <a href="{{ $Noticia->enlace }}" target="_blank">
+                                    {{ $Noticia->titulo }}
+                                </a>
+                            </div>
+                            <div class="container-blog-info">
+                                <div class="blog-fecha">
+                                    <p class="fuente">Fuente: {{ $Noticia->fuente }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            @endif
+
+            {{--
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -33,7 +62,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -54,7 +83,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -75,7 +104,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -96,7 +125,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -117,7 +146,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -138,7 +167,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -159,7 +188,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -180,7 +209,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -201,7 +230,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -222,7 +251,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -243,7 +272,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -264,7 +293,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -285,7 +314,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -306,7 +335,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -327,7 +356,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -348,7 +377,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -369,7 +398,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -390,7 +419,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -411,7 +440,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -432,7 +461,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -453,7 +482,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -474,7 +503,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -495,7 +524,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -516,7 +545,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -537,7 +566,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -558,7 +587,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -579,7 +608,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -600,7 +629,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -621,7 +650,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -642,7 +671,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -663,7 +692,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -684,7 +713,7 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="item-grid-blog">
               <div class="container-blog">
                 <div class="container-image-blog">
@@ -704,7 +733,8 @@
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
+            --}}
           </div>
         </div>
         <div class="col-md-3">

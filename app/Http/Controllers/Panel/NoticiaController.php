@@ -29,6 +29,8 @@ class NoticiaController extends Controller
             $request->imagen->move(base_path() . '/public/uploads/', $fileName);
             $Noticia = new Noticia();
             $Noticia->imagen = $fileName;
+            $Noticia->descripcion = $request->titulo;
+            $Noticia->fuente = $request->fuente;
             $Noticia->titulo = $request->titulo;
             $Noticia->enlace = $request->enlace;
             $Noticia->save();
@@ -57,6 +59,8 @@ class NoticiaController extends Controller
                 $fileName = 'Noticia' . '-' . time() . '.' . $request->file('imagen')->getClientOriginalExtension();
                 $request->imagen->move(base_path() . '/public/uploads/', $fileName);
                 $Noticia->imagen = $fileName;
+                $Noticia->descripcion = $request->titulo;
+                $Noticia->fuente = $request->fuente;
                 $Noticia->update();
             }
         } catch (\Exception $e) {
