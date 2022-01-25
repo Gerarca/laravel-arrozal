@@ -29,7 +29,6 @@ class NoticiaController extends Controller
             $request->imagen->move(base_path() . '/public/uploads/', $fileName);
             $Noticia = new Noticia();
             $Noticia->imagen = $fileName;
-            $Noticia->descripcion = $request->titulo;
             $Noticia->fuente = $request->fuente;
             $Noticia->titulo = $request->titulo;
             $Noticia->enlace = $request->enlace;
@@ -54,13 +53,11 @@ class NoticiaController extends Controller
     public function update(Request $request, $id) {
         try {
             $Noticia = Noticia::findOrFail($id);
-            $Noticia->fill($request->only('titulo', 'enlace' ))->save();
+            $Noticia->fill($request->only('titulo', 'enlace', 'fuente' ))->save();
             if ($request->hasFile('imagen')) {
                 $fileName = 'Noticia' . '-' . time() . '.' . $request->file('imagen')->getClientOriginalExtension();
                 $request->imagen->move(base_path() . '/public/uploads/', $fileName);
                 $Noticia->imagen = $fileName;
-                $Noticia->descripcion = $request->titulo;
-                $Noticia->fuente = $request->fuente;
                 $Noticia->update();
             }
         } catch (\Exception $e) {
