@@ -126,7 +126,7 @@
           {{-- <input class="input-hidde" id='step-6' name='step' type='radio'> --}}
           @foreach ($NuestraHistoria as $nuestrahistoria)
             <div class='progress-container'>
-                <label for="{{ 'step-' .$loop->index + 1 }}">
+                <label for="{{ 'step-' .$loop->iteration }}">
                     <img src="{{ url('uploads/'.$nuestrahistoria->imagen) }}" loading="lazy" alt="{{ $nuestrahistoria->titulo }}">
                     {{ $nuestrahistoria->titulo }}
                 </label>
@@ -169,7 +169,7 @@
           <div class='progress_inner__bar--set'></div>
           <div class='progress-tabs'>
             @foreach ($NuestraHistoria as $nuestrahistoria)
-                <div class="{{ 'tab-timeline tab-' .$loop->index + 1 }}">
+                <div class="{{ 'tab-timeline tab-' .$loop->iteration }}">
                 <h5 class="title-timeline"> {{ $nuestrahistoria->texto }} </h5>
               </div>
             @endforeach
@@ -335,7 +335,7 @@
                     <p class="grid-servicios-text">{{ $servicio->texto }}</p>
                 </div>
                 <div class="grid-sevicions-button">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="{{ '#modal-0' .$loop->index+1 }}" class="grid-servicios-btn">Ver más</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="{{ '#modal-0' .$loop->iteration }}" class="grid-servicios-btn">Ver más</a>
                 </div>
             </div>
         @endforeach
@@ -661,7 +661,7 @@
 {{-- /////////////Modales/////////////// --}}
 
 @foreach ($Servicios as $servicio)
-    <div class="modal fade" id="{{ 'modal-0' .$loop->index+1 }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="{{ 'modal-0' .$loop->iteration }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-body">
