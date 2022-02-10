@@ -12,7 +12,7 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">{{ trans_choice('navigation.nuestra-historia', 1) }}</h3>
+                                    <h3 class="mb-0">{{ trans_choice('sentences.copy-link', 1) }}</h3>
                                 </div>
                             </div>
                         </div>
