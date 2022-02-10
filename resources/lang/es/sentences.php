@@ -92,6 +92,7 @@ return [
     'eliminar-usuario' => 'Eliminar usuario',
     'enlace-gmaps' => 'Enlace de Google Maps',
     'enlace' => 'Enlace',
+    'enlace-video' => 'Enlace(debe ser en formato "embed", ejemplo: https://www.youtube.com/embed/yaa64YQ689U )',
     'entradas-recientes' => 'Entradas recientes',
     'enviar-archivo' => 'Enviar archivo',
     'enviar-mensaje'  => 'Enviar mensaje',
@@ -262,4 +263,9 @@ return [
     'enviar' => 'Enviar',
     'seguinos' => 'Seguinos',
     'por-anos' => 'Por Año',
+    'copy-link' => 'Pasos Para obtener el Link del Video',
+    'click-on' => 'Para copiar el link en formato "embed",  abra el video en youtube, luego de click derecho sobre el video, a continuacion dar click en   "< > Copiar Codigo de Insercion" ',
+    'click-on-1' => 'Luego abra un block de notas o cualquier editor de texto, pegue el codigo que copio anteriormente, y copie el link encerrado en el atributo src="" ',
+    'click-on-2' => 'Luego de copiar el enlace encerrado en el atributo src="", peguelo en el input enlace del video.',
+    'click-on-3' => 'Listo! puedes guardar el link',
 ];

@@ -91,6 +91,7 @@ return [
     'eliminar-usuario' => 'Delete user',
     'enlace-gmaps' => 'Google Maps link',
     'enlace' => 'Link',
+    'enlace-video' => 'link (It Must be in "embed" format, example: https://www.youtube.com/embed/yaa64YQ689U )',
     'entradas-recientes' => 'Recent entries',
     'enviar-archivo' => 'Send file',
     'enviar-mensaje'  => 'Send message',
@@ -253,4 +254,9 @@ return [
     'enviar' => 'Send',
     'seguinos' => 'Follow US',
     'por-anos' => 'For Year',
+    'copy-link' => 'Steps to get the Video Link',
+    'click-on' => 'To copy link in format "embed" , open the video on youtube, then right click on the video, then click on "< > Copy Embed Code"',
+    'click-on-1' => 'Then open notepad or any text editor, paste the code copied above, and copy the link enclosed in the src="" attribute',
+    'click-on-2' => 'After copied link enclosed in the src=" attribute, paste it into the video link input.',
+    'click-on-3' => 'Ready! you can save it',
 ];

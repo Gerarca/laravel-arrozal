@@ -41,6 +41,7 @@ Route::get('/panel', [App\Http\Controllers\HomeController::class, 'index'])->nam
             Route::resource('quienessomos', 'QuienesSomosController', ['except' => ['show']]);
             Route::resource('nuestrahistoria', 'NuestraHistoriaController', ['except' => ['show']]);
             Route::resource('nuestrahistoriavideo', 'NuestraHistoriaVideoController', ['except' => ['show']]);
+            Route::resource('copylinkyoutube', 'CopyLinkYoutubeController', ['except' => ['show']]);
             Route::resource('dondeestamos', 'DondeEstamosController', ['except' => ['show']]);
             Route::resource('servicios', 'ServiciosController', ['except' => ['show']]);
             Route::resource('pasantias', 'PasantiasTextoController', ['except' => ['show']]);

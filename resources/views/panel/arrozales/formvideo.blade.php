@@ -25,7 +25,7 @@
                         <div class="card-body">
                             <div class="form-group has-label">
                                 <label for="subtitulo">
-                                    {{ trans_choice('sentences.enlace', 1) }} *
+                                    {{ trans_choice('sentences.enlace-video', 1) }} *
                                 </label>
                                 <input class="form-control" id="enlace" name="enlace" type="text" required
                                        value="{{$arrozalesvideo->enlace?$arrozalesvideo->enlace:old('enlace')}}"/>

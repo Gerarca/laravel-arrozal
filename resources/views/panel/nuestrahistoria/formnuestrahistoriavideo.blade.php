@@ -25,10 +25,11 @@
                         <div class="card-body">
                             <div class="form-group has-label">
                                 <label for="subtitulo">
-                                    {{ trans_choice('sentences.enlace', 1) }} *
+                                    {{ trans_choice('sentences.enlace-video', 1) }} *
                                 </label>
                                 <input class="form-control" id="enlace" name="enlace" type="text" required
-                                       value="{{$nuestrahistoriavideo->enlace?$nuestrahistoriavideo->enlace:old('enlace')}}"/>
+                                    value="{{$nuestrahistoriavideo->enlace?$nuestrahistoriavideo->enlace:old('enlace')}}"/>
+                                <a class="text-danger" href="{{ route('page.index', 'panel/copylinkyoutube') }}" target="_blank">{{ trans_choice('sentences.copy-link', 1) }}</a>
                             </div>
                             <div class="form-group has-label">
                             <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
