@@ -29,6 +29,7 @@
                                 </label>
                                 <input class="form-control" id="enlace" name="enlace" type="text" required
                                        value="{{$arrozalesvideo->enlace?$arrozalesvideo->enlace:old('enlace')}}"/>
+                                       <a class="text-danger" href="{{ route('page.index', 'panel/copylinkyoutube') }}" target="_blank">{{ trans_choice('sentences.copy-link', 1) }}</a>
                             </div>
                             <div class="form-group has-label">
                             <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
