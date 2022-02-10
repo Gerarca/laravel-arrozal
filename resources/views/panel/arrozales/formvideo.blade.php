@@ -3,7 +3,7 @@
     'elementActive' => 'arrozales'
 ])
 @section('title')
-    {{!isset($arrozalesvideo->id) ? 'Agregar Video' : 'Editar Video'}}
+    {{!isset($arrozalesvideo->id) ?  trans_choice('sentences.agregar', 1)  : trans_choice('sentences.editar', 1) }}
 @endsection
 @section('content')
     <div class="content">
@@ -19,23 +19,23 @@
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-tabs nav-pills-primary">
                             <h4 class="card-title m-2">
-                                {!! $arrozalesvideo->id ? 'Editar Video' : 'Añadir Video' !!}
+                                {!! $arrozalesvideo->id ? trans_choice('sentences.editar', 1)  .' Video' : trans_choice('sentences.agregar', 1) .' Video' !!}
                             </h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group has-label">
                                 <label for="subtitulo">
-                                    Enlace *
+                                    {{ trans_choice('sentences.enlace', 1) }} *
                                 </label>
                                 <input class="form-control" id="enlace" name="enlace" type="text" required
                                        value="{{$arrozalesvideo->enlace?$arrozalesvideo->enlace:old('enlace')}}"/>
                             </div>
                             <div class="form-group has-label">
-                            <div class="category form-category">* Campos requeridos</div>
+                            <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
                         </div>
                         <div class="card-footer text-right">
                             <button type="submit"
-                                    class="btn btn-primary">{{$arrozalesvideo->exists ? 'Guardar' : 'Crear'}}</button>
+                                    class="btn btn-primary">{{$arrozalesvideo->exists ? trans_choice('sentences.guardar', 1) : trans_choice('sentences.agregar', 1) }}</button>
                         </div>
                     </div>
                 </form>

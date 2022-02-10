@@ -3,7 +3,7 @@
     'elementActive' => 'nosotros'
 ])
 @section('title')
-    {{!isset($quienesSomos->id) ? 'Editar Quienes Somos' : 'Editar Quienes Somos'}}
+    {{!isset($quienesSomos->id) ?  trans_choice('sentences.agregar', 1) : trans_choice('sentences.editar', 1)  }}
 @endsection
 @section('content')
     <div class="content">
@@ -19,41 +19,44 @@
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-tabs nav-pills-primary">
                             <h4 class="card-title m-2">
-                                {!! $quienesSomos->id ? 'Editar Quienes Somos' : 'Añadir Quienes Somos' !!}
+                                {!! $quienesSomos->id ? trans_choice('sentences.quienes-somos-editar', 1) : trans_choice('sentences.quienes-somos-crear', 1) !!}
                             </h4>
                         </div>
                         <div class="card-body">
                             <div class="tab-content">
+                                <div class="form-group has-label">
+                                    <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-es')}}</span></p>
+                                </div>
                                 <div class="tab-pane active" id="banner">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group has-label">
                                                 <label for="banner_title">
-                                                    Quienes Somos
+                                                   {{ trans_choice('navigation.nosotros', 1) }}
                                                 </label>
-                                                <textarea class="form-control" id="descripcion" rows="3" name="descripcion">{{$quienesSomos->descripcion? $quienesSomos->descripcion : "" }}</textarea>
+                                                <textarea class="form-control" id="descripcion" rows="6" name="descripcion" style="max-height: 8rem;" required>{{$quienesSomos->descripcion? $quienesSomos->descripcion : "" }}</textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group has-label">
                                                 <label for="imagen">
-                                                    Imagen *
-                                                    <small>(Recomendamos 1920px X 1080px)</small>
+                                                    {{ trans_choice('sentences.imagen', 1) }} *
+                                                    <small>({{ trans_choice('sentences.recomendamos', 1) }}  1920px X 1080px)</small>
                                                 </label>
                                                 <div class="form-group">
                                                     <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail">
                                                             <img src="{{$quienesSomos->imagen ? url('uploads/'.$quienesSomos->imagen):url('assets_template/img/image_placeholder.jpg')}}"
-                                                                 alt="Quienes Somos">
+                                                                 alt="{{ trans_choice('navigation.quienes-somos', 1) }} " >
                                                         </div>
                                                         <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                                         <div>
                                                             <span class="btn btn-rose btn-round btn-file">
-                                                            <span class="fileinput-new">Seleccionar Imagen</span>
-                                                            <span class="fileinput-exists">Cambiar</span>
-                                                                <input type="file" name="imagen" id="imagen" {{ $quienesSomos->id ? '' : 'required="true"' }} accept="image/*"/></span>
+                                                            <span class="fileinput-new">{{ trans_choice('sentences.seleccionar-imagen', 1) }} </span>
+                                                            <span class="fileinput-exists">{{ trans_choice('sentences.cambiar', 1) }} </span>
+                                                                <input type="file" name="imagen" id="imagen" {{ $quienesSomos->id ? '' : 'required="true"' }} accept="image/*" /></span>
                                                             <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
-                                                               data-dismiss="fileinput"><i class="fa fa-times"></i> Quitar</a>
+                                                               data-dismiss="fileinput"><i class="fa fa-times"></i> {{ trans_choice('sentences.quitar', 1) }} </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -62,25 +65,91 @@
                                         <div class="col-md-12">
                                             <div class="form-group has-label">
                                                 <label for="banner_title">
-                                                    Mision
+                                                    {{ trans_choice('sentences.mision', 1) }}
                                                 </label>
-                                                <textarea class="form-control" id="mision" name="mision" rows="3">{{$quienesSomos->mision? $quienesSomos->mision : "" }}</textarea>
+                                                <textarea class="form-control" id="mision" name="mision" rows="3" required>{{$quienesSomos->mision? $quienesSomos->mision : "" }}</textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group has-label">
                                                 <label for="banner_title">
-                                                    Vision
+                                                    {{ trans_choice('sentences.vision', 1) }}
                                                 </label>
-                                                <textarea class="form-control" id="vision" name="vision" rows="3">{{$quienesSomos->vision? $quienesSomos->vision : "" }}</textarea>
+                                                <textarea class="form-control" id="vision" name="vision" rows="3" required>{{$quienesSomos->vision? $quienesSomos->vision : "" }}</textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group has-label">
                                                 <label for="banner_title">
-                                                    Valores
+                                                    {{ trans_choice('sentences.valores', 1) }}
                                                 </label>
-                                                <textarea class="form-control" id="valores" name="valores" rows="3">{{$quienesSomos->valores? $quienesSomos->valores : "" }}</textarea>
+                                                <textarea class="form-control" id="valores" name="valores" rows="10" required>{{$quienesSomos->valores? $quienesSomos->valores : "" }}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="form-group has-label">
+                                    <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-en')}}</span></p>
+                                </div>
+                                <div class="tab-pane active" id="banner">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group has-label">
+                                                <label for="banner_title_en">
+                                                   {{ trans_choice('navigation.nosotros', 1) }}
+                                                </label>
+                                                <textarea class="form-control" id="descripcion_en" rows="6" name="descripcion_en" style="max-height: 8rem;" required>{{$quienesSomos->descripcion_en? $quienesSomos->descripcion_en : "" }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group has-label">
+                                                <label for="imagen_en">
+                                                    {{ trans_choice('sentences.imagen', 1) }} *
+                                                    <small>({{ trans_choice('sentences.recomendamos', 1) }}  1920px X 1080px)</small>
+                                                </label>
+                                                <div class="form-group">
+                                                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                                        <div class="fileinput-new thumbnail">
+                                                            <img src="{{$quienesSomos->imagen_en ? url('uploads/'.$quienesSomos->imagen_en):url('assets_template/img/image_placeholder.jpg')}}"
+                                                                 alt="{{ trans_choice('navigation.quienes-somos', 1) }} ">
+                                                        </div>
+                                                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                                        <div>
+                                                            <span class="btn btn-rose btn-round btn-file">
+                                                            <span class="fileinput-new">{{ trans_choice('sentences.seleccionar-imagen', 1) }} </span>
+                                                            <span class="fileinput-exists">{{ trans_choice('sentences.cambiar', 1) }} </span>
+                                                                <input type="file" name="imagen_en" id="imagen_en" {{ $quienesSomos->id ? '' : 'required="true"' }} accept="image/*" /></span>
+                                                            <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
+                                                               data-dismiss="fileinput"><i class="fa fa-times"></i> {{ trans_choice('sentences.quitar', 1) }} </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group has-label">
+                                                <label for="banner_title">
+                                                    {{ trans_choice('sentences.mision', 1) }}
+                                                </label>
+                                                <textarea class="form-control" id="mision_en" name="mision_en" rows="3" required>{{$quienesSomos->mision_en? $quienesSomos->mision_en : "" }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group has-label">
+                                                <label for="banner_title">
+                                                    {{ trans_choice('sentences.vision', 1) }}
+                                                </label>
+                                                <textarea class="form-control" id="vision_en" name="vision_en" rows="3" required>{{$quienesSomos->vision_en? $quienesSomos->vision_en : "" }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group has-label">
+                                                <label for="banner_title">
+                                                    {{ trans_choice('sentences.valores', 1) }}
+                                                </label>
+                                                <textarea class="form-control" id="valores_en" name="valores_en" rows="10" required>{{$quienesSomos->valores_en? $quienesSomos->valores_en : "" }}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +158,7 @@
                         </div>
                         <div class="card-footer text-right">
                             <button type="submit"
-                                    class="btn btn-primary">{{$quienesSomos->exists ? 'Guardar' : 'Crear'}}</button>
+                                    class="btn btn-primary">{{$quienesSomos->exists ? trans_choice('sentences.guardar', 1)  : trans_choice('sentences.crear', 1)  }}</button>
                         </div>
                     </div>
                 </form>

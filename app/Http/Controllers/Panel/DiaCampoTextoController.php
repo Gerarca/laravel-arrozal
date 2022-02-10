@@ -6,11 +6,16 @@ use App\Http\Controllers\Controller;
 use App\Models\DiaCampoTexto;
 use App\Models\DiaCampoImagenes;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 class DiaCampoTextoController extends Controller
 {
     public function index() {
-        $DiaCampoTextos = DiaCampoTexto::all()->sortBy('orden');
+
+        if( App::getLocale() == 'es' ){
+            $DiaCampoTextos = DiaCampoTexto::all()->sortBy('orden');
+        }else{
+            $DiaCampoTextos = DiaCampoTexto::get(['id','texto_en as texto']);
+        }
         $DiaCampoImagenes = DiaCampoImagenes::all()->sortBy('orden');
 
         return view('panel.diacampo.index', compact('DiaCampoTextos','DiaCampoImagenes'));
@@ -26,17 +31,22 @@ class DiaCampoTextoController extends Controller
         try {
             $request->validate([
                 'texto' => 'required',
+                'texto_en' => 'required',
             ]);
             $diacampotexto = new DiaCampoTexto();
             $diacampotexto->texto = $request->texto;
+            $diacampotexto->texto_en = $request->texto_en;
             $diacampotexto->save();
         } catch (\Exception $e) {
             \Log::error($e);
 
             return redirect()->route('diacampo.index')->withErrors($e->getMessage());
         }
-
-        return redirect()->route('diacampo.index', $diacampotexto)->with('success', 'Texto almacenado correctamente.');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('diacampo.index', $diacampotexto)->with('success', 'Texto almacenado correctamente.');
+        }else{
+            return redirect()->route('diacampo.index', $diacampotexto)->with('success', 'Text stored successfully.');
+        }
     }
 
     public function edit($id) {
@@ -49,19 +59,27 @@ class DiaCampoTextoController extends Controller
     public function update(Request $request, $id) {
         try {
             $diacampotexto = DiaCampoTexto::findOrFail($id);
-            $diacampotexto->fill($request->only('texto'))->save();
+            $diacampotexto->fill($request->only('texto','texto_en'))->save();
         } catch (\Exception $e) {
             \Log::error($e);
 
             return redirect()->back()->withErrors($e->getMessage());
         }
-
-        return redirect()->route('diacampo.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('diacampo.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('diacampo.index')->with('success', 'Successfully upgraded');
+        }
     }
 
     public function destroy(DiaCampoTexto $diacampotexto) {
         $diacampotexto->delete();
 
-        return redirect()->route('diacampo.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('diacampo.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('diacampo.index')->with('success', 'Successfully Removed');
+        }
+
     }
 }

@@ -12,11 +12,11 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">Listado de banners</h3>
+                                    <h3 class="mb-0">{{trans_choice('sentences.banners-lista', 1)}}</h3>
                                 </div>
                                 <div class="col-4 text-right">
                                     {{--@can('banners.create')--}}
-                                    <a href="banner/create" class="btn btn-sm btn-primary">Agregar banner</a>
+                                    <a href="banner/create" class="btn btn-sm btn-primary">{{trans_choice('sentences.agregar-banner', 1)}}</a>
                                     {{--@endcan--}}
                                 </div>
                             </div>
@@ -28,12 +28,12 @@
                             <table id="datatable" class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th>Titulo</th>
-                                    <th>Subtitulo</th>
-                                    <th>Enlace</th>
-                                    <th>Imagen</th>
-                                    <th>Fecha de creación</th>
-                                    <th>Orden</th>
+                                    <th>{{trans_choice('sentences.titulo', 1)}}</th>
+                                    <th>{{trans_choice('sentences.subtitulo', 1)}}</th>
+                                    <th>{{trans_choice('sentences.enlace', 1)}}</th>
+                                    <th>{{trans_choice('sentences.imagen', 1)}}</th>
+                                    <th>{{trans_choice('sentences.fecha-creacion', 1)}}</th>
+                                    <th>{{trans_choice('sentences.orden', 1)}}</th>
                                     <th>Visible</th>
                                     <th class="disabled-sorting"></th>
                                     <th class="disabled-sorting"></th>
@@ -50,11 +50,11 @@
                                             <td>{{ $banner->created_at }}</td>
                                             <td>{{ $banner->orden }}</td>
                                             <td>{{ $banner->visible==1?'Si':'No' }}</td>
-                                            <td><a href="{{ route('banner.edit', $banner->id) }}" class="btn btn-primary btn-fab btn-icon btn-round" title="editar">
+                                            <td><a href="{{ route('banner.edit', $banner->id) }}" class="btn btn-primary btn-fab btn-icon btn-round" title="{{trans_choice('sentences.editar', 1)}}">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-primary btn-fab btn-icon btn-round btn-delete" title="eliminar" data-id="{{ $banner->id }}" data-toggle="modal"  data-target="#modal-default" data-route="{{ route('banner.destroy', $banner->id) }}" data-title="{{ $banner->name }}">
+                                                <a href="#" class="btn btn-primary btn-fab btn-icon btn-round btn-delete" title="{{trans_choice('sentences.eliminar', 1)}}" data-id="{{ $banner->id }}" data-toggle="modal"  data-target="#modal-default" data-route="{{ route('banner.destroy', $banner->id) }}" data-title="{{ $banner->name }}">
                                                     <i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
@@ -76,20 +76,20 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Eliminar banner</h5>
+                    <h5 class="modal-title">{{trans_choice('sentences.eliminar-banner', 1)}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Esta acción es irreversible. <br/> ¿Está seguro que desea continuar?</p>
+                    <p>{{trans_choice('sentences.continuar-accion', 1)}}</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans_choice('sentences.cancelar', 1)}}</button>
                     <form class="" action="" method="post">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
-                        <button type="submit" class="btn btn-danger" name="button">Sí, eliminar</button>
+                        <button type="submit" class="btn btn-danger" name="button">{{trans_choice('sentences.eliminar', 1)}}</button>
                     </form>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                 responsive: true,
                 language: {
                     search: "_INPUT_",
-                    searchPlaceholder: "Buscar registros",
+                    searchPlaceholder: "{{trans_choice('sentences.buscar-registros', 1)}}",
                 }
 
             });

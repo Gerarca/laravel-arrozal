@@ -43,8 +43,8 @@
   <section class="eslogan">
     <div class="container">
       <div class="container-eslogan-text">
-        <h1 class="title-eslogan load-hidden">¡Sembrando innovación, cosechando éxitos!</h1>
-        <h2 class="subtitle-eslogan load-hidden">Desde Paraguay para el mundo.</h2>
+        <h1 class="title-eslogan load-hidden">{{ trans_choice('sentences.sembrando-innovacion',1) }}</h1>
+        <h2 class="subtitle-eslogan load-hidden">{{ trans_choice('sentences.desde-paraguay',1) }}</h2>
       </div>
     </div>
   </section>
@@ -58,7 +58,7 @@
         </div>
         <div class="col-md-6 col-nosotros">
               <div class="container-text-nosotros load-hidden">
-                <h2 class="title-nosotros">Quiénes Somos</h2>
+                <h2 class="title-nosotros">{{ trans_choice('navigation.quienes-somos', 1) }}</h2>
                 {{--<p class="text-nosotros">Arrozal S.A, fundada en 2010 y ubicada en la ciudad de Coronel Bogado, departamento de Itapua es una empresa familiar pionera en el servicio de consultoría y asistencia técnica, como también en la investigación privada de arroz en Paraguay. Hoy en día, se dedica a la producción comercial de arroz comprometida en asegurar un producto con calidad superior.</p> --}}
                 <p class="text-nosotros">{{ $quienessomo->descripcion }}</p>
               </div>
@@ -72,7 +72,7 @@
                     <span class="semilla semilla-4"></span>
                   </div>
                   <div class="container-text-valores">
-                    <h2 class="title-valores">Misión</h2>
+                    <h2 class="title-valores">{{ trans_choice('sentences.mision', 1) }}</h2>
                     {{--<p class="valores-text">Fortalecer el potencial productivo y sustentable del arroz en Paraguay a través de la investigación científica, capacitación, producción y comercialización.</p> --}}
                     <p class="valores-text">{{ $quienessomo->mision }}</p>
                   </div>
@@ -86,7 +86,7 @@
                     <span class="semilla semilla-8"></span>
                   </div>
                   <div class="container-text-valores">
-                    <h2 class="title-valores">Visión</h2>
+                    <h2 class="title-valores">{{ trans_choice('sentences.vision', 1) }}</h2>
                     {{--<p class="valores-text">Posicionar el arroz paraguayo en el mercado internacional como referencia de calidad y responsabilidad.</p> --}}
                     <p class="valores-text">{{ $quienessomo->vision }}</p>
                   </div>
@@ -100,7 +100,7 @@
                     <span class="semilla semilla-12"></span>
                   </div>
                   <div class="container-text-valores">
-                    <h2 class="title-valores">Valores</h2>
+                    <h2 class="title-valores">{{ trans_choice('sentences.valores', 1) }}</h2>
                     {{--<p class="valores-text">Pasión, transparencia, compromiso e integridad.</p> --}}
                     <p class="valores-text">{{ $quienessomo->valores }}</p>
                   </div>
@@ -115,7 +115,7 @@
   <section class="sombra"></section>
   <section class="historia">
     <div class="container">
-      <h2 class="title-historia">Nuestra Historia</h2>
+      <h2 class="title-historia">{{ trans_choice('navigation.nuestra-historia', 1) }}</h2>
       <div class='timeline'>
         <div class='timeline-progress'>
           <input class="input-hidde" checked='checked' id='step-1' name='step' type='radio'>
@@ -309,7 +309,7 @@
        </picture>
     </figure>
     <div class="container-mapa-info">
-      <h2 class="title-mapa-info">Dónde estamos</h2>
+      <h2 class="title-mapa-info">{{ trans_choice('navigation.donde-estamos', 1) }}</h2>
       @foreach ($DondeEstamos as $dondeestamos)
       <p class="text-mapa-info">{{ $dondeestamos->texto }}</p>
       @endforeach
@@ -321,7 +321,7 @@
 
   <section class="nuestros-sevicios" id="servicios">
     <div class="container">
-      <h2 class="title-servicios">Nuestros Servicios</h2>
+      <h2 class="title-servicios">{{ trans_choice('navigation.nuestro-servicios', 1) }}</h2>
 
       <div class="grid-servicios">
 
@@ -332,7 +332,7 @@
                 </div>
                 <div class="grid-servicios-text">
                     <h2 class="grid-servicios-title">{{ $servicio->titulo }}</h2>
-                    <p class="grid-servicios-text">{{ $servicio->texto }}</p>
+                    <p class="grid-servicios-text">{!! Str::limit($servicio->texto, 100 ) !!}</p>
                 </div>
                 <div class="grid-sevicions-button">
                     <a href="javascript:void(0)" data-toggle="modal" data-target="{{ '#modal-0' .$loop->iteration }}" class="grid-servicios-btn">Ver más</a>
@@ -437,7 +437,7 @@
 
   <section class="pasantia" id="pasantia">
 
-      <h2 class="title-servicios">Programas de pasantías</h2>
+      <h2 class="title-servicios">{{ trans_choice('sentences.programas-pasantias', 1) }}</h2>
       @foreach ($PasantiasTextos as $pasantiastextos)
       <p class="text-pasantia">{{ $pasantiastextos->texto }}</p>
       @endforeach
@@ -470,7 +470,7 @@
     <div class="container">
       <div class="row row-campo">
         <div class="col-md-6">
-          <h2 class="title-servicios title-campo">Día de Campo</h2>
+          <h2 class="title-servicios title-campo">{{ trans_choice('navigation.dia-campo', 1) }}</h2>
             @foreach ($DiaCampoTextos as $DiaCampoTexto)
             <p class="text-pasantia text-campo">{{ $DiaCampoTexto->texto }}</p>
             @endforeach
@@ -560,7 +560,7 @@
 
   <section class="contacto" id="contacto">
     <div class="container">
-      <h2 class="title-section mb-1">Contacto</h2>
+      <h2 class="title-section mb-1">{{ trans_choice('navigation.contacto', 1) }}</h2>
       <div class="row mt-4">
         <div class="col-md-12">
           <ul class="lista-info">
@@ -569,7 +569,7 @@
                 <div class="container-image-contacto">
                 <img class="phone" src="{{ url('assets_front/images/map.svg')}}" alt="Icono Mapa">
                 </div>
-                Ruta Nº 1 km 308 – Compañía San Rafael, Distrito de Coronel Bogado, Itapua – Paraguay
+                {{ trans_choice('sentences.direccion', 1) }}
               </a>
             </li>
             <li>
@@ -593,8 +593,8 @@
                 <div class="container-image-contacto">
                   <img src="{{ url('assets_front/images/clock.svg')}}" alt="Icono Hora">
                 </div>
-                <p>Lunes – viernes: 7:00 a.m – 17:00 p.m. <br>
-                  Sábados: 7:00 a.m. – 12:00 p.m.</p>
+                <p>{{ trans_choice('sentences.lunes-viernes', 1) }} 7:00 a.m – 17:00 p.m. <br>
+                    {{ trans_choice('sentences.sabados', 1) }} 7:00 a.m. – 12:00 p.m.</p>
               </a>
             </li>
           </ul>
@@ -607,24 +607,24 @@
           <form action="{{route('front.contacto')}}#form-contacto" method="POST" enctype="multipart/form-data" id="form-contacto">
             @csrf
             <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required value="{{ old('nombre') }}" maxlength="100">
+              <label for="nombre">{{ trans_choice('sentences.nombre', 1) }}</label>
+              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="{{ trans_choice('sentences.nombre', 1) }}" required value="{{ old('nombre') }}" maxlength="100">
             </div>
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" class="form-control" name="email" id="email" placeholder="Email" required value="{{ old('email') }}" maxlength="100">
             </div>
             <div class="form-group">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" required value="{{ old('telefono') }}" maxlength="100">
+              <label for="telefono">{{ trans_choice('sentences.telefono', 1) }}</label>
+              <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="{{ trans_choice('sentences.telefono', 1) }}" required value="{{ old('telefono') }}" maxlength="100">
             </div>
             <div class="form-group">
-              <label for="asunto">Asunto</label>
+              <label for="asunto">{{ trans_choice('sentences.asunto', 1) }}</label>
               <div class="content-select-contacto">
                 <select class="form-control" name="asunto" id="select" required>
-                  <option value="Solicitar cotizacion" selected>Solicitar cotización</option>
-                  <option value="Trabaja con nosotros">Trabajá con Nosotros</option>
-                  <option value="Otros">Otros</option>
+                  <option value="{{ trans_choice('sentences.solicitar-cotizacion', 1) }}" selected>{{ trans_choice('sentences.solicitar-cotizacion', 1) }}</option>
+                  <option value="{{ trans_choice('sentences.trabaja-nosotros', 1) }}">{{ trans_choice('sentences.trabaja-nosotros', 1) }}</option>
+                  <option value="{{ trans_choice('sentences.otros', 1) }}">{{ trans_choice('sentences.otros', 1) }}</option>
                 </select>
               </div>
             </div>
@@ -632,18 +632,18 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="custom-file">
-                    <label class="file-label" for="File">Adjuntar CV (Solo .pdf o .docx)</label>
+                    <label class="file-label" for="File">{{ trans_choice('sentences.otros', 1) }}</label>
                     <input type="file" name="archivo" class="doc"  name="cv" id="archivo" accept="application/pdf,application/msword,.docx">
                   </div>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea class="form-control" name="mensaje" id="mensaje" cols="10" rows="3" placeholder="Escriba su mensaje" required>{{ old('mensaje') }}</textarea>
+              <label for="mensaje">{{ trans_choice('sentences.mensaje', 1) }}</label>
+              <textarea class="form-control" name="mensaje" id="mensaje" cols="10" rows="3" placeholder="{{ trans_choice('sentences.escriba-mensaje', 1) }}" required>{{ old('mensaje') }}</textarea>
             </div>
             <div class="form-group">
-              <button class="btn-enviar" type="submit">Enviar</button>
+              <button class="btn-enviar" type="submit">{{ trans_choice('sentences.enviar', 1) }}</button>
             </div>
           </form>
         </div>
@@ -675,9 +675,12 @@
                 <div class="grid-modal-item">
                     <div class="container-text-servicios">
                         <h2 class="title-row-servicios">{{ $servicio->titulo }}</h2>
-                        <p class="text-servicios-modal">{{ $servicio->texto }}</p>
-                        @if ($servicio->titulo == 'Comercialización' || $servicio->titulo == 'comercialización' )
-                            <button type="button"  class="btn-enviar btn-cotizacion" data-dismiss="modal">Solicitar cotización</button>
+                        <p class="grid-servicios-text">{!! $servicio->texto !!}</p>
+                        @if ($servicio->titulo == 'Comercialización' || $servicio->titulo == 'comercialización' || $servicio->titulo == 'Commercialization' || $servicio->titulo == 'commercialization' )
+                        <form action="{{route('front.contacto')}}#form-contacto" method="POST" enctype="multipart/form-data" id="form-contacto2">
+                            @csrf
+                            <button type="button"  class="btn-enviar btn-cotizacion" data-dismiss="modal">{{ trans_choice('sentences.solicitar-cotizacion', 1) }}</button>
+                        </form>
                         @endif
                     </div>
                 </div>

@@ -9,6 +9,6 @@ class PasantiasTexto extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'texto',
+        'texto', 'texto_en'
     ];
 }

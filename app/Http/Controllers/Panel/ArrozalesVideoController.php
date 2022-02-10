@@ -7,6 +7,7 @@ use App\Models\ArrozalesTexto;
 use App\Models\ArrozalesImagene;
 use App\Models\ArrozalesVideo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ArrozalesVideoController extends Controller
 {
@@ -38,8 +39,11 @@ class ArrozalesVideoController extends Controller
 
             return redirect()->route('arrozales.index')->withErrors($e->getMessage());
         }
-
-        return redirect()->route('arrozales.index')->with('success', 'Informacion almacenado correctamente.');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index')->with('success', 'Informacion almacenado correctamente.');
+        }else{
+            return redirect()->route('arrozales.index')->with('success', 'Stored Successfully');
+        }
     }
 
     public function edit($id) {
@@ -63,12 +67,20 @@ class ArrozalesVideoController extends Controller
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('arrozales.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('arrozales.index')->with('success', 'Successfully upgraded');
+        }
     }
 
     public function destroy(ArrozalesVideo $arrozalesvideo) {
         $arrozalesvideo->delete();
 
-        return redirect()->route('arrozales.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('arrozales.index')->with('success', 'Successfully Removed');
+        }
     }
 }

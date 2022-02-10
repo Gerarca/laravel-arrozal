@@ -3,7 +3,7 @@
     'elementActive' => 'nosotros'
 ])
 @section('title')
-    {{!isset($DondeEstamos->id) ? 'Crear Donde Estamos' : 'Editar Donde Estamos'}}
+    {{!isset($DondeEstamos->id) ?  trans_choice('sentences.agregar', 1)  :  trans_choice('sentences.editar', 1) }}
 @endsection
 @section('content')
     <div class="content">
@@ -18,20 +18,34 @@
                     @endif
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">{!! $DondeEstamos->id ? 'Editar Donde estamos' : 'Añadir Donde estamos' !!}</h4>
+                            <h4 class="card-title">{!! $DondeEstamos->id ? trans_choice('sentences.donde-estamos-editar', 1) : trans_choice('sentences.donde-estamos-agregar', 1) !!}</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group has-label">
-                                <label for="titulo">
-                                    Donde Estamos
-                                </label>
-                                <textarea class="form-control" id="texto" rows="3" required name="texto">{{$DondeEstamos->texto? $DondeEstamos->texto : old('texto') }}</textarea>
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-es')}}</span></p>
                             </div>
-                            <div class="category form-category">* Campos requeridos</div><br>
+                            <div class="form-group has-label">
+                                <label for="titulo">
+                                    {{ trans_choice('navigation.donde-estamos', 1) }}
+                                </label>
+                                <textarea class="form-control" id="texto" rows="10" required name="texto" style="max-height: 8rem;">{{$DondeEstamos->texto? $DondeEstamos->texto : old('texto') }}</textarea>
+                            </div>
+                            <div class="form-group has-label">
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-en')}}</span></p>
+                            </div>
+                            <div class="form-group has-label">
+                                <label for="titulo_en">
+                                    {{ trans_choice('navigation.donde-estamos', 1) }}
+                                </label>
+                                <textarea class="form-control" id="texto_en" rows="10" required name="texto_en" style="max-height: 8rem;">{{$DondeEstamos->texto_en? $DondeEstamos->texto_en : old('texto_en') }}</textarea>
+                            </div>
+                        </div>
+
+                            <div class="category form-category">*  {{ trans_choice('sentences.campos-requeridos', 1) }}</div><br>
                         </div>
                         <div class="card-footer text-right mt-5">
                             <button type="submit"
-                                    class="btn btn-primary">{{$DondeEstamos->exists ? 'Guardar' : 'Crear'}}</button>
+                                    class="btn btn-primary">{{$DondeEstamos->exists ?  trans_choice('sentences.guardar', 1) : trans_choice('sentences.agregar', 1) }}</button>
                         </div>
                     </div>
                 </form>

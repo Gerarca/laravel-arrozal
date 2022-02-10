@@ -10,5 +10,6 @@ class QuienesSomos extends Model
     use HasFactory;
     protected $fillable = [
         'descripcion', 'mision', 'vision', 'valores', 'imagen',
+        'descripcion_en', 'mision_en', 'vision_en', 'valores_en', 'imagen_en',
     ];
 }

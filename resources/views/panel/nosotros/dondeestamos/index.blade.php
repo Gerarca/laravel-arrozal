@@ -2,7 +2,7 @@
     'class' => '',
     'elementActive' => 'nosotros'
 ])
-@section('title', 'Donde Estamos')
+@section('title',  trans_choice('navigation.donde-estamos', 1) )
 @section('content')
     <div class="content">
         <div class="container-fluid mt--7">
@@ -12,11 +12,11 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">Donde Estamos</h3>
+                                    <h3 class="mb-0"> {{ trans_choice('navigation.donde-estamos', 1) }}</h3>
                                 </div>
                                 <div class="col-4 text-right">
                                     @if($DondeEstamos->isEmpty())
-                                        <a href="dondeestamos/create" class="btn btn-sm btn-primary">Agregar Donde Estamos</a>
+                                        <a href="dondeestamos/create" class="btn btn-sm btn-primary"> {{ trans_choice('sentences.donde-estamos-agregar', 1) }}</a>
                                     @endif
                                 </div>
                             </div>
@@ -28,7 +28,7 @@
                             <table id="datatable" class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th>Donde Estamos</th>
+                                    <th> {{ trans_choice('navigation.donde-estamos', 1) }}</th>
                                     <th class="disabled-sorting"></th>
                                 </tr>
                                 </thead>
@@ -36,7 +36,7 @@
                                     @foreach($DondeEstamos as $dondeestamos)
                                         <tr>
                                             <td>{{ $dondeestamos->texto }}</td>
-                                            <td><a href="{{ route('dondeestamos.edit', $dondeestamos->id) }}" class="btn btn-primary btn-fab btn-icon btn-round" title="Editar">
+                                            <td><a href="{{ route('dondeestamos.edit', $dondeestamos->id) }}" class="btn btn-primary btn-fab btn-icon btn-round" title=" {{ trans_choice('sentences.editar', 1) }}">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>
                                         </tr>

@@ -7,6 +7,7 @@ use App\Models\ArrozalesTexto;
 use App\Models\ArrozalesImagene;
 use App\Models\ArrozalesVideo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ArrozalesImagenesController extends Controller
 {
@@ -40,8 +41,13 @@ class ArrozalesImagenesController extends Controller
             return redirect()->route('arrozales.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('arrozales.index', $arrozalesimagen)->with('success', 'Imagen almacenado correctamente.')
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index', $arrozalesimagen)->with('success', 'Imagen almacenado correctamente.')
             ->with('imagen', $fileName);
+        }else{
+            return redirect()->route('arrozales.index', $arrozalesimagen)->with('success', 'Image stored successfully.')
+            ->with('imagen', $fileName);
+        }
     }
 
     public function edit($id) {
@@ -65,14 +71,21 @@ class ArrozalesImagenesController extends Controller
 
             return redirect()->back()->withErrors($e->getMessage());
         }
-
-        return redirect()->route('arrozales.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('arrozales.index')->with('success', 'Successfully upgraded');;
+        }
     }
 
     public function destroy($id) {
         $arrozalesimagen = ArrozalesImagene::find($id);
         $arrozalesimagen->delete();
 
-        return redirect()->route('arrozales.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('arrozales.index')->with('success', 'Successfully Removed');
+        }
     }
 }

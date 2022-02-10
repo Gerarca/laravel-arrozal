@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\DiaCampoTexto;
 use App\Models\DiaCampoImagenes;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 class DiaCampoImagenesController extends Controller
 {
     public function index() {
@@ -38,8 +38,13 @@ class DiaCampoImagenesController extends Controller
             return redirect()->route('diacampo.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('diacampo.index', $diacampoimagen)->with('success', 'Imagen almacenado correctamente.')
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('diacampo.index', $diacampoimagen)->with('success', 'Imagen almacenado correctamente.')
             ->with('imagen', $fileName);
+        }else{
+            return redirect()->route('diacampo.index', $diacampoimagen)->with('success', 'Image stored successfully.')
+            ->with('imagen', $fileName);
+        }
     }
 
     public function edit($id) {
@@ -64,12 +69,20 @@ class DiaCampoImagenesController extends Controller
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('diacampo.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('diacampo.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('diacampo.index')->with('success', 'Successfully upgraded');
+        }
     }
 
     public function destroy(DiaCampoImagenes $diacampoimagen) {
         $diacampoimagen->delete();
 
-        return redirect()->route('diacampo.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('diacampo.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('diacampo.index')->with('success', 'Successfully Removed');
+        }
     }
 }

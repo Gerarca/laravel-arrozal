@@ -3,7 +3,7 @@
     'elementActive' => 'pasantias'
 ])
 @section('title')
-    {{!isset($pasantiasTexto->id) ? 'Agregar Texto' : 'Editar Texto'}}
+    {{!isset($pasantiasTexto->id) ? trans_choice('sentences.agregar-texto', 1)  : trans_choice('sentences.editar-texto', 1) }}
 @endsection
 @section('content')
     <div class="content">
@@ -19,21 +19,34 @@
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-tabs nav-pills-primary">
                             <h4 class="card-title m-2">
-                                {!! $pasantiasTexto->id ? 'Editar Texto' : 'Añadir Texto' !!}
+                                {!! $pasantiasTexto->id ? trans_choice('sentences.editar-texto', 1) : trans_choice('sentences.agregar-texto', 1) !!}
                             </h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group has-label">
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-es')}}</span></p>
+                            </div>
+                            <div class="form-group has-label">
                                 <label for="subtitulo">
-                                    Texto *
+                                    {{ trans_choice('sentences.texto', 1) }} *
                                 </label>
                                 <input class="form-control" id="texto" name="texto" type="text" required value="{{$pasantiasTexto->texto?$pasantiasTexto->texto:old('texto')}}"/>
                             </div>
-                            <div class="category form-category">* Campos requeridos</div>
+                            <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
+                            <div class="form-group has-label">
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-en')}}</span></p>
+                            </div>
+                            <div class="form-group has-label">
+                                <label for="subtitulo">
+                                    {{ trans_choice('sentences.texto', 1) }} *
+                                </label>
+                                <input class="form-control" id="texto_en" name="texto_en" type="text" required value="{{$pasantiasTexto->texto_en?$pasantiasTexto->texto_en : old('texto_en')}}"/>
+                            </div>
+                            <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div
                         </div>
                         <div class="card-footer text-right">
                             <button type="submit"
-                                    class="btn btn-primary">{{$pasantiasTexto->exists ? 'Guardar' : 'Crear'}}</button>
+                                    class="btn btn-primary">{{$pasantiasTexto->exists ? trans_choice('sentences.guardar', 1) : trans_choice('sentences.crear', 1) }}</button>
                         </div>
                     </div>
                 </form>

@@ -3,7 +3,7 @@
     'elementActive' => 'nuestrahistoria'
 ])
 @section('title')
-    {{!isset($nuestrahistoria->id) ? 'Agregar Historia' : 'Editar Historia'}}
+    {{!isset($nuestrahistoria->id) ? trans_choice('sentences.agregar', 1) : trans_choice('sentences.editar', 1) }}
 @endsection
 @section('content')
     <div class="content">
@@ -19,28 +19,31 @@
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-tabs nav-pills-primary">
                             <h4 class="card-title m-2">
-                                {!! $nuestrahistoria->id ? 'Editar Historia' : 'Añadir Historia' !!}
+                                {!! $nuestrahistoria->id ? trans_choice('sentences.nuestra-historia-editar', 1) : trans_choice('sentences.nuestra-historia-agregar', 1) !!}
                             </h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group has-label">
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-es')}}</span></p>
+                            </div>
+                            <div class="form-group has-label">
                                 <label for="titulo">
-                                    Año *
+                                    {{ trans_choice('sentences.ano', 1) }} *
                                 </label>
                                 <input class="form-control" id="titulo" name="titulo" type="text" required
                                        value="{{$nuestrahistoria->titulo?$nuestrahistoria->titulo:old('titulo')}}"/>
                             </div>
                             <div class="form-group has-label">
                                 <label for="subtitulo">
-                                    Texto *
+                                    {{ trans_choice('sentences.texto', 1) }} *
                                 </label>
                                 <input class="form-control" id="texto" name="texto" type="text" required
                                        value="{{$nuestrahistoria->texto?$nuestrahistoria->texto:old('texto')}}"/>
                             </div>
                             <div class="form-group has-label">
                                 <label for="imagen">
-                                    Imagen *
-                                    <small>(Recomendamos 1920px X 1080px)</small>
+                                    {{ trans_choice('sentences.imagen', 1) }} *
+                                    <small>({{ trans_choice('sentences.recomendamos', 1) }} 1920px X 1080px)</small>
                                 </label>
 
                                 <div class="form-group">
@@ -53,20 +56,64 @@
                                         <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                         <div>
                                             <span class="btn btn-rose btn-round btn-file">
-                                            <span class="fileinput-new">Seleccionar Imagen</span>
-                                            <span class="fileinput-exists">Cambiar</span>
+                                            <span class="fileinput-new">{{ trans_choice('sentences.seleccionar-imagen', 1) }}</span>
+                                            <span class="fileinput-exists">{{ trans_choice('sentences.cambiar', 1) }}</span>
                                                 <input type="file" name="imagen" id="imagen" {{ $nuestrahistoria->id ? '' : 'required="true"' }} accept="image/*"/></span>
                                             <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
-                                               data-dismiss="fileinput"><i class="fa fa-times"></i> Quitar</a>
+                                               data-dismiss="fileinput"><i class="fa fa-times"></i> {{ trans_choice('sentences.quitar', 1) }}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="category form-category">* Campos requeridos</div>
+
+                            <div class="form-group has-label">
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-en')}}</span></p>
+                            </div>
+                            <div class="form-group has-label">
+                                <label for="titulo_en">
+                                    {{ trans_choice('sentences.ano', 1) }} *
+                                </label>
+                                <input class="form-control" id="titulo_en" name="titulo_en" type="text" required
+                                       value="{{$nuestrahistoria->titulo_en?$nuestrahistoria->titulo_en:old('titulo_en')}}"/>
+                            </div>
+                            <div class="form-group has-label">
+                                <label for="subtitulo_en">
+                                    {{ trans_choice('sentences.texto', 1) }} *
+                                </label>
+                                <input class="form-control" id="texto_en" name="texto_en" type="text" required
+                                       value="{{$nuestrahistoria->texto_en?$nuestrahistoria->texto_en:old('texto_en')}}"/>
+                            </div>
+                            <div class="form-group has-label">
+                                <label for="imagen">
+                                    {{ trans_choice('sentences.imagen', 1) }} *
+                                    <small>({{ trans_choice('sentences.recomendamos', 1) }} 1920px X 1080px)</small>
+                                </label>
+
+                                <div class="form-group">
+
+                                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                        <div class="fileinput-new thumbnail">
+                                            <img src="{{$nuestrahistoria->imagen_en ? url('uploads/'.$nuestrahistoria->imagen_en):url('assets_template/img/image_placeholder.jpg')}}" required
+                                                 alt="{{$nuestrahistoria->titulo_en?$nuestrahistoria->titulo_en:old('titulo_en')}}">
+                                        </div>
+                                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                        <div>
+                                            <span class="btn btn-rose btn-round btn-file">
+                                            <span class="fileinput-new">{{ trans_choice('sentences.seleccionar-imagen', 1) }}</span>
+                                            <span class="fileinput-exists">{{ trans_choice('sentences.cambiar', 1) }}</span>
+                                                <input type="file" name="imagen_en" id="imagen_en" {{ $nuestrahistoria->id ? '' : 'required="true"' }} accept="image/*"/></span>
+                                            <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
+                                               data-dismiss="fileinput"><i class="fa fa-times"></i> {{ trans_choice('sentences.quitar', 1) }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
                         </div>
                         <div class="card-footer text-right">
                             <button type="submit"
-                                    class="btn btn-primary">{{$nuestrahistoria->exists ? 'Guardar' : 'Crear'}}</button>
+                                    class="btn btn-primary">{{$nuestrahistoria->exists ? trans_choice('sentences.guardar', 1) : trans_choice('sentences.agregar', 1) }}</button>
                         </div>
                     </div>
                 </form>

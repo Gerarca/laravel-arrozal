@@ -10,5 +10,6 @@ class Noticia extends Model
     use HasFactory;
     protected $fillable = [
         'titulo', 'fuente', 'enlace', 'imagen',
+        'titulo_en', 'fuente_en', 'enlace_en', 'imagen_en',
     ];
 }

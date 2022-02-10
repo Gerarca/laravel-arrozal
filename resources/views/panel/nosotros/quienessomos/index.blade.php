@@ -2,7 +2,7 @@
     'class' => '',
     'elementActive' => 'nosotros'
 ])
-@section('title', 'Quienes Somos')
+@section('title', trans_choice('navigation.quienes-somos', 1) )
 @section('content')
     <div class="content">
         <div class="container-fluid mt--7">
@@ -12,11 +12,11 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">Quienes Somos</h3>
+                                    <h3 class="mb-0"> {{ trans_choice('navigation.quienes-somos', 1)  }} </h3>
                                 </div>
                                 <div class="col-4 text-right">
-                                    @if($QuienesSomos->isEmpty())
-                                        <a href="quienessomos/create" class="btn btn-sm btn-primary">Crear Quienes Somos</a>
+                                    @if(!$QuienesSomos->isEmpty())
+                                        <a href="quienessomos/create" class="btn btn-sm btn-primary"> {{ trans_choice('sentences.quienes-somos-crear', 1)  }} </a>
                                     @endif
                                 </div>
                             </div>
@@ -27,14 +27,14 @@
                                 @if ($QuienesSomos->isEmpty())
                                     <thead class="thead-light">
                                         <tr>
-                                            <th class="text-center font-weight-normal" width="100%" >Contenido Vacio</th>
+                                            <th class="text-center font-weight-normal" width="100%" > {{ trans_choice('sentences.sin-resultados', 1)  }} </th>
                                         </tr>
                                     </thead>
                                 @else
                                     @foreach($QuienesSomos as $about)
                                         <thead class="thead-light">
                                             <tr>
-                                                <th>Quienes Somos</th>
+                                                <th> {{ trans_choice('navigation.quienes-somos', 1)  }} </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -44,7 +44,7 @@
                                         </tbody>
                                         <thead class="thead-light">
                                             <tr>
-                                                <th>Imagen</th>
+                                                <th>{{ trans_choice('sentences.imagen', 1)  }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -54,7 +54,7 @@
                                         </tbody>
                                         <thead class="thead-light">
                                             <tr>
-                                                <th>Mision</th>
+                                                <th>{{ trans_choice('sentences.mision', 1)  }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -64,7 +64,7 @@
                                         </tbody>
                                         <thead class="thead-light">
                                             <tr>
-                                                <th>Vision</th>
+                                                <th>{{ trans_choice('sentences.vision', 1)  }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -74,7 +74,7 @@
                                         </tbody>
                                         <thead class="thead-light">
                                             <tr>
-                                                <th>Valores</th>
+                                                <th>{{ trans_choice('sentences.valores', 1)  }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -84,13 +84,13 @@
                                         </tbody>
                                         <thead class="thead-light">
                                             <tr>
-                                                <th class="disabled-sorting">Accion</th>
+                                                <th class="disabled-sorting">{{ trans_choice('sentences.accion', 1)  }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="mx-auto">
-                                                    <a href="{{route('quienessomos.edit', $about->id)}}" class="btn btn-primary btn-fab btn-icon btn-round" title="editar">
+                                                    <a href="{{route('quienessomos.edit', $about->id)}}" class="btn btn-primary btn-fab btn-icon btn-round" title="{{ trans_choice('sentences.editar', 1)  }}">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                 </td>

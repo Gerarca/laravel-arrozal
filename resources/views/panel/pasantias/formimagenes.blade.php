@@ -3,7 +3,7 @@
     'elementActive' => 'pasantias'
 ])
 @section('title')
-    {{!isset($pasantiasImagen->id) ? 'Agregar Imagen' : 'Editar Imagen'}}
+    {{!isset($pasantiasImagen->id) ? trans_choice('sentences.imagen-agregar', 1) : trans_choice('sentences.imagen-editar', 1) }}
 @endsection
 @section('content')
     <div class="content">
@@ -19,14 +19,14 @@
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-tabs nav-pills-primary">
                             <h4 class="card-title m-2">
-                                {!! $pasantiasImagen->id ? 'Editar Imagen' : 'Añadir Imagen' !!}
+                                {!! $pasantiasImagen->id ? trans_choice('sentences.imagen-editar', 1) : trans_choice('sentences.imagen-agregar', 1) !!}
                             </h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group has-label">
                                 <label for="imagen">
-                                    Imagen *
-                                    <small>(Recomendamos 1920px X 1080px)</small>
+                                    {{ trans_choice('sentences.imagen', 1) }} *
+                                    <small>({{ trans_choice('sentences.recomendamos', 1) }} 1920px X 1080px)</small>
                                 </label>
                                 <div class="form-group">
                                     <div class="fileinput fileinput-new text-center" data-provides="fileinput">
@@ -37,21 +37,21 @@
                                         <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                         <div>
                                             <span class="btn btn-rose btn-round btn-file">
-                                            <span class="fileinput-new">Seleccionar Imagen</span>
-                                            <span class="fileinput-exists">Cambiar</span>
+                                            <span class="fileinput-new">{{ trans_choice('sentences.seleccionar-imagen', 1) }}</span>
+                                            <span class="fileinput-exists">{{ trans_choice('sentences.cambiar', 1) }}</span>
                                                 <input type="file" name="imagen" id="imagen" {{ $pasantiasImagen->id ? '' : 'required="true"' }} accept="image/*"/></span>
                                             <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
-                                               data-dismiss="fileinput"><i class="fa fa-times"></i> Quitar</a>
+                                               data-dismiss="fileinput"><i class="fa fa-times"></i> {{ trans_choice('sentences.quitar', 1) }}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group has-label">
-                            <div class="category form-category">* Campos requeridos</div>
+                            <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
                         </div>
                         <div class="card-footer text-right">
                             <button type="submit"
-                                    class="btn btn-primary">{{$pasantiasImagen->exists ? 'Guardar' : 'Crear'}}</button>
+                                    class="btn btn-primary">{{$pasantiasImagen->exists ? trans_choice('sentences.guardar', 1) :  trans_choice('sentences.agregar', 1) }}</button>
                         </div>
                     </div>
                 </form>

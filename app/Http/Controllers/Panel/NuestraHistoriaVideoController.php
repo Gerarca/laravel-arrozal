@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\NuestraHistoria;
 use App\Models\NuestraHistoriaVideo;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 class NuestraHistoriaVideoController extends Controller
 {
     public function index() {
@@ -37,7 +37,11 @@ class NuestraHistoriaVideoController extends Controller
             return redirect()->route('nuestrahistoria.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('nuestrahistoria.index')->with('success', 'Informacion almacenado correctamente.');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('nuestrahistoria.index')->with('success', 'Informacion almacenado correctamente.');
+        }else{
+            return redirect()->route('nuestrahistoria.index')->with('success', 'Stored successfully.');
+        }
     }
 
     public function edit($id) {
@@ -61,12 +65,20 @@ class NuestraHistoriaVideoController extends Controller
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('nuestrahistoria.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('nuestrahistoria.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('nuestrahistoria.index')->with('success', 'Successfully upgraded');;
+        }
     }
 
     public function destroy(NuestraHistoriaVideo $nuestrahistoriavideo) {
         $nuestrahistoriavideo->delete();
 
-        return redirect()->route('nuestrahistoria.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('nuestrahistoria.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('nuestrahistoria.index')->with('success', 'Successfully Removed');
+        }
     }
 }

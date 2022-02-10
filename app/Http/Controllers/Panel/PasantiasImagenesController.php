@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\PasantiasTexto;
 use App\Models\PasantiasImagene;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class PasantiasImagenesController extends Controller
 {
@@ -38,8 +39,13 @@ class PasantiasImagenesController extends Controller
             return redirect()->route('pasantias.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('pasantias.index', $pasantiasImagen)->with('success', 'Imagen almacenado correctamente.')
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('pasantias.index', $pasantiasImagen)->with('success', 'Imagen almacenado correctamente.')
             ->with('imagen', $fileName);
+        }else{
+            return redirect()->route('pasantias.index', $pasantiasImagen)->with('success', 'Image stored successfully.')
+            ->with('imagen', $fileName);
+        }
     }
 
     public function edit($id) {
@@ -64,12 +70,20 @@ class PasantiasImagenesController extends Controller
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('pasantias.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('pasantias.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('pasantias.index')->with('success', 'Successfully upgraded');
+        }
     }
 
     public function destroy(PasantiasImagene $pasantiasImagen) {
         $pasantiasImagen->delete();
 
-        return redirect()->route('pasantias.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('pasantias.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('pasantias.index')->with('success', 'Successfully Removed');
+        }
     }
 }

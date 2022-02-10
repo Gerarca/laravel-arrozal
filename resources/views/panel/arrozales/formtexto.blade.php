@@ -3,7 +3,7 @@
     'elementActive' => 'arrozales'
 ])
 @section('title')
-    {{!isset($arrozalestexto->id) ? 'Agregar Texto' : 'Editar Texto'}}
+    {{!isset($arrozalestexto->id) ? trans_choice('sentences.agregar-texto', 1)  : trans_choice('sentences.editar-texto', 1) }}
 @endsection
 @section('content')
     <div class="content">
@@ -19,21 +19,37 @@
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-tabs nav-pills-primary">
                             <h4 class="card-title m-2">
-                                {!! $arrozalestexto->id ? 'Editar Texto' : 'Añadir Texto' !!}
+                                {!! $arrozalestexto->id ? trans_choice('sentences.editar-texto', 1) : trans_choice('sentences.agregar-texto', 1) !!}
                             </h4>
                         </div>
                         <div class="card-body">
+
+                            <div class="form-group has-label">
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-es')}}</span></p>
+                            </div>
                             <div class="form-group has-label">
                                 <label for="subtitulo">
-                                    Texto *
+                                    {{ trans_choice('sentences.texto', 1) }} *
                                 </label>
-                                <textarea class="form-control" id="texto" rows="3" name="texto">{{$arrozalestexto->texto? $arrozalestexto->texto : "" }}</textarea>
+                                <textarea class="form-control" id="texto" rows="10" name="texto" style="max-height: 10rem;">{{$arrozalestexto->texto? $arrozalestexto->texto : "" }}</textarea>
                             </div>
-                            <div class="category form-category">* Campos requeridos</div>
+                            <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
+
+                            <div class="form-group has-label">
+                                <p class="border-bottom border-danger text-danger"><span>{{trans('navigation.languages-en')}}</span></p>
+                            </div>
+                            <div class="form-group has-label">
+                                <label for="subtitulo">
+                                    {{ trans_choice('sentences.texto', 1) }} *
+                                </label>
+                                <textarea class="form-control" id="texto_en" rows="10" name="texto_en" style="max-height: 10rem;">{{$arrozalestexto->texto_en? $arrozalestexto->texto_en : "" }}</textarea>
+                            </div>
+                            <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div>
+
                         </div>
                         <div class="card-footer text-right">
                             <button type="submit"
-                                    class="btn btn-primary">{{$arrozalestexto->exists ? 'Guardar' : 'Crear'}}</button>
+                                    class="btn btn-primary">{{$arrozalestexto->exists?  trans_choice('sentences.guardar', 1) : trans_choice('sentences.agregar', 1) }}</button>
                         </div>
                     </div>
                 </form>

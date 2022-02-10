@@ -3,7 +3,7 @@
     'elementActive' => 'banner'
 ])
 @section('title')
-    {{!isset($banner->id) ? 'Crear Banner' : 'Editar Banner'}}
+    {{!isset($banner->id) ? trans_choice('sentences.banner-agregar', 1) : trans_choice('sentences.edit-banner', 1) }}
 @endsection
 @section('content')
     <div class="content">
@@ -18,42 +18,41 @@
                     @endif
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">{!! $banner->id ? 'Editar Banner <b>'.$banner->name.'</b>' : 'Añadir
-                                Banner' !!}</h4>
+                            <h4 class="card-title">{!! $banner->id ? trans_choice('sentences.edit-banner', 1) .'<b>'.$banner->name.'</b>' : trans_choice('sentences.banner-agregar', 1) !!}</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group has-label">
                                 <label for="titulo">
-                                    Titulo
+                                    {{trans_choice('sentences.titulo', 1)}}
                                 </label>
                                 <input class="form-control" id="titulo" name="titulo" type="text"
                                        value="{{$banner->titulo?$banner->titulo:old('titulo')}}"/>
                             </div>
                             <div class="form-group has-label">
                                 <label for="subtitulo">
-                                    Subtitulo
+                                    {{trans_choice('sentences.subtitulo', 1)}}
                                 </label>
                                 <input class="form-control" id="subtitulo" name="subtitulo" type="text"
                                        value="{{$banner->subtitulo?$banner->subtitulo:old('subtitulo')}}"/>
                             </div>
                             <div class="form-group has-label">
                                 <label for="enlace">
-                                    Enlace
+                                    {{trans_choice('sentences.enlace', 1)}}
                                 </label>
                                 <input class="form-control" id="enlace" name="enlace" type="text"
                                        value="{{$banner->enlace?$banner->enlace:old('enlace')}}" url="true"/>
                             </div>
                             <div class="form-group has-label">
                                 <label for="boton">
-                                    Texto del botón
+                                    {{trans_choice('sentences.texto-boton', 1)}}
                                 </label>
                                 <input class="form-control" id="boton" name="boton" type="text"
                                        value="{{$banner->boton?$banner->boton:old('boton')}}"/>
                             </div>
                             <div class="form-group has-label">
                                 <label for="imagen">
-                                    Imagen *
-                                    <small>(Recomendamos 1920px X 1080px)</small>
+                                    {{trans_choice('sentences.imagen', 1)}} *
+                                    <small>({{trans_choice('sentences.recomendamos', 1)}} 1920px X 1080px)</small>
                                 </label>
 
                                 <div class="form-group">
@@ -66,18 +65,18 @@
                                         <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                         <div>
                                             <span class="btn btn-rose btn-round btn-file">
-                                            <span class="fileinput-new">Seleccionar Imagen</span>
-                                            <span class="fileinput-exists">Cambiar</span>
+                                            <span class="fileinput-new">{{trans_choice('sentences.seleccionar-imagen', 1)}}</span>
+                                            <span class="fileinput-exists">{{trans_choice('sentences.cambiar', 1)}}</span>
                                                 <input type="file" name="imagen" id="imagen" {{ $banner->id ? '' : 'required="true"' }} accept="image/*"/></span>
                                             <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
-                                               data-dismiss="fileinput"><i class="fa fa-times"></i> Quitar</a>
+                                               data-dismiss="fileinput"><i class="fa fa-times"></i> {{trans_choice('sentences.quitar', 1)}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group has-label">
                                 <label for="orden">
-                                    Orden
+                                    {{trans_choice('sentences.orden', 1)}}
                                 </label>
                                 <select class="form-control" id="orden" name="orden">
                                     @for ($i=1; $i <= $orden_maximo; $i++)
@@ -95,11 +94,11 @@
                                        data-off-label="<i class='nc-icon nc-simple-remove'></i>" data-on-color="success"
                                        data-off-color="success"/>
                             </div>
-                            <div class="category form-category">* Campos requeridos</div>
+                            <div class="category form-category">* {{trans_choice('sentences.campos-requeridos', 1)}}</div>
                         </div>
                         <div class="card-footer text-right">
                             <button type="submit"
-                                    class="btn btn-primary">{{$banner->exists ? 'Guardar banner' : 'Crear nuevo banner'}}</button>
+                                    class="btn btn-primary">{{$banner->exists ? trans_choice('sentences.guardar-banner', 1) : trans_choice('sentences.crear-banner', 1) }}</button>
                         </div>
                     </div>
                 </form>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Panel;
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class BannerController extends Controller
 {
@@ -42,8 +43,13 @@ class BannerController extends Controller
             return redirect()->route('banner.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('banner.index', $banner)->with('success', 'Banner almacenado correctamente.')
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('banner.index', $banner)->with('success', 'Banner almacenado correctamente.')
             ->with('imagen', $fileName);
+        }else{
+            return redirect()->route('banner.index', $banner)->with('success', 'Banner stored successfully.')
+            ->with('imagen', $fileName);
+        }
     }
 
     public function edit($id) {
@@ -69,13 +75,20 @@ class BannerController extends Controller
 
             return redirect()->back()->withErrors($e->getMessage());
         }
-
-        return redirect()->route('banner.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('banner.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('banner.index')->with('success', 'Successfully upgraded');
+        }
     }
 
     public function destroy(Banner $banner) {
         $banner->delete();
 
-        return redirect()->route('banner.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('banner.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('banner.index')->with('success', 'Successfully Removed');
+        }
     }
 }

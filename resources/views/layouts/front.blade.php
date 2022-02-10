@@ -42,14 +42,31 @@
           </a>
         </div>
         <ul class="lista-menu">
-          <li><a href="{{ route('front.index')}}">Inicio</a></li>
-          <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
+          <li><a href="{{ route('front.index')}}">{{ trans_choice('navigation.inicio', 1) }}</a></li>
+          <li><a href="{{ route('front.index')}}#nosotros">{{ trans_choice('navigation.quienes-somos', 1) }}</a></li>
           {{-- <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li> --}}
-          <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
+          <li><a href="{{ route('front.index')}}#servicios">{{ trans_choice('navigation.nuestro-servicios', 1) }}</a></li>
           {{-- <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li> --}}
-          <li><a href="{{ route('front.index')}}#campo">Día de Campo</a></li>
-          <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
-          <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
+          <li><a href="{{ route('front.index')}}#campo">{{ trans_choice('navigation.dia-campo', 1) }}</a></li>
+          <li><a href="{{ route('front.noticias')}}">{{ trans_choice('navigation.noticias', 1) }}</a></li>
+          <li><a href="{{ route('front.index')}}#contacto">{{ trans_choice('navigation.contacto', 1) }}</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img width="25" src="{{asset('assets_front/images/'.App::getLocale().'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
+                {{ Config::get('languages')[App::getLocale()] }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            @foreach (Config::get('languages') as $lang => $language)
+                @if ($lang != App::getLocale())
+                        <a class="dropdown-item text-secondary" href="{{ route('lang.switch', $lang) }}">
+                            <img width="25" src="{{asset('assets_front/images/'.$lang.'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
+                            {{$language}}
+                        </a>
+                @endif
+            @endforeach
+            </div>
+        </li>
         </ul>
         <button class="btn-menu">
           <img class="menu" src="{{ url('assets_front/images/menu.svg')}}" alt="Icon Menu">
@@ -58,14 +75,30 @@
       </nav>
       <div class="menu-mobile">
         <ul class="lista-menu-mobile">
-          <li><a href="{{ route('front.index')}}">Inicio</a></li>
-          <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
+          <li><a href="{{ route('front.index')}}">{{ trans_choice('navigation.inicio', 1) }}</a></li>
+          <li><a href="{{ route('front.index')}}#nosotros">{{ trans_choice('navigation.quienes-somos', 1) }}</a></li>
           {{-- <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li> --}}
-          <li><a href="{{ route('front.index')}}#servicios">Nuestros servicios</a></li>
+          <li><a href="{{ route('front.index')}}#servicios">{{ trans_choice('navigation.nuestro-servicios', 1) }}</a></li>
           {{-- <li><a href="{{ route('front.index')}}#pasantia">Programa de pasantías</a></li> --}}
-          <li><a href="{{ route('front.index')}}#campo">Día de Campo</a></li>
-          <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
-          <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
+          <li><a href="{{ route('front.index')}}#campo">{{ trans_choice('navigation.dia-campo', 1) }}</a></li>
+          <li><a href="{{ route('front.noticias')}}">{{ trans_choice('navigation.noticias', 1) }}</a></li>
+          <li><a href="{{ route('front.index')}}#contacto">{{ trans_choice('navigation.contacto', 1) }}</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img width="25" src="{{asset('assets_front/images/'.App::getLocale().'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
+                {{ Config::get('languages')[App::getLocale()] }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            @foreach (Config::get('languages') as $lang => $language)
+                @if ($lang != App::getLocale())
+                        <a class="dropdown-item text-secondary" href="{{ route('lang.switch', $lang) }}">
+                            <img width="25" src="{{asset('assets_front/images/'.$lang.'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
+                            {{$language}}
+                        </a>
+                @endif
+            @endforeach
+            </div>
+        </li>
         </ul>
       </div>
     </div>
@@ -90,21 +123,21 @@
        </div>
        <div class="col-md-5">
          <div class="container-footer-enlaces">
-           <h2 class="title-footer">Enlaces</h2>
+           <h2 class="title-footer">{{ trans_choice('sentences.enlace', 1) }}</h2>
            <ul class="lista-enlaces-footer">
-             <li><a href="{{ route('front.index')}}">Inicio</a></li>
-             <li><a href="{{ route('front.index')}}#nosotros">Quiénes somos</a></li>
+             <li><a href="{{ route('front.index')}}">{{ trans_choice('navigation.inicio', 1) }}</a></li>
+             <li><a href="{{ route('front.index')}}#nosotros">{{ trans_choice('navigation.quienes-somos', 1) }}</a></li>
              {{-- <li><a href="{{ route('front.index')}}#scroll">Dónde estamos</a></li> --}}
-             <li><a href="{{ route('front.index')}}#servicios">Nuestros Servicios</a></li>
-             <li><a href="{{ route('front.index')}}#campo">Día de campo</a></li>
-             <li><a href="{{ route('front.noticias')}}">Noticias</a></li>
-             <li><a href="{{ route('front.index')}}#contacto">Contacto</a></li>
+             <li><a href="{{ route('front.index')}}#servicios">{{ trans_choice('navigation.nuestro-servicios', 1) }}</a></li>
+             <li><a href="{{ route('front.index')}}#campo">{{ trans_choice('navigation.dia-campo', 1) }}</a></li>
+             <li><a href="{{ route('front.noticias')}}">{{ trans_choice('navigation.noticias', 1) }}</a></li>
+             <li><a href="{{ route('front.index')}}#contacto">{{ trans_choice('navigation.contacto', 1) }}</a></li>
             </ul>
           </div>
        </div>
        <div class="col-md-3">
          <div class="container-footer-enlaces">
-           <h2 class="title-footer">Seguinos</h2>
+           <h2 class="title-footer">{{ trans_choice('sentences.seguinos', 1) }}</h2>
            <ul class="lista-redes">
              <li>
                <a href="https://www.instagram.com/arrozalsa_py/?fbclid=IwAR0GzBQrpfRTPvpAOoEvwV1V4Q0xU0m_TjvcLh8sIZH5NUecRLs1cU0ip8Y" target="_blank">
@@ -190,5 +223,5 @@
         });
         @endif
     });
-</script> 
+</script>
 </html>

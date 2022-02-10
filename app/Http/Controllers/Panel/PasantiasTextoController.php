@@ -6,11 +6,16 @@ use App\Http\Controllers\Controller;
 use App\Models\PasantiasTexto;
 use App\Models\PasantiasImagene;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 class PasantiasTextoController extends Controller
 {
     public function index() {
-        $PasantiasTextos = PasantiasTexto::all()->sortBy('orden');
+
+        if( App::getLocale() == 'es' ){
+            $PasantiasTextos = PasantiasTexto::all()->sortBy('orden');
+        }else{
+            $PasantiasTextos = PasantiasTexto::get(['id','texto_en as texto']);
+        }
         $PasantiasImagenes = PasantiasImagene::all()->sortBy('orden');
 
         return view('panel.pasantias.index', compact('PasantiasTextos','PasantiasImagenes'));
@@ -26,9 +31,11 @@ class PasantiasTextoController extends Controller
         try {
             $request->validate([
                 'texto' => 'required',
+                'texto_en' => 'required',
             ]);
             $pasantiasTexto = new PasantiasTexto();
             $pasantiasTexto->texto = $request->texto;
+            $pasantiasTexto->texto_en = $request->texto_en;
             $pasantiasTexto->save();
         } catch (\Exception $e) {
             \Log::error($e);
@@ -36,7 +43,11 @@ class PasantiasTextoController extends Controller
             return redirect()->route('pasantias.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('pasantias.index', $pasantiasTexto)->with('success', 'Texto almacenado correctamente.');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('pasantias.index', $pasantiasTexto)->with('success', 'Texto almacenado correctamente.');
+        }else{
+            return redirect()->route('pasantias.index', $pasantiasTexto)->with('success', 'Text stored successfully.');
+        }
     }
 
     public function edit($id) {
@@ -49,19 +60,27 @@ class PasantiasTextoController extends Controller
     public function update(Request $request, $id) {
         try {
             $pasantiasTexto = PasantiasTexto::findOrFail($id);
-            $pasantiasTexto->fill($request->only('texto'))->save();
+            $pasantiasTexto->fill($request->only('texto','texto_en'))->save();
         } catch (\Exception $e) {
             \Log::error($e);
 
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('pasantias.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('pasantias.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('pasantias.index')->with('success', 'Successfully upgradedo');
+        }
     }
 
     public function destroy(PasantiasTexto $pasantiasTexto) {
         $pasantiasTexto->delete();
 
-        return redirect()->route('pasantias.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('pasantias.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('pasantias.index')->with('success', 'Successfully Removed');
+        }
     }
 }

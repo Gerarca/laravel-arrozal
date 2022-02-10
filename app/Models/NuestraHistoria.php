@@ -10,5 +10,6 @@ class NuestraHistoria extends Model
     use HasFactory;
     protected $fillable = [
         'titulo', 'texto', 'imagen',
+        'titulo_en', 'texto_en', 'imagen_en',
     ];
 }

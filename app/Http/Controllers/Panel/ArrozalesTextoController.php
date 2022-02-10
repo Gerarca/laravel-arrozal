@@ -7,11 +7,17 @@ use App\Models\ArrozalesTexto;
 use App\Models\ArrozalesImagene;
 use App\Models\ArrozalesVideo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ArrozalesTextoController extends Controller
 {
     public function index() {
-        $ArrozalesTextos = ArrozalesTexto::all()->sortBy('orden');
+
+        if( App::getLocale() == 'es' ){
+            $ArrozalesTextos = ArrozalesTexto::all()->sortBy('orden');
+        }else{
+            $ArrozalesTextos = ArrozalesTexto::get(['id','texto_en as texto']);
+        }
         $ArrozalesVideos = ArrozalesVideo::all()->sortBy('orden');
         $ArrozalesImagenes = ArrozalesImagene::all()->sortBy('orden');
 
@@ -28,17 +34,22 @@ class ArrozalesTextoController extends Controller
         try {
             $request->validate([
                 'texto' => 'required',
+                'texto_en' => 'required',
             ]);
             $arrozalestexto = new ArrozalesTexto();
             $arrozalestexto->texto = $request->texto;
+            $arrozalestexto->texto_en = $request->texto_en;
             $arrozalestexto->save();
         } catch (\Exception $e) {
             \Log::error($e);
 
             return redirect()->route('arrozales.index')->withErrors($e->getMessage());
         }
-
-        return redirect()->route('arrozales.index', $arrozalestexto)->with('success', 'Texto almacenado correctamente.');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index', $arrozalestexto)->with('success', 'Texto almacenado correctamente.');
+        }else{
+            return redirect()->route('arrozales.index', $arrozalestexto)->with('success', 'Stored successfully.');
+        }
     }
 
     public function edit($id) {
@@ -51,19 +62,27 @@ class ArrozalesTextoController extends Controller
     public function update(Request $request, $id) {
         try {
             $arrozalestexto = ArrozalesTexto::findOrFail($id);
-            $arrozalestexto->fill($request->only('texto'))->save();
+            $arrozalestexto->fill($request->only('texto','texto_en'))->save();
         } catch (\Exception $e) {
             \Log::error($e);
 
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('arrozales.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('arrozales.index')->with('success', 'Successfully Upgraded');
+        }
     }
 
     public function destroy(ArrozalesTexto $arrozalestexto) {
         $arrozalestexto->delete();
 
-        return redirect()->route('arrozales.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('arrozales.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('arrozales.index')->with('success', 'Successfully Removed');
+        }
     }
 }

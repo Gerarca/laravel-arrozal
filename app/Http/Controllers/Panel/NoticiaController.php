@@ -5,11 +5,16 @@ namespace App\Http\Controllers\Panel;
 use App\Http\Controllers\Controller;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class NoticiaController extends Controller
 {
     public function index() {
-        $Noticias = Noticia::all()->sortBy('orden');
+        if( App::getLocale() == 'es' ){
+            $Noticias = Noticia::all()->sortBy('orden');
+        }else{
+            $Noticias = Noticia::get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at']);
+        }
 
         return view('panel.noticias.index', compact('Noticias'));
     }
@@ -24,14 +29,21 @@ class NoticiaController extends Controller
         try {
             $request->validate([
                 'imagen' => 'required|image',
+                'imagen_en' => 'required|image',
             ]);
             $fileName = 'Noticia' . '-' . time() . '.' . $request->file('imagen')->getClientOriginalExtension();
             $request->imagen->move(base_path() . '/public/uploads/', $fileName);
+            $fileName_en = 'Noticia_en' . '-' . time() . '.' . $request->file('imagen_en')->getClientOriginalExtension();
+            $request->imagen_en->move(base_path() . '/public/uploads/', $fileName_en);
             $Noticia = new Noticia();
             $Noticia->imagen = $fileName;
             $Noticia->fuente = $request->fuente;
             $Noticia->titulo = $request->titulo;
             $Noticia->enlace = $request->enlace;
+            $Noticia->imagen_en = $fileName_en;
+            $Noticia->fuente_en = $request->fuente_en;
+            $Noticia->titulo_en = $request->titulo_en;
+            $Noticia->enlace_en = $request->enlace_en;
             $Noticia->save();
         } catch (\Exception $e) {
             \Log::error($e);
@@ -39,8 +51,13 @@ class NoticiaController extends Controller
             return redirect()->route('noticias.index')->withErrors($e->getMessage());
         }
 
-        return redirect()->route('noticias.index', $Noticia)->with('success', 'Noticia almacenado correctamente.')
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('noticias.index', $Noticia)->with('success', 'Noticia almacenado correctamente.')
             ->with('imagen', $fileName);
+        }else{
+            return redirect()->route('noticias.index', $Noticia)->with('success', 'New stored successfully.')
+            ->with('imagen', $fileName);
+        }
     }
 
     public function edit($id) {
@@ -53,11 +70,17 @@ class NoticiaController extends Controller
     public function update(Request $request, $id) {
         try {
             $Noticia = Noticia::findOrFail($id);
-            $Noticia->fill($request->only('titulo', 'enlace', 'fuente' ))->save();
-            if ($request->hasFile('imagen')) {
+            $Noticia->fill($request->only('titulo', 'enlace', 'fuente', 'titulo_en', 'enlace_en', 'fuente_en' ))->save();
+            if ($request->hasFile('imagen') ) {
                 $fileName = 'Noticia' . '-' . time() . '.' . $request->file('imagen')->getClientOriginalExtension();
                 $request->imagen->move(base_path() . '/public/uploads/', $fileName);
                 $Noticia->imagen = $fileName;
+                $Noticia->update();
+            }
+            if ($request->hasFile('imagen_en') ) {
+                $fileName_en = 'Noticia_en' . '-' . time() . '.' . $request->file('imagen_en')->getClientOriginalExtension();
+                $request->imagen_en->move(base_path() . '/public/uploads/', $fileName_en);
+                $Noticia->imagen_en = $fileName_en;
                 $Noticia->update();
             }
         } catch (\Exception $e) {
@@ -66,12 +89,20 @@ class NoticiaController extends Controller
             return redirect()->back()->withErrors($e->getMessage());
         }
 
-        return redirect()->route('noticias.index')->with('success', 'Actualizado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('noticias.index')->with('success', 'Actualizado con éxito');
+        }else{
+            return redirect()->route('noticias.index')->with('success', 'Successfully upgraded');
+        }
     }
 
     public function destroy(Noticia $Noticia) {
         $Noticia->delete();
 
-        return redirect()->route('noticias.index')->with('success', 'Eliminado con éxito');
+        if( App::getLocale() == 'es' ){
+            return redirect()->route('noticias.index')->with('success', 'Eliminado con éxito');
+        }else{
+            return redirect()->route('noticias.index')->with('success', 'Successfully Removed');
+        }
     }
 }

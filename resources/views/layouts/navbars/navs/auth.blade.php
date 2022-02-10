@@ -14,7 +14,7 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="#">Panel de administración Porta
+            <a class="navbar-brand" href="#">{{trans_choice('sentences.panel-administracion', 1)}}
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -25,7 +25,24 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="navbar-nav">
-                
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img width="25" src="{{asset('assets_front/images/'.App::getLocale().'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
+                        {{ Config::get('languages')[App::getLocale()] }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    @foreach (Config::get('languages') as $lang => $language)
+                        @if ($lang != App::getLocale())
+                                <a class="dropdown-item text-secondary" href="{{ route('lang.switch', $lang) }}">
+                                    <img width="25" src="{{asset('assets_front/images/'.$lang.'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
+                                    {{$language}}
+                                </a>
+                        @endif
+                    @endforeach
+                    </div>
+                </li>
+
                 <li class="nav-item btn-rotate dropdown">
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

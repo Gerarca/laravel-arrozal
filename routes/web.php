@@ -4,6 +4,7 @@ use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +18,11 @@ use Illuminate\Support\Facades\Auth;
 Route::redirect('/', config('app.url') . '/inicio');
 Route::get('/inicio', [FrontController::class, 'index'])->name('front.index');
 Route::get('/noticias', [FrontController::class, 'noticias'])->name('front.noticias');
+Route::get('/noticias/toyear/{year}', [FrontController::class, 'toyear'])->name('front.noticias.toyear');
 Route::get('/postNoticias', [FrontController::class, 'postNoticias'])->name('front.postNoticias');
 Route::post('/contacto', [FrontController::class, 'sendContacto'])->name('front.contacto');
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+
 /*
 Route::group(['namespace' => 'App\Http\Controllers\Panel', 'prefix' => 'panel'], function () {
     Route::resource('banner', 'BannerController', ['except' => ['show']]);
