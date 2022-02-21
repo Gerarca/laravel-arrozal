@@ -30,6 +30,7 @@ class NoticiaController extends Controller
             $request->validate([
                 'imagen' => 'required|image',
                 'imagen_en' => 'required|image',
+                'year' => 'required'
             ]);
             $fileName = 'Noticia' . '-' . time() . '.' . $request->file('imagen')->getClientOriginalExtension();
             $request->imagen->move(base_path() . '/public/uploads/', $fileName);
@@ -44,6 +45,7 @@ class NoticiaController extends Controller
             $Noticia->fuente_en = $request->fuente_en;
             $Noticia->titulo_en = $request->titulo_en;
             $Noticia->enlace_en = $request->enlace_en;
+            $Noticia->year = $request->year;
             $Noticia->save();
         } catch (\Exception $e) {
             \Log::error($e);
@@ -70,7 +72,7 @@ class NoticiaController extends Controller
     public function update(Request $request, $id) {
         try {
             $Noticia = Noticia::findOrFail($id);
-            $Noticia->fill($request->only('titulo', 'enlace', 'fuente', 'titulo_en', 'enlace_en', 'fuente_en' ))->save();
+            $Noticia->fill($request->only('titulo', 'enlace', 'fuente', 'titulo_en', 'enlace_en', 'fuente_en', 'year' ))->save();
             if ($request->hasFile('imagen') ) {
                 $fileName = 'Noticia' . '-' . time() . '.' . $request->file('imagen')->getClientOriginalExtension();
                 $request->imagen->move(base_path() . '/public/uploads/', $fileName);

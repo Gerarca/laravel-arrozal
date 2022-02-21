@@ -58,28 +58,25 @@ class FrontController extends Controller
     public function noticias(){
 
         if( App::getLocale() == 'es' ){
-            $Noticias = Noticia::all()->sortBy('orden');
+            $Noticias = Noticia::all()->sortByDesc('year');
         }else{
-            $Noticias = Noticia::get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at']);
+            $Noticias = Noticia::get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year']);
         }
 
-        $NoticiasAnos = Noticia::get()
-                                ->groupBy(function($val) {
-                                return Carbon::parse($val->created_at)->format('Y');
-                            });
+        $NoticiasAnos = $Noticias->groupBy('year');
         return view('front.noticias', compact('Noticias','NoticiasAnos'));
     }
 
     public function toyear($year){
         if( App::getLocale() == 'es' ){
-            $Noticias = Noticia::whereYear('created_at', '=' ,$year)->get();
+            $Noticias = Noticia::whereYear('year', '=' ,$year)->get();
         }else{
-            $Noticias = Noticia::whereYear('created_at', '=' ,$year)->get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at']);
+            $Noticias = Noticia::whereYear('year', '=' ,$year)->get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year']);
         }
-        $NoticiasAnos = Noticia::get()
-                                ->groupBy(function($val) {
-                                return Carbon::parse($val->created_at)->format('Y');
-                            });
+
+        $NoticiasAll = Noticia::all()->sortByDesc('year');
+        $NoticiasAnos = $NoticiasAll->groupBy('year');
+
         return view('front.noticias', compact('Noticias','NoticiasAnos'));
     }
 

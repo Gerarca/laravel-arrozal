@@ -28,4 +28,5 @@ return [
     'pasantias' => 'Internships',
     'dia-campo' => 'Field Day',
     'nuestro-servicios' => 'Services',
+    'usuarios' => 'Users',
 ];

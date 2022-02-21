@@ -37,7 +37,6 @@
                                     </label>
                                     <input class="form-control" id="enlace" name="enlace" type="text" required  value="{{$noticia->enlace?$noticia->enlace:old('enlace')}}" url="true"/>
                                 </div>
-
                                 <div class="form-group has-label">
                                     <label for="imagen">
                                         {{ trans_choice('sentences.imagen', 1) }} *
@@ -89,7 +88,6 @@
                                     </label>
                                     <input class="form-control" id="enlace_en" name="enlace_en" type="text" required  value="{{$noticia->enlace_en?$noticia->enlace_en:old('enlace_en')}}" url="true"/>
                                 </div>
-
                                 <div class="form-group has-label">
                                     <label for="imagen">
                                         {{ trans_choice('sentences.imagen', 1) }} *
@@ -122,6 +120,12 @@
                                     </label>
                                     <input class="form-control" id="fuente_en" name="fuente_en" type="text" required
                                         value="{{$noticia->fuente_en?$noticia->fuente_en:old('fuente_en')}}"/>
+                                </div>
+                                <div class="form-group has-label">
+                                    <label for="ano">
+                                        {{ trans_choice('sentences.ano', 1) }} *
+                                    </label>
+                                    <input class="form-control" id="year" name="year" required  value="{{$noticia->year?$noticia->year:old('ano')}}" type="number" min="1900" max="2099" step="1"/>
                                 </div>
                                 <div class="category form-category">* {{ trans_choice('sentences.campos-requeridos', 1) }}</div><br>
                             </div>

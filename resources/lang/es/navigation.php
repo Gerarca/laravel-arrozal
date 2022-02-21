@@ -28,4 +28,5 @@ return [
     'pasantias' => 'Pasantias',
     'dia-campo' => 'Dia de Campo',
     'nuestro-servicios' => 'Nuestro Servicios',
+    'usuarios' => 'Usuarios',
 ];

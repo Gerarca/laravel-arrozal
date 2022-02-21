@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\App;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer(['front.index', 'layouts.front'], function ($view) {
+
+            if( App::getLocale() == 'es' ){
+                $Contacto = \App\Models\Contacto::all();
+            }else{
+                $Contacto = \App\Models\Contacto::get(['direccion_en as direccion', 'telefono', 'email', 'horario_en as horario', 'instagram', 'facebook', 'linkedin']);
+            }
+
+            $view->with('Contacto', $Contacto);
+        });
     }
 }

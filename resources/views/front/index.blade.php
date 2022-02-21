@@ -564,39 +564,78 @@
       <div class="row mt-4">
         <div class="col-md-12">
           <ul class="lista-info">
-            <li>
-              <a href="https://goo.gl/maps/RnStzjBUWz4W2BQ98" target="_blank" class="align-items-start">
-                <div class="container-image-contacto">
-                <img class="phone" src="{{ url('assets_front/images/map.svg')}}" alt="Icono Mapa">
-                </div>
-                {{ trans_choice('sentences.direccion', 1) }}
-              </a>
-            </li>
-            <li>
-              <a href="tel:+595986544341">
-                <div class="container-image-contacto">
-                <img src="{{ url('assets_front/images/phone.svg')}}" alt="Icono phone">
-                </div>
-                +595 986 544 341
-              </a>
-            </li>
-            <li>
-              <a href="mailto:secretaria@arrozalsa.com.py">
-                <div class="container-image-contacto">
-                  <img src="{{ url('assets_front/images/email.svg')}}" alt="Icono email">
-                </div>
-                secretaria@arrozalsa.com.py
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="container-image-contacto">
-                  <img src="{{ url('assets_front/images/clock.svg')}}" alt="Icono Hora">
-                </div>
-                <p>{{ trans_choice('sentences.lunes-viernes', 1) }} 7:00 a.m – 17:00 p.m. <br>
-                    {{ trans_choice('sentences.sabados', 1) }} 7:00 a.m. – 12:00 p.m.</p>
-              </a>
-            </li>
+            @if ($Contacto->isEmpty())
+                <li>
+                    <a href="https://goo.gl/maps/RnStzjBUWz4W2BQ98" target="_blank" class="align-items-start">
+                    <div class="container-image-contacto">
+                    <img class="phone" src="{{ url('assets_front/images/map.svg')}}" alt="Icono Mapa">
+                    </div>
+                    {{ trans_choice('sentences.direccion', 1) }}
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+595986544341">
+                    <div class="container-image-contacto">
+                    <img src="{{ url('assets_front/images/phone.svg')}}" alt="Icono phone">
+                    </div>
+                    +595 986 544 341
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:secretaria@arrozalsa.com.py">
+                    <div class="container-image-contacto">
+                        <img src="{{ url('assets_front/images/email.svg')}}" alt="Icono email">
+                    </div>
+                    secretaria@arrozalsa.com.py
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <div class="container-image-contacto">
+                        <img src="{{ url('assets_front/images/clock.svg')}}" alt="Icono Hora">
+                    </div>
+                    <p>{{ trans_choice('sentences.lunes-viernes', 1) }} 7:00 a.m – 17:00 p.m. <br>
+                        {{ trans_choice('sentences.sabados', 1) }} 7:00 a.m. – 12:00 p.m.</p>
+                    </a>
+                </li>
+            @else
+                @foreach ($Contacto as $contact)
+                <li>
+                    <a href="https://goo.gl/maps/RnStzjBUWz4W2BQ98" target="_blank" class="align-items-start">
+                    <div class="container-image-contacto">
+                    <img class="phone" src="{{ url('assets_front/images/map.svg')}}" alt="Icono Mapa">
+                    </div>
+                    {{ $contact->direccion }}
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+595986544341">
+                    <div class="container-image-contacto">
+                    <img src="{{ url('assets_front/images/phone.svg')}}" alt="Icono phone">
+                    </div>
+                    {{ $contact->telefono }}
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:secretaria@arrozalsa.com.py">
+                    <div class="container-image-contacto">
+                        <img src="{{ url('assets_front/images/email.svg')}}" alt="Icono email">
+                    </div>
+                    {{ $contact->email }}
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <div class="container-image-contacto">
+                        <img src="{{ url('assets_front/images/clock.svg')}}" alt="Icono Hora">
+                    </div>
+                        <p>
+                            {!! $contact->horario !!}
+                        </p>
+                    </a>
+                </li>
+                @endforeach
+            @endif
           </ul>
         </div>
 

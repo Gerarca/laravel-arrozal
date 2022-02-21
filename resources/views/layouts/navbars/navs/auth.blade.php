@@ -29,7 +29,6 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img width="25" src="{{asset('assets_front/images/'.App::getLocale().'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
-                        {{ Config::get('languages')[App::getLocale()] }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     @foreach (Config::get('languages') as $lang => $language)

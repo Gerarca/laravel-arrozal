@@ -54,7 +54,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img width="25" src="{{asset('assets_front/images/'.App::getLocale().'.png')}}" class="img-responsive img-bandera" alt="@lang('idioma') @lang('navigation.languages-'. App::getLocale())">
-                {{ Config::get('languages')[App::getLocale()] }}
+
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             @foreach (Config::get('languages') as $lang => $language)
@@ -139,21 +139,41 @@
          <div class="container-footer-enlaces">
            <h2 class="title-footer">{{ trans_choice('sentences.seguinos', 1) }}</h2>
            <ul class="lista-redes">
-             <li>
-               <a href="https://www.instagram.com/arrozalsa_py/?fbclid=IwAR0GzBQrpfRTPvpAOoEvwV1V4Q0xU0m_TjvcLh8sIZH5NUecRLs1cU0ip8Y" target="_blank">
-                 <img src="{{ url('assets_front/images/instagram-color.svg')}}" alt="Icon Instagram">
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/Arrozalsa/?rf=675455755800622" target="_blank">
-                  <img src="{{ url('assets_front/images/facebook-app.svg')}}" alt="Icon Facebook">
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/arrozal-s-a/" target="_blank">
-                  <img src="{{ url('assets_front/images/linkedin-app.svg')}}" alt="Icon Facebook">
-                </a>
-              </li>
+               @if (!$Contacto ->isEmpty())
+                    @foreach ($Contacto as $contact)
+                    <li>
+                        <a href="{{ $contact->instagram }}" target="_blank">
+                        <img src="{{ url('assets_front/images/instagram-color.svg')}}" alt="Icon Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ $contact->facebook }}" target="_blank">
+                        <img src="{{ url('assets_front/images/facebook-app.svg')}}" alt="Icon Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ $contact->linkedin }}" target="_blank">
+                        <img src="{{ url('assets_front/images/linkedin-app.svg')}}" alt="Icon Linkedin">
+                        </a>
+                    </li>
+                    @endforeach
+               @else
+                    <li>
+                        <a href="https://www.instagram.com/arrozalsa_py/?fbclid=IwAR0GzBQrpfRTPvpAOoEvwV1V4Q0xU0m_TjvcLh8sIZH5NUecRLs1cU0ip8Y" target="_blank">
+                        <img src="{{ url('assets_front/images/instagram-color.svg')}}" alt="Icon Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Arrozalsa/?rf=675455755800622" target="_blank">
+                        <img src="{{ url('assets_front/images/facebook-app.svg')}}" alt="Icon Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/arrozal-s-a/" target="_blank">
+                        <img src="{{ url('assets_front/images/linkedin-app.svg')}}" alt="Icon Facebook">
+                        </a>
+                    </li>
+               @endif
             </ul>
           </div>
        </div>

@@ -38,6 +38,7 @@ Route::get('/panel', [App\Http\Controllers\HomeController::class, 'index'])->nam
             Route::get('editar_perfil', 'UserController@editar_perfil')->name('editar_perfil');
             Route::resource('banner', 'BannerController', ['except' => ['show']]);
             Route::resource('noticias', 'NoticiaController', ['except' => ['show']]);
+            Route::get('/noticias/toyear/{year}', ['as' => 'noticias.toyear' , 'uses' => 'NoticiaController@toyear']);
             Route::resource('quienessomos', 'QuienesSomosController', ['except' => ['show']]);
             Route::resource('nuestrahistoria', 'NuestraHistoriaController', ['except' => ['show']]);
             Route::resource('nuestrahistoriavideo', 'NuestraHistoriaVideoController', ['except' => ['show']]);
@@ -51,5 +52,7 @@ Route::get('/panel', [App\Http\Controllers\HomeController::class, 'index'])->nam
             Route::resource('arrozales', 'ArrozalesTextoController', ['except' => ['show']]);
             Route::resource('arrozalesvideo', 'ArrozalesVideoController', ['except' => ['show']]);
             Route::resource('arrozalesimagenes', 'ArrozalesImagenesController', ['except' => ['show']]);
+            Route::resource('users', 'UsersController', ['except' => ['show']]);
+            Route::resource('contacto', 'ContactoController', ['except' => ['show']]);
         });
     });

@@ -106,6 +106,20 @@
                     <p>{{ __('Arrozales del Chaco') }}</p>
                 </a>
             </li>
+            <li class="{{ $elementActive == 'users' ? 'active' : '' }}">
+                <a href="{{ route('page.index', 'panel/users') }}">
+                    <i class="nc-icon  nc-circle-10"></i>
+
+                    <p>{{ trans_choice('navigation.usuarios', 1) }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'contacto' ? 'active' : '' }}">
+                <a href="{{ route('page.index', 'panel/contacto') }}">
+                    <i class="nc-icon  nc-badge"></i>
+
+                    <p>{{ trans_choice('navigation.contacto', 1) }}</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
