@@ -44,7 +44,7 @@
                                             <td>{!! $noticia->enlace ? '<a href="'.$noticia->enlace.'" target="_blank" class="btn btn-primary btn-round btn-icon"><i class="fa fa-chrome"></i></a>' : 'No posee enlace'  !!}</td>
                                             <td><img src="{{ url('uploads/'.$noticia->imagen) }}" alt="{{ $noticia->titulo }}" width="100"></td>
                                             <td>{{ $noticia->fuente }}</td>
-                                            <td>{{ $noticia->created_at }}</td>
+                                            <td>{{ $noticia->year }}</td>
                                             <td><a href="{{ route('noticias.edit', $noticia->id) }}" class="btn btn-primary btn-fab btn-icon btn-round" title="{{ trans_choice('sentences.editar', 1) }}">
                                                     <i class="fa fa-edit"></i></a>
                                             </td>

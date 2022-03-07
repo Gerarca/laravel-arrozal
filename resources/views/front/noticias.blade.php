@@ -21,7 +21,7 @@
                             <a href="{{ $Noticia->enlace }}" target="_blank">
                                 <img class="image-blog" src="{{ url('uploads/'.$Noticia->imagen)  }}" loading="lazy" alt="">
                             </a>
-                            <p class="fecha">{{ $Noticia->created_at->format('d/m/y') }}</p>
+                            <p class="fecha">{{ $Noticia->year }}</p>
                         </div>
                         <div class="body-text-novedades">
                             <div class="container-info-blog">
