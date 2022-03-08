@@ -19,6 +19,7 @@ use App\Models\Noticia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 class FrontController extends Controller
 {
@@ -69,9 +70,11 @@ class FrontController extends Controller
 
     public function toyear($year){
         if( App::getLocale() == 'es' ){
-            $Noticias = Noticia::whereYear('year', '=' ,$year)->get();
+         //   $Noticias = Noticia::whereYear('year', '=' ,$year)->get();
+            $Noticias = DB::table('noticias')->where('year', '=', $year)->get();
         }else{
-            $Noticias = Noticia::whereYear('year', '=' ,$year)->get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year']);
+        //    $Noticias = Noticia::whereYear('year', '=' ,$year)->get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year']);
+            $Noticias = DB::table('noticias')->where('year', '=', $year)->get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year']);
         }
 
         $NoticiasAll = Noticia::all()->sortByDesc('year');
