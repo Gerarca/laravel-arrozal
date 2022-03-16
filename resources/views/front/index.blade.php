@@ -631,9 +631,7 @@
                     <div class="container-image-contacto">
                         <img src="{{ url('assets_front/images/clock.svg')}}" alt="Icono Hora">
                     </div>
-                        <p>
-                            {!! $contact->horario !!}
-                        </p>
+                        {!! $contact->horario !!}
                     </a>
                 </li>
                 @endforeach

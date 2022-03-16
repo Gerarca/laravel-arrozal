@@ -132,6 +132,7 @@ return [
     'horarios-atencion' => 'Horarios de atención',
     'historia-video-agregar' => 'Agregar Historia Video',
     'historia-video-editar' => 'Editar Historia Video',
+    'horario' => 'Lunes - Viernes: 7:00 a.m. - 17:00 p.m. <br> Sabado 7 a.m. - 12:00 p.m.',
     'imagen' => 'Imagen',
     'imagen-agregar' => 'Agregar Imagen',
     'imagen-editar' => 'Editar Imagen',
