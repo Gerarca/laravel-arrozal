@@ -1615,13 +1615,13 @@ form {
     text-align: center;
 }
 
-.lista-info li a p:nth-child(2),
-.lista-info li a p:nth-child(4) {
+.lista-info li a p {
     display: none;
 }
 
-.lista-info li a p:nth-child(2) {
-    text-align: center;
+.lista-info li a .horario-contacto {
+    display: block !important;
+    text-align: center !important;
 }
 
 .lista-info li a:hover {

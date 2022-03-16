@@ -594,8 +594,10 @@
                     <div class="container-image-contacto">
                         <img src="{{ url('assets_front/images/clock.svg')}}" alt="Icono Hora">
                     </div>
-                    <p>{{ trans_choice('sentences.lunes-viernes', 1) }} 7:00 a.m – 17:00 p.m. <br>
-                        {{ trans_choice('sentences.sabados', 1) }} 7:00 a.m. – 12:00 p.m.</p>
+                      <p class="horario-contacto">
+                        {{ trans_choice('sentences.lunes-viernes', 1) }} 7:00 a.m – 17:00 p.m. <br>
+                        {{ trans_choice('sentences.sabados', 1) }} 7:00 a.m. – 12:00 p.m.
+                      </p>
                     </a>
                 </li>
             @else
