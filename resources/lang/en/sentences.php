@@ -243,7 +243,7 @@ return [
     'imagen-texto' => 'Image text',
     'imagen-mensaje' => 'Image Message',
     'imagen-almacenada' => 'Imagen almacenado correctamente.',
-    'sembrando-innovacion' => '¡Sowing innovation, reaping success!',
+    'sembrando-innovacion' => '¡Planting innovacion, harveting success!',
     'desde-paraguay' => 'From Paraguay to the world.',
     'programas-pasantias' => 'Internship Programs',
     'direccion' => 'Route No. 1 km 308 – San Rafael Company, District of Coronel Bogado, Itapua – Paraguay',

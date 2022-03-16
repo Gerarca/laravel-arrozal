@@ -170,6 +170,7 @@ body {
     font-size: var(--rem-18);
     transition: all .3s;
     font-size: 15px;
+    text-transform: capitalize;
 }
 
 .header .menu-desktop .lista-menu.changecolor li a {
@@ -347,6 +348,7 @@ body {
     font-size: var(--rem-32);
     color: var(--title);
     margin-bottom: 1rem;
+    text-transform: capitalize;
 }
 
 .text-nosotros {
@@ -375,6 +377,7 @@ body {
     margin-bottom: .5rem;
     position: relative;
     z-index: 5;
+    text-transform: capitalize;
 }
 
 .container-text-valores .valores-text {
@@ -793,6 +796,7 @@ body {
 .title-mapa-info {
     color: var(--principal);
     font-family: var(--montserrat-semi);
+    text-transform: capitalize;
 }
 
 .text-mapa-info {
@@ -1607,6 +1611,15 @@ form {
     font-family: var(--montserrat-semi);
 }
 
+.lista-info li a {
+    text-align: center;
+}
+
+.lista-info li a:nth-child(2) p,
+.lista-info li a:nth-child(4) p {
+    display: none;
+}
+
 .lista-info li a:hover {
     color: var(--principal);
     text-decoration: none;
@@ -1972,6 +1985,7 @@ form {
     color: var(--blanco);
     display: inline-block;
     margin-bottom: .5rem;
+    text-transform: capitalize;
 }
 
 .lista-enlaces-footer li a:hover {

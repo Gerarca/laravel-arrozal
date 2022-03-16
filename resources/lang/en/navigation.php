@@ -19,7 +19,7 @@ return [
     'languages-en' => 'English',
     'languages-es' => 'Spanish',
     'languages-pt' => 'Portuguese',
-    'noticias' => 'News',
+    'noticias' => 'Media',
     'nosotros'  => 'About us',
     'quienes-somos' => 'About us|A',
     'donde-estamos' => 'Where we are|W',
