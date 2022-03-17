@@ -61,7 +61,8 @@ class FrontController extends Controller
         if( App::getLocale() == 'es' ){
             $Noticias = Noticia::all()->sortByDesc('year');
         }else{
-            $Noticias = Noticia::get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year']);
+            $Noticias = Noticia::all(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year'])->sortByDesc('year');
+            //$Noticias = Noticia::get(['id', 'titulo_en as titulo', 'enlace_en as enlace', 'imagen_en as imagen', 'fuente_en as fuente', 'created_at', 'year']);
         }
 
         $NoticiasAnos = $Noticias->groupBy('year');
