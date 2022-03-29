@@ -156,7 +156,7 @@ return [
     'mis-documentos' => 'Mis documentos',
     'mis-clientes' => 'Mis clientes',
     'mis-representantes' => 'Mis representantes',
-    'mision' => 'Mission',
+    'mision' => 'Misión',
     'newsletter-box' => 'Mantente informado sobre nuestras últimas noticias!!',
     'nombre-apellido' => 'Nombre y apellido',
     'novedad-agregar' => 'Añadir novedad|AN',
